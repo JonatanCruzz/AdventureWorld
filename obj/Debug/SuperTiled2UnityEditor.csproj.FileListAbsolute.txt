@@ -1,0 +1,2 @@
+C:\Unity Projects\AdventureGameWorld2\obj\Debug\SuperTiled2UnityEditor.csproj.AssemblyReference.cache
+C:\Unity Projects\AdventureGameWorld2\obj\Debug\SuperTiled2UnityEditor.csproj.CoreCompileInputs.cache
