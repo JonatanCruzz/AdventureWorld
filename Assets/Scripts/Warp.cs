@@ -29,8 +29,12 @@ public class Warp : MonoBehaviour
         area = GameObject.FindGameObjectWithTag("Area");
     }
 
-     public IEnumerator OnTriggerEnter2D(Collider2D other)
+    public IEnumerator OnTriggerEnter2D(Collider2D other)
     {
+        if (other.tag != "Player")
+        {
+            yield break;
+        }
         other.GetComponent<Animator>().enabled = false;
         other.GetComponent<Player>().enabled = false;
 
@@ -72,17 +76,17 @@ public class Warp : MonoBehaviour
         {
             alpha = Mathf.Lerp(alpha, -0.1f, fadeTime * Time.deltaTime);
             if (alpha < 0) start = false;
-           
-        }  
+
+        }
     }
 
-     void FadeIn()
+    void FadeIn()
     {
         start = true;
         isFadeIn = true;
     }
 
-     void FadeOut()
+    void FadeOut()
     {
         isFadeIn = false;
     }
