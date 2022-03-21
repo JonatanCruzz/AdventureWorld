@@ -15,7 +15,11 @@ public class Player : MonoBehaviour
     public Ghost ghost;
     public bool makeGhost;
 
-    public bool damage;
+    public bool damage
+    {
+        get => anim.GetBool("damage");
+        set => anim.SetBool("damage", value);
+    }
     public int empuje;
     public float HP_min;
     public float HP_max;
@@ -33,10 +37,13 @@ public class Player : MonoBehaviour
     public GameObject initialmap;
     public GameObject slashPrefab;
 
-    bool movePrevent;
+    public bool movePrevent;
     Aura aura;
 
+
     /*---- Variables ----*/
+
+
 
 
     private void Awake()
@@ -90,17 +97,20 @@ public class Player : MonoBehaviour
                 }
             }
         }
-       /* else
-        {
-            switch (dead)
-            {
-                case 0:
-                    anim.SetTrigger("dead");
-                    dead++;
-                    break;
-            }
-        }*/
-       
+        /* else
+         {
+             switch (dead)
+             {
+                 case 0:
+                     anim.SetTrigger("dead");
+                     dead++;
+                     break;
+             }
+         }*/
+
+
+        // hide teleport dialog if the player press the space key
+
     }
 
     private void FixedUpdate()
@@ -111,7 +121,7 @@ public class Player : MonoBehaviour
             {
                 rb2d.MovePosition(rb2d.position + mov * speed * Time.deltaTime);
             }
-        }          
+        }
     }
 
     public void Movements()
@@ -120,12 +130,12 @@ public class Player : MonoBehaviour
         {
             mov = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         }
-        
+
     }
 
     public void Animations()
     {
-         if (mov != Vector2.zero && !Dash)
+        if (mov != Vector2.zero && !Dash)
         {
             anim.SetFloat("movX", mov.x);
             anim.SetFloat("movY", mov.y);
@@ -147,7 +157,7 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown("x") && !attacking)
         {
             anim.SetTrigger("attacking");
-           
+
         }
 
         if (mov != Vector2.zero) attackCollider.offset = new Vector2(mov.x / 2, mov.y / 2);
@@ -168,7 +178,9 @@ public class Player : MonoBehaviour
         {
             anim.SetTrigger("loading");
             aura.AuraStart();
-        } else if (Input.GetKeyUp(KeyCode.Z)){
+        }
+        else if (Input.GetKeyUp(KeyCode.Z))
+        {
             anim.SetTrigger("attacking");
             if (aura.IsLoaded())
             {
@@ -204,8 +216,8 @@ public class Player : MonoBehaviour
             else
             {
                 Dash = false;
-               
-            }  
+
+            }
         }
         else
         {
@@ -225,13 +237,13 @@ public class Player : MonoBehaviour
             if (Dash_T < 0.35f)
             {
                 Dash = true;
-               
+
                 transform.Translate(Vector3.left * Speed_Dash * Time.deltaTime);
             }
             else
             {
                 Dash = false;
-               
+
             }
         }
         else
@@ -304,7 +316,7 @@ public class Player : MonoBehaviour
         movePrevent = false;
     }
 
-    /* -----------------Esto es lo nuevo que se añadio hoy------------------------ */
+    /* -----------------Esto es lo nuevo que se aï¿½adio hoy------------------------ */
 
     public void Damage()
     {
@@ -319,6 +331,7 @@ public class Player : MonoBehaviour
     public void Finish_Damage()
     {
         damage = false;
+        Debug.Log("Finish Damage");
     }
 
     public void Vida()
