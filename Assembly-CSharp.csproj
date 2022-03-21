@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{393CC465-AFA0-1785-A9C9-DB0EDCB51B2E}</ProjectGuid>
+    <ProjectGuid>{5AF71FFB-6BF3-9EA9-303A-EA82F5257849}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -70,13 +70,14 @@
     <Compile Include="Assets\Scripts\Attack.cs" />
     <Compile Include="Assets\Scripts\Rock.cs" />
     <Compile Include="Assets\LeanTween\Framework\LeanTest.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\Inventory.cs" />
+    <Compile Include="Assets\Scripts\LittleChest.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\Item.cs" />
     <Compile Include="Assets\LeanTween\Framework\LTDescrOptional.cs" />
     <Compile Include="Assets\Scripts\Ghost.cs" />
     <Compile Include="Assets\Scripts\Slash.cs" />
     <Compile Include="Assets\Scripts\FixDepth.cs" />
-    <Compile Include="Assets\Scripts\ScriptableObjects\Item.cs" />
-    <Compile Include="Assets\Scripts\ScriptableObjects\Inventory.cs" />
-    <Compile Include="Assets\Scripts\LittleChest.cs" />
+    <Compile Include="Assets\Scripts\StartMenu.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -768,11 +769,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="SuperTiled2UnityEditor.csproj">
-      <Project>{97718F69-90EC-A67A-3CB8-CA34089DCB79}</Project>
+      <Project>{257E259B-4867-884E-680B-DB89A9B3305C}</Project>
       <Name>SuperTiled2UnityEditor</Name>
     </ProjectReference>
     <ProjectReference Include="SuperTiled2Unity.csproj">
-      <Project>{BFFC2E6E-0ECF-E742-7EA1-4C3A0A31365F}</Project>
+      <Project>{BA9AD707-B726-6500-7D39-93A7BD4EA4A9}</Project>
       <Name>SuperTiled2Unity</Name>
     </ProjectReference>
   </ItemGroup>
