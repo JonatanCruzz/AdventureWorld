@@ -9,6 +9,7 @@ TagManager:
   - Attack
   - Objetc
   - Enemy
+  - PrayStatue
   layers:
   - Default
   - TransparentFX

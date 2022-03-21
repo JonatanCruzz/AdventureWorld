@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Assertions;
 
@@ -10,10 +11,7 @@ public class Warp : MonoBehaviour
     public GameObject targetMap;
     public bool needText;
 
-    bool start = false;
-    bool isFadeIn = false;
     float alpha = 0;
-    float fadeTime = 1f;
 
     GameObject area;
 
@@ -29,65 +27,43 @@ public class Warp : MonoBehaviour
         area = GameObject.FindGameObjectWithTag("Area");
     }
 
-    public IEnumerator OnTriggerEnter2D(Collider2D other)
+    public async void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag != "Player")
         {
-            yield break;
+            return;
         }
         other.GetComponent<Animator>().enabled = false;
         other.GetComponent<Player>().enabled = false;
 
-        FadeIn();
-        yield return new WaitForSeconds(fadeTime);
+        await FadeIn();
 
         other.transform.position = target.transform.GetChild(0).transform.position;
         Camera.main.GetComponent<CameraMovements>().setBound(targetMap);
 
-        FadeOut();
         other.GetComponent<Animator>().enabled = true;
         other.GetComponent<Player>().enabled = true;
 
+        await FadeOut();
         if (needText)
         {
             StartCoroutine(area.GetComponent<Area>().ShowArea(targetMap.name));
         }
     }
 
-    public void OnGUI()
+    async Task FadeIn()
     {
-        if (!start)
-            return;
+        var fade = GameObject.Find("Fade");
+        var fadeScript = fade.GetComponent<Fade>();
 
-        GUI.color = new Color(GUI.color.r, GUI.color.g, GUI.color.b, alpha);
-
-        Texture2D tex;
-        tex = new Texture2D(1, 1);
-        tex.SetPixel(0, 0, Color.black);
-        tex.Apply();
-
-        GUI.DrawTexture(new Rect(0, 0, Screen.width, Screen.height), tex);
-
-        if (isFadeIn)
-        {
-            alpha = Mathf.Lerp(alpha, 1.1f, fadeTime * Time.deltaTime);
-        }
-        else
-        {
-            alpha = Mathf.Lerp(alpha, -0.1f, fadeTime * Time.deltaTime);
-            if (alpha < 0) start = false;
-
-        }
+        await fadeScript.FadeInAsync();
     }
 
-    void FadeIn()
+    async Task FadeOut()
     {
-        start = true;
-        isFadeIn = true;
-    }
+        var fade = GameObject.Find("Fade");
+        var fadeScript = fade.GetComponent<Fade>();
 
-    void FadeOut()
-    {
-        isFadeIn = false;
+        await fadeScript.FadeOutAsync();
     }
 }

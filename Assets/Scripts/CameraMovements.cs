@@ -8,9 +8,8 @@ public class CameraMovements : MonoBehaviour
     // Bound object to set limits of the camera
     public GameObject bound;
 
-    float tLX, tLY, bRX, bRY;
-
-
+    public float LX, LY, RX, RY;
+    public CameraMargin margin;
     private void Start()
     {
         Screen.SetResolution(800, 800, true);
@@ -34,39 +33,31 @@ public class CameraMovements : MonoBehaviour
         if (Input.GetKey("escape")) Application.Quit();
 
         transform.position = new Vector3(
-            Mathf.Clamp(target.position.x, tLX, bRX),
-            Mathf.Clamp(target.position.y, bRY, tLY),
+            Mathf.Clamp(target.position.x, LX, RX),
+            Mathf.Clamp(target.position.y, RY, LY),
             transform.position.z
             );
-        return;
-        //determine if the camera is inside the bound
-        if (transform.position.x < bound.transform.position.x - bound.transform.localScale.x / 2)
-        {
-            transform.position = new Vector3(bound.transform.position.x - bound.transform.localScale.x / 2, transform.position.y, transform.position.z);
-        }
-        if (transform.position.x > bound.transform.position.x + bound.transform.localScale.x / 2)
-        {
-            transform.position = new Vector3(bound.transform.position.x + bound.transform.localScale.x / 2, transform.position.y, transform.position.z);
-        }
-        if (transform.position.y < bound.transform.position.y - bound.transform.localScale.y / 2)
-        {
-            transform.position = new Vector3(transform.position.x, bound.transform.position.y - bound.transform.localScale.y / 2, transform.position.z);
-        }
-        if (transform.position.y > bound.transform.position.y + bound.transform.localScale.y / 2)
-        {
-            transform.position = new Vector3(transform.position.x, bound.transform.position.y + bound.transform.localScale.y / 2, transform.position.z);
-        }
+
     }
 
     public void setBound(GameObject map)
     {
         SuperTiled2Unity.SuperMap config = map.GetComponent<SuperTiled2Unity.SuperMap>();
+        // if map has a component of type CameraMargins then set the camera limits
+        var mapMargin = map.GetComponent<CameraMargin>();
+        if (mapMargin == null)
+            mapMargin = map.AddComponent<CameraMargin>();
+
+        this.margin = mapMargin;
+
         float cameraSize = Camera.main.orthographicSize;
 
-        tLX = map.transform.position.x + cameraSize;
-        tLY = map.transform.position.y - cameraSize;
-        bRX = map.transform.position.x + config.m_Width - cameraSize;
-        bRY = map.transform.position.y - config.m_Height + cameraSize;
+
+        LX = map.transform.position.x + cameraSize - mapMargin.left;
+        LY = map.transform.position.y - cameraSize + mapMargin.top;
+        RX = map.transform.position.x + config.m_Width - cameraSize + mapMargin.right;
+        RY = map.transform.position.y - config.m_Height + cameraSize - mapMargin.bottom;
+
 
     }
 }
