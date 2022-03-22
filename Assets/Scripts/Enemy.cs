@@ -2,14 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour {
+public class AttackSpecifications
+{
+    public Vector2 attackDirection;
+    public float knockback;
+    public int damage;
+
+}
+public class Enemy : MonoBehaviour
+{
 
     // Variables para gestionar el radio de visión, el de ataque y la velocidad
     public float visionRadius;
     public float attackRadius;
     public float speed;
     public bool damage;
-    public int empuje;
+    public Vector2 empuje;
+    public int knockbackForce;
 
 
     [Tooltip("Prefab de la roca que se disparará")]
@@ -19,7 +28,7 @@ public class Enemy : MonoBehaviour {
     bool attacking;
 
     [Tooltip("Puntos de vida")]
-    public int maxHp = 5;
+    public int maxHp = 50;
     [Tooltip("Vida actual")]
     public int hp;
 
@@ -31,9 +40,10 @@ public class Enemy : MonoBehaviour {
 
     // Animador y cuerpo cinemático con la rotación en Z congelada
     public Animator anim;
-    Rigidbody2D rb2d;
+    public Rigidbody2D rb2d;
 
-    void Start () {
+    void Start()
+    {
 
         // Recuperamos al jugador gracias al Tag
         player = GameObject.FindGameObjectWithTag("Player");
@@ -97,6 +107,7 @@ public class Enemy : MonoBehaviour {
             // En caso contrario nos movemos hacia él
             else
             {
+                // apply the movement
                 rb2d.MovePosition(transform.position + dir * speed * Time.deltaTime);
 
                 // Al movernos establecemos la animación de movimiento
@@ -121,7 +132,8 @@ public class Enemy : MonoBehaviour {
     }
 
     // Podemos dibujar el radio de visión y ataque sobre la escena dibujando una esfera
-    void OnDrawGizmosSelected() {
+    void OnDrawGizmosSelected()
+    {
 
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, visionRadius);
@@ -140,9 +152,17 @@ public class Enemy : MonoBehaviour {
         attacking = false;
     }
 
-    public void Attacked()
+    public void Attacked(AttackSpecifications data)
     {
-        if (--hp <= 0) Destroy(gameObject);
+        hp -= data.damage;
+        Debug.Log("hp: " + hp + " damage: " + data.damage);
+        if (hp <= 0) Destroy(gameObject);
+        anim.SetTrigger("damage");
+        damage = true;
+        var direction = data.attackDirection;
+        var force = data.knockback;
+        this.empuje = direction;
+        this.knockbackForce = (int)force;
     }
 
     public void OnGUI()
@@ -157,10 +177,46 @@ public class Enemy : MonoBehaviour {
     {
         if (damage)
         {
-            transform.Translate(Vector3.right * empuje * Time.deltaTime, Space.World);
-            GetComponent<Enemy>().enabled = false;
+            // move the enemy to the knockback direction
+            // determine if it would collide with anything
+            // if not, move the enemy
+            // if it would collide, move the enemy to the closest safe spot
+            var direction = new Vector3(empuje.x, empuje.y, 0);
+            var force = knockbackForce;
+            // create a raycast at the enemy's position in the direction of the knockback based on the force and Time.deltaTime
+            // if the raycast hits the player, retry the raycast at the new position with a smaller force
+            var hit = Physics2D.Raycast(transform.position, direction, force * Time.deltaTime, 1 << LayerMask.NameToLayer("Default"));
+            if (hit.collider != null)
+            {
+                // if the raycast hits the player, retry the raycast at the new position with a smaller force
+                if (hit.collider.tag == "Player")
+                {
+                    hit = Physics2D.Raycast(hit.collider.transform.position, direction, force * Time.deltaTime / 2, 1 << LayerMask.NameToLayer("Default"));
+                }
+            }
+
+            if (hit.collider == null)
+            {
+                Debug.Log("No hay colision");
+                rb2d.MovePosition(transform.position + direction * force * Time.deltaTime);
+                // rb2d.MovePosition(transform.position + new Vector3(empuje.x, empuje.y, 0) * knockbackForce * Time.deltaTime);
+
+            }
+            else
+            {
+                Debug.Log("Hay colision: " + hit.collider.name + " " + hit.collider.tag + " " + hit.collider.transform.position);
+                Debug.Log("Direccion: " + direction);
+                Debug.Log("Force: " + force);
+
+                var hitPoint = hit.point;
+                var distance = Vector2.Distance(hitPoint, transform.position);
+                var directionToMove = (hitPoint - (Vector2)transform.position).normalized;
+                var distanceToMove = distance - 0.5f;
+                rb2d.MovePosition(transform.position + (Vector3)directionToMove * distanceToMove * Time.deltaTime);
+            }
+            // GetComponent<Enemy>().enabled = false;
         }
-        GetComponent<Enemy>().enabled = true;
+        // GetComponent<Enemy>().enabled = true;
     }
 
     public void Finish_Damage_Enemy()

@@ -4,35 +4,22 @@ using UnityEngine;
 
 public class Attack : MonoBehaviour
 {
-
+    public Player player;
+    public int knockbackForce = 50;
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Enemy") collision.SendMessage("Attacked");
         if (collision.CompareTag("Enemy"))
         {
-            collision.GetComponent<Enemy>().anim.SetTrigger("damage");
-            collision.GetComponent<Enemy>().damage = true;
-
-            if (transform.position.x > collision.transform.position.x)
+            var enemy = collision.GetComponent<Enemy>();
+            var direction = new Vector2(player.anim.GetFloat("movX"), player.anim.GetFloat("movY"));
+            var attack = new AttackSpecifications
             {
-                collision.GetComponent<Enemy>().empuje = -3;
-                collision.transform.rotation = Quaternion.Euler(0, 0, 0);
-            }
-            else
-            {
-                collision.GetComponent<Enemy>().empuje = 3;
-                collision.transform.rotation = Quaternion.Euler(0, 0, 0);
-            }
-            if (transform.position.y > collision.transform.position.y)
-            {
-                collision.GetComponent<Enemy>().empuje = -3;
-                collision.transform.rotation = Quaternion.Euler(0, 0, 0);
-            }
-            else
-            {
-                collision.GetComponent<Enemy>().empuje = 3;
-                collision.transform.rotation = Quaternion.Euler(0, 0, 0);
-            }
+                attackDirection = direction,
+                knockback = knockbackForce,
+                damage = 1
+            };
+            collision.SendMessage("Attacked", attack);
+            collision.transform.rotation = Quaternion.Euler(0, 0, 0);
         }
     }
 
