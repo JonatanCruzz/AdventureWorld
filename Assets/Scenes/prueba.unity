@@ -862,7 +862,7 @@ MonoBehaviour:
   top: 0
   bottom: 0
   left: -3.86
-  right: 0
+  right: -4
 --- !u!1001 &420331133
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2081,8 +2081,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   top: 0
   bottom: 0
-  left: -3.85
-  right: -3.95
+  left: -3.86
+  right: -3.86
 --- !u!1 &921621767
 GameObject:
   m_ObjectHideFlags: 0
