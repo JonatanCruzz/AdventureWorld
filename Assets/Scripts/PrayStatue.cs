@@ -20,7 +20,7 @@ public class PrayStatue : Interactable
         var TeleportUI = Resources.FindObjectsOfTypeAll<TeleportManager>()[0];
         TeleportUI.gameObject.SetActive(true);
 
-        //find gameobject with component TeleportManager
+
     }
 
     public override bool isClicked()

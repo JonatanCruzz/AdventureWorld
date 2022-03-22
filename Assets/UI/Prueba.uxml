@@ -1,7 +1,7 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="NewUSSFile.uss" />
     <ui:VisualElement name="Container" style="justify-content: center; flex-grow: 1; align-items: center;">
-        <ui:VisualElement style="background-color: rgba(255, 255, 255, 0); width: 700px; height: 500px; align-items: flex-start; justify-content: space-around; left: auto; right: auto; background-image: url(&apos;/Assets/Fantasy Wooden GUI  Free/normal_ui_set A/UI board Medium Set.png&apos;); padding-left: 50px; padding-right: 50px; padding-top: 50px; padding-bottom: 50px;">
+        <ui:VisualElement style="background-color: rgba(255, 255, 255, 0); width: 700px; height: 500px; align-items: flex-start; justify-content: space-around; left: auto; right: auto; background-image: url(&apos;/Assets/vendor/Fantasy Wooden GUI  Free/normal_ui_set A/UI board Medium Set.png&apos;); padding-left: 50px; padding-right: 50px; padding-top: 50px; padding-bottom: 50px;">
             <ui:ListView focusable="false" name="local-games-list" item-height="80" selection-type="None" picking-mode="Ignore" style="height: 2px; width: 100%; flex-grow: 1; background-color: rgba(0, 0, 0, 0); align-items: auto;" />
         </ui:VisualElement>
     </ui:VisualElement>

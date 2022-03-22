@@ -1,12 +1,12 @@
 VisualElement {}
 
 Button {
-    background-image: url(/Assets/Fantasy\ Wooden\ GUI\ \ Free/normal_ui_set\ A/TextBTN_Medium.png);
+    background-image: url(/Assets/vendor/Fantasy\ Wooden\ GUI\ \ Free/normal_ui_set\ A/TextBTN_Medium.png);
     color: white;
 
 }
 Button:active{
-    background-image: url(/Assets/Fantasy\ Wooden\ GUI\ \ Free/normal_ui_set\ A/TextBTN_Medium_Pressed.png);
+    background-image: url(/Assets/vendor/Fantasy\ Wooden\ GUI\ \ Free/normal_ui_set\ A/TextBTN_Medium_Pressed.png);
     background-color: transparent;
 }
 ListView {

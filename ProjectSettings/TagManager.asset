@@ -4,17 +4,17 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - CamaraSeguimiento
-  - Area
-  - Attack
-  - Objetc
-  - Enemy
   - PrayStatue
+  - Objetc
+  - Attack
+  - Area
+  - Enemy
+  - CamaraSeguimiento
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Enemy
+  - 
   - Water
   - UI
   - Attack
@@ -48,5 +48,5 @@ TagManager:
     uniqueID: 0
     locked: 0
   - name: Player
-    uniqueID: 159003661
+    uniqueID: 669979463
     locked: 0
