@@ -8,8 +8,10 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: cc34d0f3dc257a442819830b408c5322, type: 3}
-  missingFiles: []
-  errors: []
+  missingFiles:
+  - Assets/SuperTiled2Unity/Import/World of Solaria Demo 1.0.png
+  errors:
+  - 'Missing texture asset: World of Solaria Demo 1.0.png'
   warnings: []
   missingSortingLayers: []
   missingLayers: []
@@ -17,7 +19,7 @@ ScriptedImporter:
   importerVersion: 11
   pixelsPerUnit: 16
   edgesPerEllipse: 32
-  numberOfObjectsImported: 955
+  numberOfObjectsImported: 2
   useSpriteAtlas: 1
   atlasWidth: 2048
   atlasHeight: 2048

@@ -9,7 +9,100 @@ ScriptedImporter:
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 1fa25d03934ea624a82bf2fcee6f0873, type: 3}
   missingFiles: []
-  errors: []
+  errors:
+  - Errors detected in tileset 'NuevaModificaccion.tsx'. Check the tileset inspector
+    for more details. Your map may be broken until these are fixed.
+  - Errors detected in tileset 'cambio.tsx'. Check the tileset inspector for more
+    details. Your map may be broken until these are fixed.
+  - Could not find tile 1917. Make sure the tilesets were successfully imported.
+  - Could not find tile 2005. Make sure the tilesets were successfully imported.
+  - Could not find tile 2006. Make sure the tilesets were successfully imported.
+  - Could not find tile 2027. Make sure the tilesets were successfully imported.
+  - Could not find tile 2028. Make sure the tilesets were successfully imported.
+  - Could not find tile 2017. Make sure the tilesets were successfully imported.
+  - Could not find tile 2040. Make sure the tilesets were successfully imported.
+  - Could not find tile 2041. Make sure the tilesets were successfully imported.
+  - Could not find tile 1932. Make sure the tilesets were successfully imported.
+  - Could not find tile 1918. Make sure the tilesets were successfully imported.
+  - Could not find tile 1919. Make sure the tilesets were successfully imported.
+  - Could not find tile 1920. Make sure the tilesets were successfully imported.
+  - Could not find tile 1921. Make sure the tilesets were successfully imported.
+  - Could not find tile 1934. Make sure the tilesets were successfully imported.
+  - Could not find tile 2051. Make sure the tilesets were successfully imported.
+  - Could not find tile 2052. Make sure the tilesets were successfully imported.
+  - Could not find tile 1933. Make sure the tilesets were successfully imported.
+  - Could not find tile 1923. Make sure the tilesets were successfully imported.
+  - Could not find tile 1929. Make sure the tilesets were successfully imported.
+  - Could not find tile 1921. Make sure the tilesets were successfully imported.
+  - Could not find tile 1917. Make sure the tilesets were successfully imported.
+  - Could not find tile 2038. Make sure the tilesets were successfully imported.
+  - Could not find tile 2039. Make sure the tilesets were successfully imported.
+  - Could not find tile 1928. Make sure the tilesets were successfully imported.
+  - Could not find tile 2049. Make sure the tilesets were successfully imported.
+  - Could not find tile 2050. Make sure the tilesets were successfully imported.
+  - Could not find tile 1970. Make sure the tilesets were successfully imported.
+  - Could not find tile 1971. Make sure the tilesets were successfully imported.
+  - Could not find tile 1933. Make sure the tilesets were successfully imported.
+  - Could not find tile 1969. Make sure the tilesets were successfully imported.
+  - Could not find tile 1931. Make sure the tilesets were successfully imported.
+  - Could not find tile 1934. Make sure the tilesets were successfully imported.
+  - Could not find tile 1979. Make sure the tilesets were successfully imported.
+  - Could not find tile 1980. Make sure the tilesets were successfully imported.
+  - Could not find tile 1981. Make sure the tilesets were successfully imported.
+  - Could not find tile 1990. Make sure the tilesets were successfully imported.
+  - Could not find tile 1991. Make sure the tilesets were successfully imported.
+  - Could not find tile 1992. Make sure the tilesets were successfully imported.
+  - Could not find tile 2001. Make sure the tilesets were successfully imported.
+  - Could not find tile 2002. Make sure the tilesets were successfully imported.
+  - Could not find tile 2003. Make sure the tilesets were successfully imported.
+  - Could not find tile 1945. Make sure the tilesets were successfully imported.
+  - Could not find tile 2006. Make sure the tilesets were successfully imported.
+  - Could not find tile 1999. Make sure the tilesets were successfully imported.
+  - Could not find tile 1917. Make sure the tilesets were successfully imported.
+  - Could not find tile 1943. Make sure the tilesets were successfully imported.
+  - Could not find tile 1447. Make sure the tilesets were successfully imported.
+  - Could not find tile 1448. Make sure the tilesets were successfully imported.
+  - Could not find tile 2028. Make sure the tilesets were successfully imported.
+  - Could not find tile 1933. Make sure the tilesets were successfully imported.
+  - Could not find tile 1475. Make sure the tilesets were successfully imported.
+  - Could not find tile 1476. Make sure the tilesets were successfully imported.
+  - Could not find tile 2027. Make sure the tilesets were successfully imported.
+  - Could not find tile 2029. Make sure the tilesets were successfully imported.
+  - Could not find tile 1931. Make sure the tilesets were successfully imported.
+  - Could not find tile 1503. Make sure the tilesets were successfully imported.
+  - Could not find tile 1504. Make sure the tilesets were successfully imported.
+  - Could not find tile 1932. Make sure the tilesets were successfully imported.
+  - Could not find tile 1940. Make sure the tilesets were successfully imported.
+  - Could not find tile 1939. Make sure the tilesets were successfully imported.
+  - Could not find tile 1921. Make sure the tilesets were successfully imported.
+  - Could not find tile 1926. Make sure the tilesets were successfully imported.
+  - Could not find tile 1942. Make sure the tilesets were successfully imported.
+  - Could not find tile 1560. Make sure the tilesets were successfully imported.
+  - Could not find tile 1449. Make sure the tilesets were successfully imported.
+  - Could not find tile 1477. Make sure the tilesets were successfully imported.
+  - Could not find tile 1505. Make sure the tilesets were successfully imported.
+  - Could not find tile 1476. Make sure the tilesets were successfully imported.
+  - Could not find tile 1477. Make sure the tilesets were successfully imported.
+  - Could not find tile 1475. Make sure the tilesets were successfully imported.
+  - Could not find tile 1504. Make sure the tilesets were successfully imported.
+  - Could not find tile 1505. Make sure the tilesets were successfully imported.
+  - Could not find tile 1503. Make sure the tilesets were successfully imported.
+  - Could not find tile 1531. Make sure the tilesets were successfully imported.
+  - Could not find tile 1559. Make sure the tilesets were successfully imported.
+  - Could not find tile 1447. Make sure the tilesets were successfully imported.
+  - Could not find tile 1448. Make sure the tilesets were successfully imported.
+  - Could not find tile 1449. Make sure the tilesets were successfully imported.
+  - Could not find tile 1938. Make sure the tilesets were successfully imported.
+  - Could not find tile 1949. Make sure the tilesets were successfully imported.
+  - Could not find tile 1448. Make sure the tilesets were successfully imported.
+  - Could not find tile 1449. Make sure the tilesets were successfully imported.
+  - Could not find tile 1476. Make sure the tilesets were successfully imported.
+  - Could not find tile 1477. Make sure the tilesets were successfully imported.
+  - Could not find tile 1504. Make sure the tilesets were successfully imported.
+  - Could not find tile 1505. Make sure the tilesets were successfully imported.
+  - Could not find tile 1447. Make sure the tilesets were successfully imported.
+  - Could not find tile 1475. Make sure the tilesets were successfully imported.
+  - Could not find tile 1503. Make sure the tilesets were successfully imported.
   warnings: []
   missingSortingLayers: []
   missingLayers: []
