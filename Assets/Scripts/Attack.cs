@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class Attack : MonoBehaviour
 {
-    public Player player;
+    public Animator source;
     public int knockbackForce = 50;
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Enemy"))
         {
             var enemy = collision.GetComponent<Enemy>();
-            var direction = new Vector2(player.anim.GetFloat("movX"), player.anim.GetFloat("movY"));
+            var direction = new Vector2(source.GetFloat("movX"), source.GetFloat("movY"));
             var attack = new AttackSpecifications
             {
                 attackDirection = direction,
