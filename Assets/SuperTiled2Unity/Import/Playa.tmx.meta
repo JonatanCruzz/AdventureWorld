@@ -9,56 +9,7 @@ ScriptedImporter:
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 1fa25d03934ea624a82bf2fcee6f0873, type: 3}
   missingFiles: []
-  errors:
-  - Errors detected in tileset 'NuevaModificaccion.tsx'. Check the tileset inspector
-    for more details. Your map may be broken until these are fixed.
-  - Could not find tile 1614. Make sure the tilesets were successfully imported.
-  - Could not find tile 1615. Make sure the tilesets were successfully imported.
-  - Could not find tile 1642. Make sure the tilesets were successfully imported.
-  - Could not find tile 1643. Make sure the tilesets were successfully imported.
-  - Could not find tile 1503. Make sure the tilesets were successfully imported.
-  - Could not find tile 1504. Make sure the tilesets were successfully imported.
-  - Could not find tile 1505. Make sure the tilesets were successfully imported.
-  - Could not find tile 1449. Make sure the tilesets were successfully imported.
-  - Could not find tile 1477. Make sure the tilesets were successfully imported.
-  - Could not find tile 1448. Make sure the tilesets were successfully imported.
-  - Could not find tile 1476. Make sure the tilesets were successfully imported.
-  - Could not find tile 1503. Make sure the tilesets were successfully imported.
-  - Could not find tile 1504. Make sure the tilesets were successfully imported.
-  - Could not find tile 1505. Make sure the tilesets were successfully imported.
-  - Could not find tile 1447. Make sure the tilesets were successfully imported.
-  - Could not find tile 1448. Make sure the tilesets were successfully imported.
-  - Could not find tile 1449. Make sure the tilesets were successfully imported.
-  - Could not find tile 1475. Make sure the tilesets were successfully imported.
-  - Could not find tile 1476. Make sure the tilesets were successfully imported.
-  - Could not find tile 1477. Make sure the tilesets were successfully imported.
-  - Could not find tile 1447. Make sure the tilesets were successfully imported.
-  - Could not find tile 1448. Make sure the tilesets were successfully imported.
-  - Could not find tile 1449. Make sure the tilesets were successfully imported.
-  - Could not find tile 1475. Make sure the tilesets were successfully imported.
-  - Could not find tile 1476. Make sure the tilesets were successfully imported.
-  - Could not find tile 1477. Make sure the tilesets were successfully imported.
-  - Could not find tile 1503. Make sure the tilesets were successfully imported.
-  - Could not find tile 1504. Make sure the tilesets were successfully imported.
-  - Could not find tile 1505. Make sure the tilesets were successfully imported.
-  - Could not find tile 1447. Make sure the tilesets were successfully imported.
-  - Could not find tile 1448. Make sure the tilesets were successfully imported.
-  - Could not find tile 1449. Make sure the tilesets were successfully imported.
-  - Could not find tile 1475. Make sure the tilesets were successfully imported.
-  - Could not find tile 1476. Make sure the tilesets were successfully imported.
-  - Could not find tile 1477. Make sure the tilesets were successfully imported.
-  - Could not find tile 1503. Make sure the tilesets were successfully imported.
-  - Could not find tile 1504. Make sure the tilesets were successfully imported.
-  - Could not find tile 1505. Make sure the tilesets were successfully imported.
-  - Could not find tile 1447. Make sure the tilesets were successfully imported.
-  - Could not find tile 1448. Make sure the tilesets were successfully imported.
-  - Could not find tile 1449. Make sure the tilesets were successfully imported.
-  - Could not find tile 1475. Make sure the tilesets were successfully imported.
-  - Could not find tile 1476. Make sure the tilesets were successfully imported.
-  - Could not find tile 1477. Make sure the tilesets were successfully imported.
-  - Could not find tile 1503. Make sure the tilesets were successfully imported.
-  - Could not find tile 1504. Make sure the tilesets were successfully imported.
-  - Could not find tile 1505. Make sure the tilesets were successfully imported.
+  errors: []
   warnings: []
   missingSortingLayers: []
   missingLayers: []
