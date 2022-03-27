@@ -14,6 +14,9 @@ GameObject:
   - component: {fileID: 95978110417515160}
   - component: {fileID: 114419153531601642}
   - component: {fileID: 50573978581630612}
+  - component: {fileID: 3281650730814056809}
+  - component: {fileID: 1307858623586503968}
+  - component: {fileID: 139642039273476226}
   m_Layer: 11
   m_Name: Enemy
   m_TagString: Untagged
@@ -72,9 +75,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -402569605
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 669979463
+  m_SortingLayer: 1
+  m_SortingOrder: 1
   m_Sprite: {fileID: 8213902188476598959, guid: 93b727c53297ee84796339e951b363b2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -96,10 +99,10 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.10275054, y: -0.09440422}
+  m_Offset: {x: -0.10275054, y: -0.18}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -110,7 +113,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.45946264, y: 0.6382408}
+  m_Size: {x: 1.03, y: 1.25}
   m_EdgeRadius: 0
 --- !u!95 &95978110417515160
 Animator:
@@ -144,12 +147,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   visionRadius: 4
-  attackRadius: 2.5
+  attackRadius: 2.75
   speed: 0.75
-  rockPrefab: {fileID: 0}
+  damage: 0
+  ataqueRecibido:
+    attackDirection: {x: 0, y: 0}
+    knockback: 0
+    damage: 0
+  attackDamage: 1
+  attackKnockback: 10
+  rockPrefab: {fileID: 6066569096904572211, guid: c4b2cde9ede95d14ea607883e07000cc, type: 3}
   attackSpeed: 2
-  maxHp: 3
-  hp: 0
+  hp: {fileID: 0}
+  anim: {fileID: 0}
+  rb2d: {fileID: 0}
 --- !u!50 &50573978581630612
 Rigidbody2D:
   serializedVersion: 4
@@ -158,7 +169,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1165992998545724}
-  m_BodyType: 2
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -171,3 +182,43 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!114 &3281650730814056809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1165992998545724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3371b1140a670bf48a9d48262428ad42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HP: 0
+  maxHP: 5
+--- !u!114 &1307858623586503968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1165992998545724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09cafb7ccac7c5e47857abce97763fe6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  source: {fileID: 95978110417515160}
+--- !u!114 &139642039273476226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1165992998545724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9150d92ce3f0e934eb64bdc0f4bc1b72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fixEveryFrame: 1

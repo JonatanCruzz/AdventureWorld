@@ -28,7 +28,7 @@ public class PrayStatue : Interactable
         return Input.GetKeyDown(KeyCode.E);
     }
 
-    public async void doTeleport()
+    public IEnumerator doTeleport()
     {
         Debug.Log("Teleporting to " + objectiveDescription);
         Debug.Log("targetMap: " + targetMap);
@@ -40,8 +40,7 @@ public class PrayStatue : Interactable
         player.GetComponent<Animator>().enabled = false;
         player.GetComponent<Player>().enabled = false;
 
-
-        await fadeScript.FadeInAsync();
+        yield return fadeScript.FadeIn();
 
 
         player.transform.position = transform.GetChild(0).transform.position;
@@ -49,7 +48,7 @@ public class PrayStatue : Interactable
 
         Camera.main.GetComponent<CameraMovements>().setBound(targetMap.gameObject);
 
-        await fadeScript.FadeOutAsync();
+        yield return fadeScript.FadeOut();
 
         player.GetComponent<Animator>().enabled = true;
         player.GetComponent<Player>().enabled = true;

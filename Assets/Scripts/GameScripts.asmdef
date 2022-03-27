@@ -1,0 +1,19 @@
+{
+    "name": "NewAssembly",
+    "rootNamespace": "",
+    "references": [
+        "UnityEngine.UIElementsModule",
+        "Unity.2D.Tilemap.Extras.Editor",
+        "SuperTiled2Unity",
+        "GenericDictionary"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

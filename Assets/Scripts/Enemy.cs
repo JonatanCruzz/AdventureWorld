@@ -2,14 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AttackSpecifications
-{
-    public Vector2 attackDirection;
-    public float knockback;
-    public int damage;
-
-}
-public class Enemy : MonoBehaviour
+[RequireComponent(typeof(Animator))]
+[RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(HealthUnit))]
+public class Enemy : MonoBehaviour, AttackForce
 {
 
     // Variables para gestionar el radio de visión, el de ataque y la velocidad
@@ -17,8 +13,10 @@ public class Enemy : MonoBehaviour
     public float attackRadius;
     public float speed;
     public bool damage;
-    public Vector2 empuje;
-    public int knockbackForce;
+    [SerializeField]
+    public AttackSpecifications ataqueRecibido;
+    public int attackDamage = 1;
+    public int attackKnockback = 10;
 
 
     [Tooltip("Prefab de la roca que se disparará")]
@@ -27,10 +25,7 @@ public class Enemy : MonoBehaviour
     public float attackSpeed = 2f;
     bool attacking;
 
-    [Tooltip("Puntos de vida")]
-    public int maxHp = 50;
-    [Tooltip("Vida actual")]
-    public int hp;
+    public HealthUnit hp;
 
     // Variable para guardar al jugador
     GameObject player;
@@ -47,6 +42,7 @@ public class Enemy : MonoBehaviour
 
         // Recuperamos al jugador gracias al Tag
         player = GameObject.FindGameObjectWithTag("Player");
+        hp = GetComponent<HealthUnit>();
 
         // Guardamos nuestra posición inicial
         initialPosition = transform.position;
@@ -54,7 +50,7 @@ public class Enemy : MonoBehaviour
         anim = GetComponent<Animator>();
         rb2d = GetComponent<Rigidbody2D>();
 
-        hp = maxHp;
+        // hp = maxHp;
     }
 
     void Update()
@@ -146,7 +142,8 @@ public class Enemy : MonoBehaviour
         attacking = true;
         if (target != initialPosition && rockPrefab != null)
         {
-            Instantiate(rockPrefab, transform.position, transform.rotation);
+            var rock = Instantiate(rockPrefab, transform.position, transform.rotation);
+            rock.GetComponent<Rock>().source = this;
             yield return new WaitForSeconds(seconds);
         }
         attacking = false;
@@ -154,22 +151,27 @@ public class Enemy : MonoBehaviour
 
     public void Attacked(AttackSpecifications data)
     {
-        hp -= data.damage;
-        Debug.Log("hp: " + hp + " damage: " + data.damage);
-        if (hp <= 0) Destroy(gameObject);
+        if (!this.enabled) return;
+        hp.HP -= data.damage;
+        if (hp.HP <= 0) Destroy(gameObject);
         anim.SetTrigger("damage");
         damage = true;
-        var direction = data.attackDirection;
-        var force = data.knockback;
-        this.empuje = direction;
-        this.knockbackForce = (int)force;
+        this.ataqueRecibido = data;
+        StartCoroutine(OnDamage());
+    }
+
+    private IEnumerator OnDamage()
+    {
+        yield return new WaitForSeconds(0.2f);
+        damage = false;
+        this.ataqueRecibido = new AttackSpecifications();
     }
 
     public void OnGUI()
     {
         Vector2 pos = Camera.main.WorldToScreenPoint(transform.position);
 
-        GUI.Box(new Rect(pos.x - 20, Screen.height - pos.y + 60, 40, 24), hp + "/" + maxHp);
+        GUI.Box(new Rect(pos.x - 20, Screen.height - pos.y + 60, 40, 24), hp.HP + "/" + hp.Max_HP);
 
     }
 
@@ -181,40 +183,10 @@ public class Enemy : MonoBehaviour
             // determine if it would collide with anything
             // if not, move the enemy
             // if it would collide, move the enemy to the closest safe spot
+            var empuje = ataqueRecibido.attackDirection;
             var direction = new Vector3(empuje.x, empuje.y, 0);
-            var force = knockbackForce;
-            // create a raycast at the enemy's position in the direction of the knockback based on the force and Time.deltaTime
-            // if the raycast hits the player, retry the raycast at the new position with a smaller force
-            var hit = Physics2D.Raycast(transform.position, direction, force * Time.deltaTime, 1 << LayerMask.NameToLayer("Default"));
-            if (hit.collider != null)
-            {
-                // if the raycast hits the player, retry the raycast at the new position with a smaller force
-                if (hit.collider.tag == "Player")
-                {
-                    hit = Physics2D.Raycast(hit.collider.transform.position, direction, force * Time.deltaTime / 2, 1 << LayerMask.NameToLayer("Default"));
-                }
-            }
-
-            if (hit.collider == null)
-            {
-                Debug.Log("No hay colision");
-                rb2d.MovePosition(transform.position + direction * force * Time.deltaTime);
-                // rb2d.MovePosition(transform.position + new Vector3(empuje.x, empuje.y, 0) * knockbackForce * Time.deltaTime);
-
-            }
-            else
-            {
-                Debug.Log("Hay colision: " + hit.collider.name + " " + hit.collider.tag + " " + hit.collider.transform.position);
-                Debug.Log("Direccion: " + direction);
-                Debug.Log("Force: " + force);
-
-                var hitPoint = hit.point;
-                var distance = Vector2.Distance(hitPoint, transform.position);
-                var directionToMove = (hitPoint - (Vector2)transform.position).normalized;
-                var distanceToMove = distance - 0.5f;
-                rb2d.MovePosition(transform.position + (Vector3)directionToMove * distanceToMove * Time.deltaTime);
-            }
-            // GetComponent<Enemy>().enabled = false;
+            var force = ataqueRecibido.damage;
+            PhysicsUtils.DoMoveRigidBodyByKnockback(rb2d, direction, force);
         }
         // GetComponent<Enemy>().enabled = true;
     }
@@ -222,6 +194,16 @@ public class Enemy : MonoBehaviour
     public void Finish_Damage_Enemy()
     {
         damage = false;
+
     }
 
+    public int getAttackForce()
+    {
+        return attackDamage;
+    }
+
+    public int getKnockbackForce()
+    {
+        return attackKnockback;
+    }
 }

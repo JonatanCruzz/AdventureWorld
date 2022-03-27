@@ -27,43 +27,28 @@ public class Warp : MonoBehaviour
         area = GameObject.FindGameObjectWithTag("Area");
     }
 
-    public async void OnTriggerEnter2D(Collider2D other)
+    public IEnumerator OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag != "Player")
         {
-            return;
+            yield break;
         }
         other.GetComponent<Animator>().enabled = false;
         other.GetComponent<Player>().enabled = false;
-
-        await FadeIn();
+        var fade = GameObject.Find("Fade").GetComponent<Fade>();
+        yield return fade.FadeIn();
 
         other.transform.position = target.transform.GetChild(0).transform.position;
         Camera.main.GetComponent<CameraMovements>().setBound(targetMap);
 
         other.GetComponent<Animator>().enabled = true;
         other.GetComponent<Player>().enabled = true;
+        yield return fade.FadeOut();
 
-        await FadeOut();
         if (needText)
         {
             StartCoroutine(area.GetComponent<Area>().ShowArea(targetMap.name));
         }
     }
 
-    async Task FadeIn()
-    {
-        var fade = GameObject.Find("Fade");
-        var fadeScript = fade.GetComponent<Fade>();
-
-        await fadeScript.FadeInAsync();
-    }
-
-    async Task FadeOut()
-    {
-        var fade = GameObject.Find("Fade");
-        var fadeScript = fade.GetComponent<Fade>();
-
-        await fadeScript.FadeOutAsync();
-    }
 }

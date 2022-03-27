@@ -10,7 +10,7 @@ public class TeleportObjective : MonoBehaviour
     public string objectiveDescription;
     public GameObject targetMap;
 
-    public async void OnClick()
+    public IEnumerator OnClick()
     {
         Debug.Log("Teleporting to " + objectiveDescription);
         Debug.Log("targetMap: " + targetMap);
@@ -22,14 +22,12 @@ public class TeleportObjective : MonoBehaviour
         player.GetComponent<Animator>().enabled = false;
         player.GetComponent<Player>().enabled = false;
 
-
-        await fadeScript.FadeInAsync();
+        yield return fadeScript.FadeIn();
 
 
         player.transform.position = transform.GetChild(0).transform.position;
         Camera.main.GetComponent<CameraMovements>().setBound(targetMap);
-
-        await fadeScript.FadeOutAsync();
+        yield return fadeScript.FadeOut();
 
         player.GetComponent<Animator>().enabled = true;
         player.GetComponent<Player>().enabled = true;

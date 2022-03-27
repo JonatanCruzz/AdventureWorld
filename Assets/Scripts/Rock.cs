@@ -9,6 +9,7 @@ public class Rock : MonoBehaviour
     public float speed;
 
     GameObject player;   // Recuperamos al objeto jugador
+    public AttackForce source;  // Recuperamos al objeto fuente de ataque
     Rigidbody2D rb2d;    // Recuperamos el componente de cuerpo rígido
     Vector3 target, dir; // Vectores para almacenar el objetivo y su dirección
 
@@ -45,23 +46,15 @@ public class Rock : MonoBehaviour
             //Esto es lo nuevo que se agrego hoy 2-11-2021
             if (collision.CompareTag("Player"))
             {
-                if (collision.GetComponent<Player>().HP_min > 0)
+                if (collision.GetComponent<HealthUnit>().HP > 0)
                 {
-                    // collision.GetComponent<Player>().anim.SetTrigger("damage");
-                    collision.GetComponent<Player>().damage = true;
-
-                    if (transform.position.x > collision.transform.position.x)
+                    var attack = new AttackSpecifications
                     {
-                        collision.GetComponent<Player>().empuje = -3;
-                        collision.transform.rotation = Quaternion.Euler(0, 0, 0);
-                    }
-                    else
-                    {
-                        collision.GetComponent<Player>().empuje = 3;
-                        collision.transform.rotation = Quaternion.Euler(0, 0, 0);
-                    }
-
-                    collision.GetComponent<Player>().HP_min -= 10;
+                        attackDirection = dir,
+                        knockback = this.source != null ? this.source.getAttackForce() : Attack.knockbackForce,
+                        damage = this.source != null ? this.source.getAttackForce() : 10
+                    };
+                    collision.SendMessage("Attacked", attack);
                 }
 
             }
