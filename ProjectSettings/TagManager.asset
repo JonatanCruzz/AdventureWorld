@@ -20,6 +20,8 @@ TagManager:
   - Attack
   - NPC
   - 
+  - Player
+  - Enemy
   - 
   - 
   - 

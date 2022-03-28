@@ -2,37 +2,56 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public interface AttackForce
+{
+    int getAttackForce();
+    int getKnockbackForce();
+}
 public class Attack : MonoBehaviour
 {
+    public Animator source;
+    public AttackForce attackForce;
+    public static int knockbackForce = 10;
+
+    public void Awake()
+    {
+        if (this.attackForce == null)
+        {
+            if (this.GetComponent<Enemy>() is Enemy enemy)
+            {
+                this.attackForce = enemy;
+            }
+            else if (this.GetComponent<Player>() is Player player)
+            {
+                this.attackForce = player;
+            }
+            this.attackForce = this.GetComponent<AttackForce>();
+        }
+    }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Enemy") collision.SendMessage("Attacked");
+        var direction = new Vector2(source.GetFloat("movX"), source.GetFloat("movY"));
+        var attack = new AttackSpecifications
+        {
+            attackDirection = direction,
+            knockback = this.attackForce != null ? attackForce.getKnockbackForce() : knockbackForce,
+            damage = this.attackForce != null ? attackForce.getAttackForce() : 1
+        };
         if (collision.CompareTag("Enemy"))
         {
-            collision.GetComponent<Enemy>().anim.SetTrigger("damage");
-            collision.GetComponent<Enemy>().damage = true;
 
-            if (transform.position.x > collision.transform.position.x)
-            {
-                collision.GetComponent<Enemy>().empuje = -3;
-                collision.transform.rotation = Quaternion.Euler(0, 0, 0);
-            }
-            else
-            {
-                collision.GetComponent<Enemy>().empuje = 3;
-                collision.transform.rotation = Quaternion.Euler(0, 0, 0);
-            }
-            if (transform.position.y > collision.transform.position.y)
-            {
-                collision.GetComponent<Enemy>().empuje = -3;
-                collision.transform.rotation = Quaternion.Euler(0, 0, 0);
-            }
-            else
-            {
-                collision.GetComponent<Enemy>().empuje = 3;
-                collision.transform.rotation = Quaternion.Euler(0, 0, 0);
-            }
+            collision.SendMessage("Attacked", attack);
+            collision.transform.rotation = Quaternion.Euler(0, 0, 0);
+        }
+        else if (collision.CompareTag("Player"))
+        {
+            if (this.attackForce != null && this.attackForce is Player) return;
+            var player = collision.GetComponent<HealthUnit>();
+            if (player.HP <= 0) return;
+
+            collision.SendMessage("Attacked", attack);
+            collision.transform.rotation = Quaternion.Euler(0, 0, 0);
         }
     }
 

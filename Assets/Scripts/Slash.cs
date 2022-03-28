@@ -18,15 +18,22 @@ public class Slash : MonoBehaviour
 
     public IEnumerator OnTriggerEnter2D(Collider2D col)
     {
-        if(col.tag == "Object"){
+        if (col.tag == "Object")
+        {
             yield return new WaitForSeconds(waitBeforeDestroy);
             Destroy(gameObject);
         }
-         else if (col.tag != "Player" && col.tag != "Attack")
+        else if (col.tag != "Player" && col.tag != "Attack")
         {
-            if (col.tag == "Enemy") col.SendMessage("Attacked");
+
+            if (col.tag == "Enemy") col.SendMessage("Attacked", new AttackSpecifications
+            {
+                attackDirection = mov,
+                knockback = speed,
+                damage = 5
+            });
             Destroy(gameObject);
         }
-        
+
     }
 }

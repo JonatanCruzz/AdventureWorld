@@ -4,7 +4,8 @@ using UnityEngine;
 using UnityEngine.Assertions;
 using UnityEngine.UI;
 
-public class Player : MonoBehaviour
+[RequireComponent(typeof(HealthUnit))]
+public class Player : MonoBehaviour, AttackForce
 {
     /*---- Variables ----*/
     public float speed = 5f;
@@ -13,18 +14,28 @@ public class Player : MonoBehaviour
     public float Dash_T;
     public float Speed_Dash;
     public Ghost ghost;
-    public bool makeGhost;
-
-    public bool damage
+    private bool _damage = false;
+    private bool damage
     {
-        get => anim.GetBool("damage");
-        set => anim.SetBool("damage", value);
+        get
+        {
+            return _damage;
+        }
+        set
+        {
+            Debug.Log("changed damage: " + value);
+            anim.SetBool("damage", value);
+            _damage = value;
+            if (value)
+                StartCoroutine(onDamage());
+        }
+
     }
-    public int empuje;
-    public float HP_min;
-    public float HP_max;
+    public Vector2 knockback;
+    public float knockbackForce = 50;
+    public int attackKnockback = 10;
+    public HealthUnit hp;
     public Image barra;
-    public int dead;
 
     public bool attacking;
 
@@ -40,38 +51,65 @@ public class Player : MonoBehaviour
     public bool movePrevent;
     Aura aura;
 
+    // Inventory
+
+    public Inventory inventory;
+    public EquipmentInventory equipment;
+    [SerializeField] private Inventory defaultInventory;
+    [SerializeField] private EquipmentInventory defaultEquipment;
+    public InventoryUI inventoryUI;
+
 
     /*---- Variables ----*/
 
-
+    private IEnumerator onDamage()
+    {
+        yield return new WaitForSeconds(0.2f);
+        damage = false;
+    }
 
 
     private void Awake()
     {
         Assert.IsNotNull(initialmap);
         Assert.IsNotNull(slashPrefab);
+
     }
 
     void Start()
     {
         anim = GetComponent<Animator>();
         rb2d = GetComponent<Rigidbody2D>();
+        hp = GetComponent<HealthUnit>();
 
         attackCollider = transform.GetChild(0).GetComponent<CircleCollider2D>();
         attackCollider.enabled = false;
+
+        attackCollider.GetComponent<Attack>().attackForce = this;
         Camera.main.GetComponent<CameraMovements>().setBound(initialmap);
 
         aura = transform.GetChild(1).GetComponent<Aura>();
+        if (!this.inventory)
+        {
+            this.inventory = Instantiate(defaultInventory);
+        }
+        if (!this.equipment)
+        {
+            this.equipment = Instantiate(defaultEquipment);
+        }
+        this.inventoryUI.player = this;
+
+        this.inventoryUI.gameObject.SetActive(true);
     }
 
     void Update()
     {
         //el damage es lo que se agrego nuevo hoy 2-11-2021
         Vida();
+        Damage();
 
-        if (HP_min > 0)
+        if (hp.HP > 0)
         {
-            Damage();
             if (!damage)
             {
                 Movements();
@@ -95,6 +133,12 @@ public class Player : MonoBehaviour
                 {
                     Dash_Skill_Up();
                 }
+
+                // if user press the button "I" to open the inventory UI
+                if (Input.GetKeyDown(KeyCode.I))
+                {
+                    inventoryUI.Show();
+                }
             }
         }
         /* else
@@ -115,7 +159,7 @@ public class Player : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (HP_min > 0)
+        if (hp.HP > 0)
         {
             if (!damage)
             {
@@ -200,6 +244,7 @@ public class Player : MonoBehaviour
             movePrevent = true;
         }
     }
+
 
     public void Dash_Skill_Right()
     {
@@ -322,10 +367,10 @@ public class Player : MonoBehaviour
     {
         if (damage)
         {
-            transform.Translate(Vector3.right * empuje * Time.deltaTime, Space.World);
-            GetComponent<Player>().enabled = false;
+            var direction = new Vector3(knockback.x, knockback.y, 0);
+            var force = knockbackForce;
+            PhysicsUtils.DoMoveRigidBodyByKnockback(rb2d, this.knockback, this.knockbackForce);
         }
-        GetComponent<Player>().enabled = true;
     }
 
     public void Finish_Damage()
@@ -336,8 +381,35 @@ public class Player : MonoBehaviour
 
     public void Vida()
     {
-        barra.fillAmount = HP_min / HP_max;
+        barra.fillAmount = hp.HP / hp.Max_HP;
+    }
+
+    public void Attacked(AttackSpecifications data)
+    {
+        if (damage) return;
+        hp.HP -= data.damage; // TODO: apply defense
+        this.damage = true;
+
+        this.knockback = data.attackDirection;
+        this.knockbackForce = data.knockback;
+
     }
 
 
+    public int getAttackForce()
+    {
+        var attackForce = 1;
+        // get equitment all calculate stats
+        foreach (var item in equipment.GetAllItems())
+        {
+            if (item == null) continue;
+            attackForce += item.strength;
+        }
+        return attackForce;
+    }
+
+    public int getKnockbackForce()
+    {
+        return attackKnockback;
+    }
 }

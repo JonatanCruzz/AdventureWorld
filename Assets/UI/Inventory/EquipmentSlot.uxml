@@ -1,0 +1,7 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement style="flex-grow: 0; flex-shrink: 0; background-image: url(&apos;/Assets/vendor/Simple Fantasy GUI/PNG/Character Panel/Eq_Slot.png&apos;); padding-left: 6px; padding-right: 6px; padding-top: 6px; padding-bottom: 6px; width: 128px; height: 128px; margin-left: 5px; margin-right: 5px; margin-top: 5px; margin-bottom: 5px;">
+        <ui:VisualElement style="flex-grow: 1; flex-shrink: 0;">
+            <ui:Image name="SlotIcon" style="width: auto; height: auto; flex-grow: 1; flex-shrink: 0;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

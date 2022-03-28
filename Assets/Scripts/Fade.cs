@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Threading.Tasks;
 using Unity;
 using UnityEngine;
@@ -49,14 +50,17 @@ public class Fade : MonoBehaviour
             FadeOutAsync();
         });
     }
-    public void FadeIn(Color? color = null)
+    public IEnumerator FadeIn(Color? color = null)
     {
-        FadeInAsync(color);
+        BeginFade(1, color);
+        yield return new WaitForSeconds(fadeSpeed);
     }
 
-    public void FadeOut(Color? color = null)
+    public IEnumerator FadeOut(Color? color = null)
     {
-        FadeOutAsync(color);
+        BeginFade(-1, color);
+        yield return new WaitForSeconds(fadeSpeed);
+
     }
     public async Task FadeOutAsync(Color? color = null)
     {
