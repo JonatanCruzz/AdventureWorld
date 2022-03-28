@@ -200,16 +200,16 @@ public class ItemDatabase : EditorWindow
             m_LargeDisplayIcon.style.backgroundImage = m_activeItem.itemSprite.texture;
         }
         m_DetailSection.style.visibility = Visibility.Visible;
-        m_DetailSection.Q<VisualElement>("EquipmentSection").style.visibility = Visibility.Hidden;
-        m_DetailSection.Q<VisualElement>("ConsumableSection").style.visibility = Visibility.Hidden;
+        m_DetailSection.Q<VisualElement>("EquipmentSection").style.display = DisplayStyle.None;
+        m_DetailSection.Q<VisualElement>("ConsumableSection").style.display = DisplayStyle.None;
 
         switch (m_activeItem)
         {
             case EquipableItem item:
-                m_DetailSection.Q<VisualElement>("EquipmentSection").style.visibility = Visibility.Visible;
+                m_DetailSection.Q<VisualElement>("EquipmentSection").style.display = DisplayStyle.Flex;
                 break;
             case ConsumableItem item:
-                m_DetailSection.Q<VisualElement>("ConsumableSection").style.visibility = Visibility.Visible;
+                m_DetailSection.Q<VisualElement>("ConsumableSection").style.display = DisplayStyle.Flex;
                 break;
         }
     }

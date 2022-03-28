@@ -14,6 +14,7 @@ public class EquipmentInventoryUI
     private VisualElement m_Root;
     public EquipmentInventoryUI(VisualElement m_Root, Player player)
     {
+        this.m_Root = m_Root;
         this.player = player;
 
         equipmentSlots.Add(EquipableItemSlotType.Head, m_Root.Q<EquipmentSlot>("HeadSlot"));

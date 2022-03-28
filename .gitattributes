@@ -1,3 +1,13 @@
 *.unity binary
 *.prefab binary
 *.asset binary
+
+
+# Denote all files that are truly binary and should not be modified.
+*.dll binary
+*.exe binary
+*.png binary
+*.ico binary
+*.snk binary
+*.pdb binary
+*.svg binary

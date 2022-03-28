@@ -10,6 +10,7 @@ public interface AttackForce
 public class Attack : MonoBehaviour
 {
     public Animator source;
+    [SerializeField]
     public AttackForce attackForce;
     public static int knockbackForce = 10;
 
@@ -38,6 +39,7 @@ public class Attack : MonoBehaviour
             knockback = this.attackForce != null ? attackForce.getKnockbackForce() : knockbackForce,
             damage = this.attackForce != null ? attackForce.getAttackForce() : 1
         };
+        Debug.Log("Attack: " + attack.damage);
         if (collision.CompareTag("Enemy"))
         {
 

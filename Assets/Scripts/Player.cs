@@ -405,6 +405,7 @@ public class Player : MonoBehaviour, AttackForce
             if (item == null) continue;
             attackForce += item.strength;
         }
+        Debug.Log("Attack Force: " + attackForce);
         return attackForce;
     }
 
