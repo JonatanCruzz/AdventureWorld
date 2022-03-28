@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 1198425108100140105}
   - component: {fileID: 1198425108100140106}
   - component: {fileID: 1198425108100140107}
-  - component: {fileID: 1198425108100140116}
   - component: {fileID: 1198425108100140117}
   m_Layer: 0
   m_Name: LittleChest
@@ -29,7 +28,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1198425108100140119}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.41, y: -5.26, z: 1.9465461}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -148,32 +147,6 @@ MonoBehaviour:
   contents: {fileID: 0}
   isOpen: 0
   dialogWindow: {fileID: 0}
---- !u!61 &1198425108100140116
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1198425108100140119}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.9375, y: 1}
-    newSize: {x: 0.9375, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 2.27, y: 2.41}
-  m_EdgeRadius: 0
 --- !u!114 &1198425108100140117
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -188,7 +161,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uiKey: {fileID: 2370021381033097029}
   description: 
-  _collider: {fileID: 1198425108100140116}
+  radius: 3
+  defaultInventory: {fileID: 11400000, guid: 0ab7094b762bb6d4b9dcb14bcc0e8284, type: 2}
 --- !u!1001 &1198425107336729999
 PrefabInstance:
   m_ObjectHideFlags: 0

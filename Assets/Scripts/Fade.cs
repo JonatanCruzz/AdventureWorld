@@ -45,11 +45,15 @@ public class Fade : MonoBehaviour
 
     void Start()
     {
-        FadeInAsync().ContinueWith(t =>
-        {
-            FadeOutAsync();
-        });
+        StartCoroutine(FadeInAndOut());
     }
+
+    private IEnumerator FadeInAndOut()
+    {
+        yield return FadeIn();
+        yield return FadeOut();
+    }
+
     public IEnumerator FadeIn(Color? color = null)
     {
         BeginFade(1, color);

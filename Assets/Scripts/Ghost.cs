@@ -5,34 +5,45 @@ using UnityEngine;
 public class Ghost : MonoBehaviour
 {
     public float ghostDelay;
-    private float ghostDelaySeconds;
     public GameObject ghost;
     public bool makeGhost = false;
-
+    private Coroutine ghostCoroutine;
     void Start()
     {
-        ghostDelaySeconds = ghostDelay;
     }
 
-    
-    void Update()
+    private IEnumerator GhostCoroutine()
+    {
+        while (makeGhost)
+        {
+            GameObject currentGhost = Instantiate(ghost, transform.position, transform.rotation);
+            Sprite currentSprite = GetComponent<SpriteRenderer>().sprite;
+            currentGhost.transform.localScale = this.transform.localScale;
+            currentGhost.GetComponent<SpriteRenderer>().sprite = currentSprite;
+            Destroy(currentGhost, 1f);
+
+            yield return new WaitForSeconds(ghostDelay);
+
+        }
+    }
+
+
+    void FixedUpdate()
     {
         if (makeGhost)
         {
-            if (ghostDelaySeconds > 0)
+            if (ghostCoroutine == null)
             {
-                ghostDelaySeconds -= Time.deltaTime;
-            }
-            else
-            {
-                GameObject currentGhost = Instantiate(ghost, transform.position, transform.rotation);
-                Sprite currentSprite = GetComponent<SpriteRenderer>().sprite;
-                currentGhost.transform.localScale = this.transform.localScale;
-                currentGhost.GetComponent<SpriteRenderer>().sprite = currentSprite;
-                ghostDelaySeconds = ghostDelay;
-                Destroy(currentGhost, 1f);
+                ghostCoroutine = StartCoroutine(GhostCoroutine());
             }
         }
-       
+        else
+        {
+            if (ghostCoroutine != null)
+            {
+                StopCoroutine(ghostCoroutine);
+                ghostCoroutine = null;
+            }
+        }
     }
 }

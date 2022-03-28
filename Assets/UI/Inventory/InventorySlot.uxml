@@ -1,9 +1,21 @@
-<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <ui:VisualElement style="flex-grow: 0; flex-shrink: 0; background-image: url(&apos;/Assets/vendor/Simple Fantasy GUI/PNG/Inventory/Inventory_Slot.png&apos;); padding-left: 6px; padding-right: 6px; padding-top: 6px; padding-bottom: 6px; width: 128px; height: 128px; margin-left: 5px; margin-right: 5px; margin-top: 5px; margin-bottom: 5px;">
-        <ui:VisualElement style="flex-grow: 1; flex-shrink: 0;">
-            <ui:Image name="SlotIcon" style="width: auto; height: auto; flex-grow: 1; flex-shrink: 0;" />
-        </ui:VisualElement>
-        <ui:Label text="Coin" display-tooltip-when-elided="true" name="ItemLabel" style="font-size: 24px; color: rgb(255, 255, 255); -unity-font: url(&apos;/Assets/Fonts/HyliaSerifBeta-Regular.otf&apos;); -unity-font-style: normal;" />
-        <ui:Label text="10" display-tooltip-when-elided="true" name="CountLabel" binding-path="item.itemName" style="font-size: 15px; color: rgb(255, 255, 255); -unity-font: url(&apos;/Assets/Fonts/HyliaSerifBeta-Regular.otf&apos;); -unity-font-style: normal; right: 0; top: 0; position: absolute;" />
-    </ui:VisualElement>
-</ui:UXML>
+<UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns="UnityEngine.UIElements"
+      xsi:noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd"
+      xsi:schemaLocation="UnityEngine.UIElements ../../../UIElementsSchema/UnityEngine.UIElements.xsd"
+      editor-extension-mode="False">
+    <VisualElement style="flex-grow: 0; flex-shrink: 0; background-image: url('/Assets/vendor/Simple Fantasy GUI/PNG/Inventory/Inventory_Slot.png'); padding-left: 6px; padding-right: 6px; padding-top: 6px; padding-bottom: 6px; width: 128px; height: 128px; margin-left: 5px; margin-right: 5px; margin-top: 5px; margin-bottom: 5px;">
+        <VisualElement style="flex-grow: 1; flex-shrink: 0;">
+            <Image name="SlotIcon"
+                   style="width: auto; height: auto; flex-grow: 1; flex-shrink: 0;" />
+        </VisualElement>
+        <Label text="Coin"
+               display-tooltip-when-elided="true"
+               name="ItemLabel"
+               style="font-size: 24px; color: rgb(255, 255, 255); -unity-font: url('/Assets/Fonts/HyliaSerifBeta-Regular.otf'); -unity-font-style: normal;" />
+        <Label text="10"
+               display-tooltip-when-elided="true"
+               name="CountLabel"
+               binding-path="item.itemName"
+               style="font-size: 15px; color: rgb(255, 255, 255); -unity-font: url('/Assets/Fonts/HyliaSerifBeta-Regular.otf'); -unity-font-style: normal; right: 0; top: 0; position: absolute;" />
+    </VisualElement>
+</UXML>

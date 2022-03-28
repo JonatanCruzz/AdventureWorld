@@ -6,6 +6,7 @@ public class ChestScript : Interactable
 {
     public Inventory defaultInventory;
     private Inventory chestInventory;
+    
 
 
 

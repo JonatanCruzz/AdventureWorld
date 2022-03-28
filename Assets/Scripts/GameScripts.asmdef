@@ -2,10 +2,13 @@
     "name": "NewAssembly",
     "rootNamespace": "",
     "references": [
-        "UnityEngine.UIElementsModule",
-        "Unity.2D.Tilemap.Extras.Editor",
-        "SuperTiled2Unity",
-        "GenericDictionary"
+        "GUID:03a02e6858eef43b383e305cd83babb4",
+        "GUID:023ac9b81facd43ebbb2a6f1c6252835",
+        "GUID:4b5b950ea3b0b68479cd44593596cf7f",
+        "GUID:35204e0755890ae4ca9df5ef224708ba",
+        "GUID:cbdf09464b6b87745be748a67e5a21a0",
+        "GUID:06e56dbbb8dec4d43a0b85b0fe0dd0ca",
+        "GUID:9e40727f271cdb843b278d90af73253e"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

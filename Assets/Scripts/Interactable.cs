@@ -16,8 +16,7 @@ public abstract class Interactable : MonoBehaviour
     public GameObject uiKey;
 
     public string description;
-    public Collider2D _collider;
-
+    public float radius = 1.5f;
     // this method will be overridden by other classes
     public abstract void OnClick();
 
@@ -28,7 +27,16 @@ public abstract class Interactable : MonoBehaviour
     {
         var player = GameObject.FindGameObjectWithTag("Player");
         var playerCollider = player.GetComponent<Collider2D>();
-        return _collider.bounds.Contains(playerCollider.bounds.center);
+
+        return ((Vector2)gameObject.transform.position - (Vector2)playerCollider.transform.position).sqrMagnitude < radius * radius;
+    }
+
+    private IEnumerator _onClick()
+    {
+        OnClick();
+        _isClicked = true;
+        yield return new WaitForSeconds(1);
+        _isClicked = false;
     }
 
     public void Update()
@@ -38,9 +46,7 @@ public abstract class Interactable : MonoBehaviour
             uiKey.SetActive(true);
             if (isClicked())
             {
-                OnClick();
-                this._isClicked = true;
-                Task.Delay(TimeSpan.FromSeconds(1)).ContinueWith(t => this._isClicked = false);
+                StartCoroutine(_onClick());
             }
         }
         else

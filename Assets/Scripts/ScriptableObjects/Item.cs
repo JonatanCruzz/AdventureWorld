@@ -1,15 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using UnityEngine;
-
-public enum ItemType
-{
-    Key,
-    Consumable,
-    Equipable,
-    Misc
-}
 
 public enum EquipableItemSlotType
 {
@@ -24,6 +17,33 @@ public enum EquipableItemSlotType
 public class Item : ScriptableObject, INotifyPropertyChanged
 {
 
+    #region Properties
+    public string ID = Guid.NewGuid().ToString().ToUpper();
+
+    public int BuyPrice
+    {
+        get => _buyPrice;
+        set
+        {
+            if (value != _buyPrice)
+            {
+                _buyPrice = value;
+                OnPropertyChanged(nameof(BuyPrice));
+            }
+        }
+    }
+    public float SellPercentage
+    {
+        get => _sellPercentage;
+        set
+        {
+            if (value != _sellPercentage)
+            {
+                _sellPercentage = value;
+                OnPropertyChanged(nameof(SellPercentage));
+            }
+        }
+    }
     public Sprite itemSprite
     {
         get
@@ -69,21 +89,6 @@ public class Item : ScriptableObject, INotifyPropertyChanged
             }
         }
     }
-    public ItemType itemType
-    {
-        get
-        {
-            return _itemType;
-        }
-        set
-        {
-            if (value != _itemType)
-            {
-                _itemType = value;
-                OnPropertyChanged(nameof(itemType));
-            }
-        }
-    }
     public bool stackable
     {
         get
@@ -114,21 +119,25 @@ public class Item : ScriptableObject, INotifyPropertyChanged
             }
         }
     }
-
-
+    #endregion
+    #region Private Variables
+    [SerializeField]
+    private int _buyPrice;
+    [SerializeField]
+    [Range(0, 1)]
+    private float _sellPercentage;
     [SerializeField]
     private Sprite _itemSprite;
     [SerializeField]
     private string _itemDescription;
     [SerializeField]
     private string _itemName;
-    [SerializeField]
-    private ItemType _itemType;
+
     [SerializeField]
     private bool _stackable;
     [SerializeField]
     private int _stackSize;
-
+    #endregion
 
     public void Use()
     {
@@ -149,24 +158,4 @@ public class Item : ScriptableObject, INotifyPropertyChanged
     {
         PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
     }
-}
-
-[CreateAssetMenu(fileName = "Consumable", menuName = "Items/Consumable")]
-public class ConsumableItem : Item
-{
-    public void Awake()
-    {
-        itemType = ItemType.Consumable;
-    }
-    public int healthRestored;
-    public int manaRestored;
-    public int staminaRestored;
-
-    public override void AddBuff(Player player)
-    {
-        player.hp.HP += healthRestored;
-        // player.mana += manaRestored;
-        // player.stamina += staminaRestored;
-    }
-
 }
