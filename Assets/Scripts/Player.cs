@@ -35,6 +35,7 @@ public class Player : MonoBehaviour, AttackForce
     public float knockbackForce = 50;
     public int attackKnockback = 10;
     public HealthUnit hp;
+    
     public Image barra;
 
     public bool attacking;

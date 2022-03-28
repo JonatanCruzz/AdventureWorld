@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13b75c95f34a00d4e8c04f76b73312e6, type: 3}
+  m_Name: BanderaArriba
+  m_EditorClassIdentifier: 
+  m_AnimatedSprites:
+  - {fileID: -6882987733501649589, guid: 3cbef485da095b84b901db74ee023c50, type: 3}
+  - {fileID: -5141082086305877206, guid: 3cbef485da095b84b901db74ee023c50, type: 3}
+  - {fileID: -1765734875813024817, guid: 3cbef485da095b84b901db74ee023c50, type: 3}
+  - {fileID: -4188768234734423817, guid: 3cbef485da095b84b901db74ee023c50, type: 3}
+  - {fileID: 6123700423111140210, guid: 3cbef485da095b84b901db74ee023c50, type: 3}
+  m_MinSpeed: 0.5
+  m_MaxSpeed: 0.5
+  m_AnimationStartTime: 0
+  m_AnimationStartFrame: 0
+  m_TileColliderType: 0
