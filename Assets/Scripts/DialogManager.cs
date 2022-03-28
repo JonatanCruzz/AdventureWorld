@@ -16,14 +16,16 @@ public class DialogManager : MonoBehaviour
     public event Action OnSCloseDialog;
 
     public static DialogManager Instance { get; private set; } //static function for any class we want
-    private void Awake(){
+    private void Awake()
+    {
         Instance = this;
     }
     Dialog dialog;
     int currentLine = 0;
     bool isTyping;
 
-    public IEnumerator ShowDialog(Dialog dialog){
+    public IEnumerator ShowDialog(Dialog dialog)
+    {
         yield return new WaitForEndOfFrame();
 
         OnShowDialog?.Invoke();
@@ -35,14 +37,20 @@ public class DialogManager : MonoBehaviour
         StartCoroutine(TypeDialog(dialog.Lines[0])); //first line of dialog
     }
 
-    public void HandleUpdate(){ //this function show the next dialog...
-        if(Input.GetKeyDown(KeyCode.E) && !isTyping){
+    public void HandleUpdate()
+    { //this function show the next dialog...
+        Debug.Log("HandleUpdate");
+        if (Input.GetKeyDown(KeyCode.E) && !isTyping)
+        {
             ++currentLine;
 
-            if(currentLine < dialog.Lines.Count){
+            if (currentLine < dialog.Lines.Count)
+            {
 
                 StartCoroutine(TypeDialog(dialog.Lines[currentLine]));
-            }else{
+            }
+            else
+            {
                 currentLine = 0;
 
                 dialogBox.SetActive(false);
@@ -52,14 +60,15 @@ public class DialogManager : MonoBehaviour
         }
     }
 
-    
+
     public IEnumerator TypeDialog(string line) //before actually completing the current dialog
-    { 
+    {
         isTyping = true;
 
         dialogText.text = ""; //set dialog empty string
 
-        foreach(var letter in line.ToCharArray()){ //basically, looping for each letter of the dialog
+        foreach (var letter in line.ToCharArray())
+        { //basically, looping for each letter of the dialog
 
             dialogText.text += letter; //adding 1by1 to the text
 

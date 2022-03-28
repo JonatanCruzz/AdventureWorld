@@ -1,20 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public enum GameState{Dialog}
+[System.Serializable]
+public enum GameState { Normal, Dialog }
 public class GameController : MonoBehaviour
-{ 
-    GameState state;
-   void Start()
+{
+    [SerializeField]
+    public GameState state = GameState.Normal;
+    void Start()
     {
-       DialogManager.Instance.OnShowDialog += () => {
-        state = GameState.Dialog;
-       } ;
+
+        DialogManager.Instance.OnShowDialog += () =>
+        {
+            Debug.Log("onShowDialog");
+            state = GameState.Dialog;
+        };
     }
     void Update()
     {
-        if(state == GameState.Dialog){
+        if (state == GameState.Dialog)
+        {
             DialogManager.Instance.HandleUpdate();
         }
     }
