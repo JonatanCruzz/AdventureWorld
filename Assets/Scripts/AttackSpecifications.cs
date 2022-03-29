@@ -8,4 +8,5 @@ public struct AttackSpecifications
     public Vector2 attackDirection;
     public float knockback;
     public int damage;
+
 }

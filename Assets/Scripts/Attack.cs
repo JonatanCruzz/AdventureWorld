@@ -32,6 +32,12 @@ public class Attack : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
+        // if trigger is parent of self, ignore
+        Debug.Log("Collided with " + collision.gameObject.name);
+        if (collision.transform.IsChildOf(this.transform))
+            return;
+        if (this.transform.IsChildOf(collision.transform))
+            return;
         var direction = new Vector2(source.GetFloat("movX"), source.GetFloat("movY"));
         var attack = new AttackSpecifications
         {
@@ -39,7 +45,6 @@ public class Attack : MonoBehaviour
             knockback = this.attackForce != null ? attackForce.getKnockbackForce() : knockbackForce,
             damage = this.attackForce != null ? attackForce.getAttackForce() : 1
         };
-        Debug.Log("Attack: " + attack.damage);
         if (collision.CompareTag("Enemy"))
         {
 

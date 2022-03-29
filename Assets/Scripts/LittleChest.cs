@@ -3,20 +3,36 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class LittleChest : MonoBehaviour
+public class LittleChest : Interactable
 {
-    public Item contents;
     public bool isOpen;
-    public GameObject dialogWindow;
+    public Inventory defaultInventory;
+    private Inventory chestInventory;
 
-    void Start()
+
+    public override void OnClick()
     {
-        
+        Debug.Log("Opening chest");
+        if (chestInventory == null)
+        {
+            chestInventory = Instantiate(defaultInventory);
+            // chestInventory.transform.position = transform.position;
+        }
+        isOpen = true;
+        var inventoryUI = FindObjectOfType<InventoryUI>();
+        inventoryUI.OpenChest(chestInventory);
+        inventoryUI.OnInventoryClose += () => { isOpen = false; };
+
+
     }
 
-    // Update is called once per frame
-    void Update()
+    public override bool IsInteracting()
     {
-        
+        return isOpen;
+    }
+
+    public override bool isClicked()
+    {
+        return Input.GetKeyDown(KeyCode.E);
     }
 }

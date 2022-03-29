@@ -59,7 +59,6 @@ public class Fade : MonoBehaviour
         BeginFade(1, color);
         yield return new WaitForSeconds(fadeSpeed);
         Debug.Log("FadeIn");
-        yield break;
     }
 
     public IEnumerator FadeOut(Color? color = null)
@@ -67,7 +66,6 @@ public class Fade : MonoBehaviour
         BeginFade(-1, color);
         yield return new WaitForSeconds(fadeSpeed);
         Debug.Log("FadeOut");
-        yield break;
 
     }
     public async Task FadeOutAsync(Color? color = null)

@@ -2,9 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Assertions;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(HealthUnit))]
+[RequireComponent(typeof(BuffBehaviour))]
+[RequireComponent(typeof(MoveBehaviour))]
+
 public class Player : MonoBehaviour, AttackForce
 {
     /*---- Variables ----*/
@@ -35,14 +39,15 @@ public class Player : MonoBehaviour, AttackForce
     public float knockbackForce = 50;
     public int attackKnockback = 10;
     public HealthUnit hp;
-    
+    public BuffBehaviour buffs;
+
     public Image barra;
 
     public bool attacking;
 
     public Animator anim;
     Rigidbody2D rb2d;
-    Vector2 mov;
+    // Vector2 mov;
 
     CircleCollider2D attackCollider;
 
@@ -54,12 +59,15 @@ public class Player : MonoBehaviour, AttackForce
 
     // Inventory
 
-    public Inventory inventory;
-    public EquipmentInventory equipment;
+    [HideInInspector] public Inventory inventory;
+    [HideInInspector] public EquipmentInventory equipment;
     [SerializeField] private Inventory defaultInventory;
     [SerializeField] private EquipmentInventory defaultEquipment;
     public InventoryUI inventoryUI;
 
+
+    private MoveBehaviour moveBehaviour;
+    private PlayerInput input;
 
     /*---- Variables ----*/
 
@@ -67,29 +75,28 @@ public class Player : MonoBehaviour, AttackForce
     {
         yield return new WaitForSeconds(0.2f);
         damage = false;
-    }
+        this.moveBehaviour.Attack = new AttackSpecifications();
 
+    }
 
     private void Awake()
     {
         Assert.IsNotNull(initialmap);
         Assert.IsNotNull(slashPrefab);
-
-    }
-
-    void Start()
-    {
+        input = GetComponent<PlayerInput>();
         anim = GetComponent<Animator>();
         rb2d = GetComponent<Rigidbody2D>();
         hp = GetComponent<HealthUnit>();
+        buffs = GetComponent<BuffBehaviour>();
+        moveBehaviour = GetComponent<MoveBehaviour>();
 
         attackCollider = transform.GetChild(0).GetComponent<CircleCollider2D>();
         attackCollider.enabled = false;
 
         attackCollider.GetComponent<Attack>().attackForce = this;
-        Camera.main.GetComponent<CameraMovements>().setBound(initialmap);
-
         aura = transform.GetChild(1).GetComponent<Aura>();
+
+
         if (!this.inventory)
         {
             this.inventory = Instantiate(defaultInventory);
@@ -98,9 +105,38 @@ public class Player : MonoBehaviour, AttackForce
         {
             this.equipment = Instantiate(defaultEquipment);
         }
+        this.equipment.Player = this;
         this.inventoryUI.player = this;
 
+        this.input.onActionTriggered += onActionTriggered;
+    }
+    private void OnEnable()
+    {
+        this.input.onActionTriggered += onActionTriggered;
+
+    }
+    private void OnDisable()
+    {
+        this.input.onActionTriggered -= onActionTriggered;
+    }
+
+    private void onActionTriggered(InputAction.CallbackContext ctx)
+    {
+        Debug.Log("Trigger Action:" + ctx.action.name);
+        switch (ctx.action.name)
+        {
+            case "Move":
+                moveBehaviour.Move(ctx);
+                break;
+        }
+    }
+
+    void Start()
+    {
+
+        Camera.main.GetComponent<CameraMovements>().setBound(initialmap);
         this.inventoryUI.gameObject.SetActive(true);
+
     }
 
     void Update()
@@ -164,7 +200,7 @@ public class Player : MonoBehaviour, AttackForce
         {
             if (!damage)
             {
-                rb2d.MovePosition(rb2d.position + mov * speed * Time.deltaTime);
+                // rb2d.MovePosition(rb2d.position + mov * speed * Time.deltaTime);
             }
         }
     }
@@ -173,17 +209,17 @@ public class Player : MonoBehaviour, AttackForce
     {
         if (!Dash)
         {
-            mov = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+            // this.moveBehaviour.moveDirection = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         }
 
     }
 
     public void Animations()
     {
-        if (mov != Vector2.zero && !Dash)
+        if (this.moveBehaviour.moveDirection != Vector2.zero && !Dash)
         {
-            anim.SetFloat("movX", mov.x);
-            anim.SetFloat("movY", mov.y);
+            // anim.SetFloat("movX", mov.x);
+            // anim.SetFloat("movY", mov.y);
             anim.SetBool("Walking", true);
         }
         else
@@ -205,7 +241,7 @@ public class Player : MonoBehaviour, AttackForce
 
         }
 
-        if (mov != Vector2.zero) attackCollider.offset = new Vector2(mov.x / 2, mov.y / 2);
+        if (this.moveBehaviour.moveDirection != Vector2.zero) attackCollider.offset = new Vector2(this.moveBehaviour.moveDirection.x / 2, this.moveBehaviour.moveDirection.y / 2);
 
         if (attacking)
         {
@@ -353,7 +389,7 @@ public class Player : MonoBehaviour, AttackForce
     {
         if (movePrevent)
         {
-            mov = Vector2.zero;
+            this.moveBehaviour.moveDirection = Vector2.zero;
         }
     }
     IEnumerator EnableMovementsAfter(float seconds)
@@ -370,7 +406,7 @@ public class Player : MonoBehaviour, AttackForce
         {
             var direction = new Vector3(knockback.x, knockback.y, 0);
             var force = knockbackForce;
-            PhysicsUtils.DoMoveRigidBodyByKnockback(rb2d, this.knockback, this.knockbackForce);
+            // PhysicsUtils.DoMoveRigidBodyByKnockback(rb2d, this.knockback, this.knockbackForce);
         }
     }
 
@@ -390,6 +426,7 @@ public class Player : MonoBehaviour, AttackForce
         if (damage) return;
         hp.HP -= data.damage; // TODO: apply defense
         this.damage = true;
+        this.moveBehaviour.Attack = data;
 
         this.knockback = data.attackDirection;
         this.knockbackForce = data.knockback;

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d9c03d7a0dc063640b66451a5e371685, type: 3}
-  m_Name: basic armor
+  m_Name: prueba
   m_EditorClassIdentifier: 
   ID: E3243442-3567-42F3-8780-91BC25793A5F
   _buyPrice: 0
@@ -20,9 +20,9 @@ MonoBehaviour:
   _itemName: basic armor
   _stackable: 0
   _stackSize: 0
-  itemSlot: 0
-  armor: 0
+  itemSlot: 1
+  armor: 2
   strength: 0
   agility: 0
-  health: 0
+  health: 235
   healthRegen: 0

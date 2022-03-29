@@ -19,6 +19,7 @@ public class EquipmentInventory : ScriptableObject, INotifyPropertyChanged
     [SerializeField] private EquipableItem m_Feet;
     [SerializeField] private EquipableItem m_MainHand;
     [SerializeField] private EquipableItem m_OffHand;
+    [SerializeField] private Player player;
 
     public EquipableItem Head
     {
@@ -30,8 +31,10 @@ public class EquipmentInventory : ScriptableObject, INotifyPropertyChanged
         {
             if (value != m_Head)
             {
+                this.removeBuffs();
                 m_Head = value;
                 OnPropertyChanged(nameof(Head));
+                this.addBuffs();
             }
         }
     }
@@ -45,8 +48,10 @@ public class EquipmentInventory : ScriptableObject, INotifyPropertyChanged
         {
             if (value != m_Chest)
             {
+                this.removeBuffs();
                 m_Chest = value;
                 OnPropertyChanged(nameof(Chest));
+                this.addBuffs();
             }
         }
     }
@@ -60,8 +65,10 @@ public class EquipmentInventory : ScriptableObject, INotifyPropertyChanged
         {
             if (value != m_Feet)
             {
+                this.removeBuffs();
                 m_Feet = value;
                 OnPropertyChanged(nameof(Feet));
+                this.addBuffs();
             }
         }
     }
@@ -75,8 +82,10 @@ public class EquipmentInventory : ScriptableObject, INotifyPropertyChanged
         {
             if (value != m_MainHand)
             {
+                this.removeBuffs();
                 m_MainHand = value;
                 OnPropertyChanged(nameof(MainHand));
+                this.addBuffs();
             }
         }
     }
@@ -90,8 +99,55 @@ public class EquipmentInventory : ScriptableObject, INotifyPropertyChanged
         {
             if (value != m_OffHand)
             {
+                this.removeBuffs();
                 m_OffHand = value;
                 OnPropertyChanged(nameof(OffHand));
+                this.addBuffs();
+            }
+        }
+    }
+
+    public Player Player
+    {
+        get
+        {
+            return player;
+        }
+        set
+        {
+            if (player != value)
+            {
+                if (player != null)
+                {
+                    this.removeBuffs();
+                    player.equipment = null;
+                }
+                player = value;
+                OnPropertyChanged(nameof(Player));
+                this.addBuffs();
+            }
+        }
+    }
+    private void addBuffs()
+    {
+        if (player == null) return;
+        foreach (var item in this.GetAllItems())
+        {
+            if (item != null)
+            {
+                item.AddBuff(player);
+            }
+        }
+    }
+
+    private void removeBuffs()
+    {
+        if (player == null) return;
+        foreach (var item in this.GetAllItems())
+        {
+            if (item != null)
+            {
+                item.RemoveBuff(player);
             }
         }
     }

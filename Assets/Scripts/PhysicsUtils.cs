@@ -1,7 +1,7 @@
 using UnityEngine;
 public static class PhysicsUtils
 {
-    public static void DoMoveRigidBodyByKnockback(Rigidbody2D rb2d, Vector2 empuje, float knockbackForce, string layerToIgnore = "Default")
+    public static void DoMoveRigidBodyByKnockback(Rigidbody2D rb2d, Vector2 empuje, float knockbackForce, float deltaTime, string layerToIgnore = "Default")
     {
         // move the enemy to the knockback direction
         // determine if it would collide with anything
@@ -10,23 +10,23 @@ public static class PhysicsUtils
         var direction = new Vector3(empuje.x, empuje.y, 0);
         var force = knockbackForce;
         var transform = rb2d.transform;
-        // create a raycast at the enemy's position in the direction of the knockback based on the force and Time.deltaTime
+        // create a raycast at the enemy's position in the direction of the knockback based on the force and deltaTime
         // if the raycast hits the player, retry the raycast at the new position with a smaller force
-        var hit = Physics2D.Raycast(transform.position, direction, force * Time.deltaTime, 1 << LayerMask.NameToLayer("Default"));
+        var hit = Physics2D.Raycast(transform.position, direction, force * deltaTime, 1 << LayerMask.NameToLayer("Default"));
         if (hit.collider != null)
         {
             // if the raycast hits the player, retry the raycast at the new position with a smaller force
             if (hit.collider.tag == "Player")
             {
-                hit = Physics2D.Raycast(hit.collider.transform.position, direction, force * Time.deltaTime / 2, 1 << LayerMask.NameToLayer("Default"));
+                hit = Physics2D.Raycast(hit.collider.transform.position, direction, force * deltaTime / 2, 1 << LayerMask.NameToLayer("Default"));
             }
         }
 
         if (hit.collider == null)
         {
 
-            rb2d.MovePosition(transform.position + direction * force * Time.deltaTime);
-            // rb2d.MovePosition(transform.position + new Vector3(empuje.x, empuje.y, 0) * knockbackForce * Time.deltaTime);
+            rb2d.MovePosition(transform.position + direction * force * deltaTime);
+            // rb2d.MovePosition(transform.position + new Vector3(empuje.x, empuje.y, 0) * knockbackForce * deltaTime);
 
         }
         else
@@ -37,7 +37,7 @@ public static class PhysicsUtils
             var distance = Vector2.Distance(hitPoint, transform.position);
             var directionToMove = (hitPoint - (Vector2)transform.position).normalized;
             var distanceToMove = distance - 0.5f;
-            rb2d.MovePosition(transform.position + (Vector3)directionToMove * distanceToMove * Time.deltaTime);
+            rb2d.MovePosition((Vector2)transform.position + directionToMove * distanceToMove * deltaTime);
         }
     }
 }

@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PrayStatue : Interactable
@@ -18,7 +17,7 @@ public class PrayStatue : Interactable
     {
         // if the player is not in the teleport dialog
         var TeleportUI = Resources.FindObjectsOfTypeAll<TeleportManager>()[0];
-        TeleportUI.gameObject.SetActive(true);
+        TeleportUI.Display = true;
 
 
     }
@@ -28,29 +27,20 @@ public class PrayStatue : Interactable
         return Input.GetKeyDown(KeyCode.E);
     }
 
-    public async void doTeleport()
+    public IEnumerator doTeleport()
     {
-        Debug.Log("Teleporting to " + objectiveDescription);
-        Debug.Log("targetMap: " + targetMap);
-
-        // do something
         var player = GameObject.FindGameObjectWithTag("Player");
-        var fade = GameObject.Find("Fade");
-        var fadeScript = fade.GetComponent<Fade>();
+        var fadeScript = GameObject.Find("Fade").GetComponent<Fade>();
         player.GetComponent<Animator>().enabled = false;
         player.GetComponent<Player>().enabled = false;
-        Debug.Log("fading");
-        await fadeScript.FadeInAsync();
+        yield return StartCoroutine(fadeScript.FadeIn());
 
 
         player.transform.position = transform.GetChild(0).transform.position;
-        Debug.Log("targetMap: " + targetMap);
-        Debug.Log("setbound1");
+
 
         Camera.main.GetComponent<CameraMovements>().setBound(targetMap.gameObject);
-        Debug.Log("setbound2");
-        await fadeScript.FadeOutAsync();
-        Debug.Log("faded");
+        yield return StartCoroutine(fadeScript.FadeOut());
 
         player.GetComponent<Animator>().enabled = true;
         player.GetComponent<Player>().enabled = true;

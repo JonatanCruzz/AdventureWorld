@@ -16,18 +16,9 @@ public class InventorySlotUI
 
         this.UpdateSlot(slot);
 
-        container.RegisterCallback<MouseDownEvent>(OnMouseDown);
     }
 
-    private void OnMouseDown(MouseDownEvent e)
-    {
-        if (slot.item != null)
-        {
-            Debug.Log("Clicked on " + slot.item.itemName);
-            slot.AddItem(slot.item, 1, out _);
 
-        }
-    }
 
     public void UpdateSlot(InventorySlot slot)
     {
@@ -66,7 +57,6 @@ public class InventorySlotUI
 
     private void OnSlotPropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
     {
-        Debug.Log("Slot property changed " + e.PropertyName);
         if (e.PropertyName == "item")
         {
             if (this.slot.item != null)
@@ -84,7 +74,6 @@ public class InventorySlotUI
     }
     private void OnItemPropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
     {
-        Debug.Log("Item property changed " + e.PropertyName);
         UpdateItem(slot.item);
     }
 }

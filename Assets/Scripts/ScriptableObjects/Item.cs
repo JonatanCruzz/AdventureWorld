@@ -16,6 +16,15 @@ public enum EquipableItemSlotType
 [CreateAssetMenu]
 public class Item : ScriptableObject, INotifyPropertyChanged
 {
+    private void setProperty(string propertyName, string localPropertyName, object value)
+    {
+        var prop = this.GetType().GetProperty(localPropertyName);
+        if (prop != null && !prop.GetValue(this).Equals(value))
+        {
+            prop.SetValue(this, value);
+            OnPropertyChanged(propertyName);
+        }
+    }
 
     #region Properties
     public string ID = Guid.NewGuid().ToString().ToUpper();
@@ -23,56 +32,22 @@ public class Item : ScriptableObject, INotifyPropertyChanged
     public int BuyPrice
     {
         get => _buyPrice;
-        set
-        {
-            if (value != _buyPrice)
-            {
-                _buyPrice = value;
-                OnPropertyChanged(nameof(BuyPrice));
-            }
-        }
+        set => setProperty(nameof(BuyPrice), nameof(_buyPrice), value);
     }
     public float SellPercentage
     {
         get => _sellPercentage;
-        set
-        {
-            if (value != _sellPercentage)
-            {
-                _sellPercentage = value;
-                OnPropertyChanged(nameof(SellPercentage));
-            }
-        }
+        set => setProperty(nameof(SellPercentage), nameof(_sellPercentage), value);
     }
     public Sprite itemSprite
     {
-        get
-        {
-            return _itemSprite;
-        }
-        set
-        {
-            if (value != _itemSprite)
-            {
-                _itemSprite = value;
-                OnPropertyChanged(nameof(itemSprite));
-            }
-        }
+        get => _itemSprite;
+        set => setProperty(nameof(itemSprite), nameof(_itemSprite), value);
     }
     public string itemDescription
     {
-        get
-        {
-            return _itemDescription;
-        }
-        set
-        {
-            if (value != _itemDescription)
-            {
-                _itemDescription = value;
-                OnPropertyChanged(nameof(itemDescription));
-            }
-        }
+        get => _itemDescription;
+        set => setProperty(nameof(itemDescription), nameof(_itemDescription), value);
     }
     public string itemName
     {
@@ -150,6 +125,10 @@ public class Item : ScriptableObject, INotifyPropertyChanged
     public virtual void AddBuff(Player player)
     {
         Debug.Log("Adding buff to player");
+    }
+    public virtual void RemoveBuff(Player player)
+    {
+        Debug.Log("Removing buff from player");
     }
 
 

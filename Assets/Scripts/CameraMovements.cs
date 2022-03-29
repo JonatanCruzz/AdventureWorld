@@ -12,7 +12,7 @@ public class CameraMovements : MonoBehaviour
     public CameraMargin margin;
     private void Start()
     {
-        Screen.SetResolution(800, 800, true);
+        Screen.SetResolution(1920, 1080, true);
 
     }
     void Awake()
@@ -23,9 +23,9 @@ public class CameraMovements : MonoBehaviour
 
     void Update()
     {
-        if (!Screen.fullScreen || Camera.main.aspect != 1)
+        if (!Screen.fullScreen)
         {
-            Screen.SetResolution(800, 800, true);
+            Screen.SetResolution(1920, 1080, true);
         }
 
 

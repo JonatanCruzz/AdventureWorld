@@ -1,8 +1,14 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
-
+enum InventoryUIState
+{
+    equipment,
+    other,
+    none
+}
 public class InventoryUI : MonoBehaviour
 {
     public VisualTreeAsset inventorySlotPrefab;
@@ -14,6 +20,10 @@ public class InventoryUI : MonoBehaviour
     private InventoryWindowManager m_OtherIventoryWindow;
     private EquipmentInventoryUI m_equipmentWindow;
     private List<EquipmentSlot> equipmentSlots = new List<EquipmentSlot>();
+    public Action OnInventoryClose;
+
+    private InventoryUIState state = InventoryUIState.none;
+
     private void display()
     {
         m_Root.style.display = DisplayStyle.Flex;
@@ -21,6 +31,7 @@ public class InventoryUI : MonoBehaviour
     }
     public void Show()
     {
+        this.state = InventoryUIState.equipment;
 
         m_OtherIventoryWindow.Display = false;
         m_mainInventory.Display = true;
@@ -30,6 +41,7 @@ public class InventoryUI : MonoBehaviour
     }
     public void OpenChest(Inventory chestInventory)
     {
+        this.state = InventoryUIState.other;
         m_OtherIventoryWindow.Inventory = chestInventory;
 
         m_OtherIventoryWindow.Display = true;
@@ -47,6 +59,8 @@ public class InventoryUI : MonoBehaviour
         {
             m_Root.style.display = DisplayStyle.None;
             player.enabled = true;
+            this.state = InventoryUIState.none;
+            OnInventoryClose?.Invoke();
         }
     }
 
@@ -63,7 +77,7 @@ public class InventoryUI : MonoBehaviour
         m_mainInventory.Inventory = player.inventory;
 
         m_mainInventory.OnSlotClick += OnMainInventorySlotClick;
-
+        m_OtherIventoryWindow.OnSlotClick += OnOtherInventorySlotClick;
     }
 
     private void OnMainInventorySlotClick(InventorySlotUI uiSlot)
@@ -72,13 +86,43 @@ public class InventoryUI : MonoBehaviour
         var itemSlot = uiSlot.slot;
         if (itemSlot.item != null)
         {
-            if (itemSlot.item is EquipableItem equipable)
+            switch (this.state)
             {
-                var output = player.equipment.AddItem(equipable);
-                itemSlot.item = output;
-                itemSlot.numberOfItem = output == null ? 0 : 1;
+                case InventoryUIState.equipment:
+                    switch (itemSlot.item)
+                    {
+                        case EquipableItem equipable:
+                            var output = player.equipment.AddItem(equipable);
+                            itemSlot.item = output;
+                            itemSlot.numberOfItem = output == null ? 0 : 1;
+                            break;
+                        case ConsumableItem consumable:
+                            itemSlot.item.AddBuff(player);
+
+                            itemSlot.numberOfItem--;
+                            if (itemSlot.numberOfItem <= 0)
+                            {
+                                itemSlot.item = null;
+                            }
+
+                            break;
+                    }
+                    break;
+                case InventoryUIState.other:
+                    m_OtherIventoryWindow.Inventory.TryMoveToInv(itemSlot);
+                    break;
             }
 
+
+        }
+    }
+
+    private void OnOtherInventorySlotClick(InventorySlotUI uiSlot)
+    {
+        var itemSlot = uiSlot.slot;
+        if (itemSlot.item != null)
+        {
+            player.inventory.TryMoveToInv(itemSlot);
         }
     }
 

@@ -4,6 +4,22 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using UnityEngine;
 
+public static class InventoryExtensions
+{
+    public static void TryMoveToInv(this Inventory targetInv, InventorySlot sourceSlot)
+    {
+        var left = targetInv.AddItem(sourceSlot.item, sourceSlot.numberOfItem);
+        if (left == 0)
+        {
+            sourceSlot.item = null;
+            sourceSlot.numberOfItem = 0;
+        }
+        else
+        {
+            sourceSlot.numberOfItem = left;
+        }
+    }
+}
 [CreateAssetMenu(fileName = "Inventory", menuName = "Inventory/Normal", order = 1)]
 public class Inventory : ScriptableObject
 {
@@ -126,7 +142,7 @@ public class InventorySlot : INotifyPropertyChanged
         numberOfItemLeft = amount;
         if (!this.item.stackable)
         {
-            if (numberOfItem != 0) return;
+            if (this.numberOfItem != 0) return;
             numberOfItem = 1;
             numberOfItemLeft = amount - 1;
         }

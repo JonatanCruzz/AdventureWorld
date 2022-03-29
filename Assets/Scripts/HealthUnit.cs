@@ -4,21 +4,48 @@ using UnityEngine;
 
 public class HealthUnit : MonoBehaviour
 {
-    public float HP;
-    [SerializeField] private float maxHP;
+    public float HP = 0;
+    private float maxHP = 0;
+    private float _addictiveHP = 0;
+    private float _multiplierHP = 0;
+    public float BaseHP = 0;
+    [HideInInspector]
+    public float AddictiveHP
+    {
+        get => _addictiveHP;
+        set
+        {
+            _addictiveHP = value;
+            this.updateMaxHP();
+        }
+    }
+    [HideInInspector]
+    public float MultiplierHP
+    {
+        get => _multiplierHP;
+        set
+        {
+            _multiplierHP = value;
+            this.updateMaxHP();
+        }
+    }
     public float Max_HP
     {
         get => maxHP;
-        set
-        {
-            // update HP to have the same proportion of the new max HP
-            HP = (HP * (float)value / maxHP);
-            maxHP = value;
-        }
     }
-
-    void Start()
+    private void updateMaxHP()
     {
-        HP = Max_HP;
+        var relativeHp = maxHP != 0 ? HP / maxHP : 1;
+        maxHP = (BaseHP + AddictiveHP) * (MultiplierHP + 1);
+        HP = Mathf.Clamp(maxHP * relativeHp, 0, maxHP);
+
+        Debug.Log("Max HP: " + this.maxHP + " HP: " + this.HP);
+
+    }
+    public void Awake()
+    {
+        this.HP = this.maxHP;
+        this.updateMaxHP();
+
     }
 }

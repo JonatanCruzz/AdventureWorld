@@ -17,6 +17,8 @@ public abstract class Interactable : MonoBehaviour
 
     public string description;
     public float radius = 1.5f;
+    public Vector2 offset = new Vector2(0, 0f);
+
     // this method will be overridden by other classes
     public abstract void OnClick();
 
@@ -30,6 +32,10 @@ public abstract class Interactable : MonoBehaviour
 
         return ((Vector2)gameObject.transform.position - (Vector2)playerCollider.transform.position).sqrMagnitude < radius * radius;
     }
+    public virtual bool IsInteracting()
+    {
+        return _isClicked;
+    }
 
     private IEnumerator _onClick()
     {
@@ -41,7 +47,7 @@ public abstract class Interactable : MonoBehaviour
 
     public void Update()
     {
-        if (!_isClicked && IsCloseEnough())
+        if (!_isClicked && !IsInteracting() && IsCloseEnough())
         {
             uiKey.SetActive(true);
             if (isClicked())
@@ -53,5 +59,14 @@ public abstract class Interactable : MonoBehaviour
         {
             uiKey.SetActive(false);
         }
+    }
+
+    // Podemos dibujar el radio de visión y ataque sobre la escena dibujando una esfera
+    void OnDrawGizmosSelected()
+    {
+
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere((Vector2)transform.position + offset, radius);
+
     }
 }

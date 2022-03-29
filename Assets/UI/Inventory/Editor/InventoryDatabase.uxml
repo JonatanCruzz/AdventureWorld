@@ -20,6 +20,7 @@
                         <ui:Label text="General" display-tooltip-when-elided="true" name="Header" class="details-header" />
                         <ui:TextField picking-mode="Ignore" label="Name" value="filler text" binding-path="_itemName" name="ItemName" style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px;" />
                         <ui:Toggle label="Stackable" name="Stackable" binding-path="_stackable" style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px;" />
+                        <uie:IntegerField label="Stack Size" value="42" binding-path="_stackSize" />
                         <uie:ObjectField label="Icon" name="IconPicker" binding-path="_itemSprite" type="UnityEngine.Sprite, UnityEngine.CoreModule" allow-scene-objects="true" style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px;" />
                     </ui:VisualElement>
                 </ui:VisualElement>
@@ -39,6 +40,7 @@
                 <ui:VisualElement name="EquipmentSection" style="flex-direction: row;">
                     <ui:VisualElement name="Container" style="flex-grow: 1; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; border-left-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); margin-left: 5px; margin-right: 5px; margin-top: 5px; margin-bottom: 5px; background-color: rgb(65, 65, 65);">
                         <ui:Label text="Equipment" display-tooltip-when-elided="true" name="Header" class="details-header" />
+                        <uie:EnumField label="Location" value="Head" type="EquipableItemSlotType, GameScript" binding-path="itemSlot" />
                         <uie:IntegerField label="Armor" value="0" name="Armor" binding-path="armor" style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px;" />
                         <uie:IntegerField label="Strength" value="0" name="Strength" binding-path="strength" style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px;" />
                         <uie:IntegerField label="Agility" value="0" name="Agility" binding-path="agility" style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px;" />
@@ -50,6 +52,10 @@
                     <ui:VisualElement name="Container" style="flex-grow: 1; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; border-left-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); margin-left: 5px; margin-right: 5px; margin-top: 5px; margin-bottom: 5px; background-color: rgb(65, 65, 65);">
                         <ui:Label text="Consumable" display-tooltip-when-elided="true" name="Header" class="details-header" />
                         <uie:IntegerField label="Health Restored" value="0" name="healthRestored" binding-path="healthRestored" style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px;" />
+                        <ui:VisualElement style="flex-direction: row; align-items: stretch; justify-content: space-between;">
+                            <ui:Foldout text="Buffs" style="flex-grow: 1; flex-shrink: 0;" />
+                            <ui:Button text="+" display-tooltip-when-elided="true" />
+                        </ui:VisualElement>
                     </ui:VisualElement>
                 </ui:VisualElement>
             </ui:VisualElement>

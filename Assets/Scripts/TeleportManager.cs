@@ -13,21 +13,40 @@ public class TeleportManager : MonoBehaviour
     public VisualTreeAsset listViewTemplate;
 
     public PrayStatue[] teleportObjectives;
+    public bool Display
+    {
+        get => uiRoot.style.display == DisplayStyle.Flex;
+        set
+        {
+            uiRoot.style.display = value ? DisplayStyle.Flex : DisplayStyle.None;
+            if (this.Display)
+            {
+                // disable player movement while the list is open
+                GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().enabled = false;
+            }
+            else
+            {
+                GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().enabled = true;
+
+            }
+        }
+    }
 
     void OnEnable()
     {
+
         uiRoot = ui.rootVisualElement;
         listView = uiRoot.Q<ListView>("local-games-list");
         listView.makeItem = MakeItem;
         listView.bindItem = BindItem;
+        this.Display = false;
 
         // find all objects with the tag "TeleportObjective"
         teleportObjectives = FindObjectsOfType<PrayStatue>();
 
         listView.itemsSource = teleportObjectives;
 
-        // disable player movement while the list is open
-        GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().enabled = false;
+
     }
 
     void OnDisable()
@@ -38,12 +57,15 @@ public class TeleportManager : MonoBehaviour
 
     void Update()
     {
+        if (!this.Display) return;
         // if the player presses the escape key, close the list
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            this.Display = false;
             gameObject.SetActive(false);
         }
     }
+
 
     private VisualElement MakeItem()
     {
@@ -56,10 +78,10 @@ public class TeleportManager : MonoBehaviour
     {
         // do the teleport
         Debug.Log("Teleporting to " + objective.objectiveDescription);
-        objective.doTeleport();
+        StartCoroutine(objective.doTeleport());
 
         // close the panel
-        gameObject.SetActive(false);
+        this.Display = false;
 
     }
 

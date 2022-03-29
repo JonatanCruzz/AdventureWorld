@@ -9,7 +9,7 @@
         "Unity.2D.Tilemap.Extras.Editor",
         "SuperTiled2Unity",
         "GenericDictionary",
-        "Weaver.Attributes"
+        "Unity.InputSystem"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
