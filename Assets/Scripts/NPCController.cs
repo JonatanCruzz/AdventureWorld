@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using PixelCrushers.DialogueSystem;
 using UnityEngine;
 
 public class NPCController : Interactable
@@ -11,11 +12,12 @@ public class NPCController : Interactable
     {
 
         // dialog
-        var DialogUi = Resources.FindObjectsOfTypeAll<DialogManager>()[0];
-        DialogUi.gameObject.SetActive(true);
+        // var DialogUi = Resources.FindObjectsOfTypeAll<DialogManager>()[0];
+        // DialogUi.gameObject.SetActive(true);
 
-        StartCoroutine(DialogUi.ShowDialog(dialog));
-        player.canInteract = false;
+        // StartCoroutine(DialogUi.ShowDialog(dialog));
+        DialogueManager.instance.StartConversation("NPC 1");
+
 
     }
     public override bool isClicked()

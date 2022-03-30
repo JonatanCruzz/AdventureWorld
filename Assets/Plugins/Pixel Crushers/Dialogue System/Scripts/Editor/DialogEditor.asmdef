@@ -1,0 +1,20 @@
+{
+    "name": "DialogEditor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:935fcc8686edc9845a81157b7e100ae4",
+        "GUID:75469ad4d38634e559750d17036d5f7c",
+        "GUID:d4a5fb5ceaf49934b982a9e4a6a051fe"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

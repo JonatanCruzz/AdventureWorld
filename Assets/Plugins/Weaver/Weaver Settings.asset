@@ -95,7 +95,7 @@ MonoBehaviour:
       _DependancyIndices: 
     _ProceduralAssetListData: []
   _Animations:
-    enabled: 1
+    enabled: 0
     notifyOnNewValue: 1
     createParameterWrappers: 1
   _Layers:

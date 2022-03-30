@@ -86,12 +86,12 @@ public class Player : MonoBehaviour, AttackForce
         this.invulnerable = true;
         for (int i = 0; i < AmountOfFlash; i++)
         {
-            spriteRenderer.color = FlashColor;
+            spriteRenderer.material.color = FlashColor;
             yield return new WaitForSeconds(InvulnerableFlashSpeed);
-            spriteRenderer.color = NormalColor;
+            spriteRenderer.material.color = NormalColor;
             yield return new WaitForSeconds(InvulnerableFlashSpeed);
         }
-        spriteRenderer.color = NormalColor;
+        spriteRenderer.material.color = NormalColor;
 
         this.invulnerable = false;
     }

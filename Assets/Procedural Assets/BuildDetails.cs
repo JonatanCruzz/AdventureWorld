@@ -14,7 +14,7 @@ namespace Weaver
         /// <summary>The number of times this project has been built.</summary>
         public const int BuildNumber = 0;
 
-        /// <summary>3/30/2022 4:24:34 PM</summary>
-        public static readonly System.DateTime BuildDate = new System.DateTime(637842542747268221L);
+        /// <summary>3/30/2022 7:09:35 PM</summary>
+        public static readonly System.DateTime BuildDate = new System.DateTime(637842641751129663L);
     }
 }

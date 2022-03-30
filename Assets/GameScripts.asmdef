@@ -12,7 +12,10 @@
         "Unity.InputSystem",
         "Animancer",
         "Animancer.FSM",
-        "Weaver"
+        "Weaver",
+        "Unity.TextMeshPro",
+        "DialogEditor",
+        "DialogueSystem"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
