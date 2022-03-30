@@ -17,6 +17,7 @@ public class DialogManager : MonoBehaviour
 
     public bool interacting = false;
 
+
     public static DialogManager Instance { get; private set; } //static function for any class we want
     private void Awake()
     {

@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.Assertions;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
-
+using Animancer;
 [RequireComponent(typeof(HealthUnit))]
 [RequireComponent(typeof(BuffBehaviour))]
 [RequireComponent(typeof(MoveBehaviour))]
@@ -14,25 +14,7 @@ public class Player : MonoBehaviour, AttackForce
     private bool p_lastMovePrevent = false;
     private bool p_lastCanInteract = false;
     private bool p_canInteract = false;
-    private bool _damage = false;
-    private bool damage
-    {
-        get
-        {
-            return _damage;
-        }
-        set
-        {
-            anim.SetBool("damage", value);
-            _damage = value;
-
-            if (value)
-            {
-                this.invulnerable = true;
-                StartCoroutine(onDamage());
-            }
-        }
-    }
+    private bool damage;
     private bool invulnerable = false;
     [UnityEngine.Header("Invulnerability")]
     public int AmountOfFlash = 5;
@@ -44,6 +26,7 @@ public class Player : MonoBehaviour, AttackForce
     public int attackKnockback = 10;
     public int baseAttack = 1;
     public bool attacking;
+    private AnimancerState attackState;
     public bool canInteract
     {
         get => p_canInteract;
@@ -55,6 +38,12 @@ public class Player : MonoBehaviour, AttackForce
         }
     }
 
+    [Header("Animation")]
+    // public Animator anim;
+    private HybridAnimancerComponent animancer;
+    [SerializeField] private AnimationClip _DamageClip;
+    [SerializeField] private MixerTransition2DAsset.UnShared _AttackTransition;
+    private PlayerState state;
     [Header("Components")]
     public Ghost ghost;
     [HideInInspector] public HealthUnit hp;
@@ -65,7 +54,7 @@ public class Player : MonoBehaviour, AttackForce
     private SpriteRenderer spriteRenderer;
     public Image barra;
 
-    public Animator anim;
+
     [HideInInspector] Rigidbody2D rb2d;
 
     CircleCollider2D attackCollider;
@@ -94,24 +83,27 @@ public class Player : MonoBehaviour, AttackForce
     /*---- Variables ----*/
     private IEnumerator Flash()
     {
+        this.invulnerable = true;
         for (int i = 0; i < AmountOfFlash; i++)
         {
-            spriteRenderer.material.color = FlashColor;
+            spriteRenderer.color = FlashColor;
             yield return new WaitForSeconds(InvulnerableFlashSpeed);
-            spriteRenderer.material.color = NormalColor;
+            spriteRenderer.color = NormalColor;
             yield return new WaitForSeconds(InvulnerableFlashSpeed);
         }
+        spriteRenderer.color = NormalColor;
+
         this.invulnerable = false;
     }
     private IEnumerator onDamage()
     {
-        yield return new WaitForSeconds(0.2f);
+        this.damage = true;
+        yield return this.animancer.Play(_DamageClip);
+        this.animancer.Play(this.state);
+
         this.moveBehaviour.Attack = new AttackSpecifications();
         damage = false;
-        this.invulnerable = true;
         yield return StartCoroutine(Flash());
-        this.invulnerable = false;
-
 
     }
 
@@ -135,10 +127,12 @@ public class Player : MonoBehaviour, AttackForce
         Assert.IsNotNull(initialmap);
         Assert.IsNotNull(slashPrefab);
         input = GetComponent<PlayerInput>();
-        anim = GetComponent<Animator>();
+        // anim = GetComponent<Animator>();
+        animancer = GetComponent<HybridAnimancerComponent>();
         rb2d = GetComponent<Rigidbody2D>();
         hp = GetComponent<HealthUnit>();
         buffs = GetComponent<BuffBehaviour>();
+
         moveBehaviour = GetComponent<MoveBehaviour>();
         spriteRenderer = GetComponent<SpriteRenderer>();
 
@@ -161,7 +155,10 @@ public class Player : MonoBehaviour, AttackForce
 
         var TeleportUI = GameObject.FindGameObjectWithTag("TeleportUI").GetComponent<TeleportManager>();
         TeleportUI.enabled = true;
+        this.state = new PlayerState(animancer.Controller);
+
     }
+
 
 
     private void onActionTriggered(InputAction.CallbackContext ctx)
@@ -190,11 +187,8 @@ public class Player : MonoBehaviour, AttackForce
                 switch (ctx.phase)
                 {
                     case InputActionPhase.Started:
-                        AnimatorStateInfo stateInfo = anim.GetCurrentAnimatorStateInfo(0);
-                        attacking = stateInfo.IsName("Player_Attack");
                         if (attacking) return;
-                        anim.SetTrigger("attacking");
-                        // attackCollider.enabled = true;
+                        StartCoroutine(this.DoAttack());
                         break;
                     case InputActionPhase.Canceled:
                         // attackCollider.enabled = false;
@@ -206,9 +200,25 @@ public class Player : MonoBehaviour, AttackForce
                 break;
         }
     }
+    private IEnumerator DoAttack()
+    {
+        this.attacking = true;
+        this.attackState = this.animancer.Play(_AttackTransition);
+        _AttackTransition.State.Parameter = this.moveBehaviour.moveDirection;
+        // animState.Time = 0;
+
+        yield return attackState;
+        // this.animancer.Stop();
+        this.animancer.Play(this.state);
+
+        this.attacking = false;
+
+    }
 
     void Start()
     {
+
+        animancer.Play(state);
         Camera.main.GetComponent<CameraMovements>().setBound(initialmap);
         this.inventoryUI.gameObject.SetActive(true);
         this.canInteract = true;
@@ -253,74 +263,74 @@ public class Player : MonoBehaviour, AttackForce
     {
         if (this.moveBehaviour.moveDirection != Vector2.zero && !this.moveBehaviour.Dashing)
         {
-            anim.SetBool("Walking", true);
+            this.state.Walking = true;
         }
         else
         {
-            anim.SetBool("Walking", false);
+            this.state.Walking = false;
         }
 
     }
 
     public void SwordAttack()
     {
-
-        AnimatorStateInfo stateInfo = anim.GetCurrentAnimatorStateInfo(0);
-        attacking = stateInfo.IsName("Player_Attack");
-
         if (this.moveBehaviour.moveDirection != Vector2.zero) attackCollider.offset = new Vector2(this.moveBehaviour.moveDirection.x / 2, this.moveBehaviour.moveDirection.y / 2);
 
-        if (attacking)
+        if (attacking && this.attackState != null)
         {
-            float playbackTime = stateInfo.normalizedTime;
+            float playbackTime = this.attackState.NormalizedTime;
             if (playbackTime > 0.33 && playbackTime < 0.66) attackCollider.enabled = true;
             else attackCollider.enabled = false;
         }
     }
     public void slashAttack(InputAction.CallbackContext ctx)
     {
+        if (this.inSlash) return;
         switch (ctx.phase)
         {
             case InputActionPhase.Started:
+                this.p_lastMovePrevent = this.movePrevent;
                 this.movePrevent = true;
-                anim.SetTrigger("loading");
+                // this.state.lo
+                this.state.Setloading();
                 aura.AuraStart();
                 break;
             case InputActionPhase.Canceled:
-                anim.SetTrigger("attacking");
-                if (aura.IsLoaded())
-                {
-                    float angle = Mathf.Atan2(anim.GetFloat("movY"), anim.GetFloat("movX")) * Mathf.Rad2Deg;
 
-                    GameObject slashObj = Instantiate(slashPrefab, transform.position, Quaternion.AngleAxis(angle, Vector3.forward));
-
-                    Slash slash = slashObj.GetComponent<Slash>();
-                    slash.mov.x = anim.GetFloat("movX");
-                    slash.mov.y = anim.GetFloat("movY");
-                    if (slash.mov == Vector2.zero)
-                    {
-                        slash.mov = new Vector2(1, 0);
-                    }
-                }
-                aura.AuraStop();
-                StartCoroutine(EnableMovementsAfter(0.4f));
+                StartCoroutine(DoingSlashAttack());
                 break;
         }
     }
-
-    IEnumerator EnableMovementsAfter(float seconds)
+    private bool inSlash = false;
+    private IEnumerator DoingSlashAttack()
     {
-        yield return new WaitForSeconds(seconds);
-        movePrevent = false;
+        this.inSlash = true;
+        this.movePrevent = true;
+        this.state.Setattacking();
+        if (aura.IsLoaded())
+        {
+            float angle = Mathf.Atan2(this.state.movY, this.state.movX) * Mathf.Rad2Deg;
+
+            GameObject slashObj = Instantiate(slashPrefab, transform.position, Quaternion.AngleAxis(angle, Vector3.forward));
+
+            Slash slash = slashObj.GetComponent<Slash>();
+            slash.mov.x = this.state.movX;
+            slash.mov.y = this.state.movY;
+            if (slash.mov == Vector2.zero)
+            {
+                slash.mov = new Vector2(1, 0);
+            }
+        }
+        aura.AuraStop();
+        yield return new WaitForSeconds(0.4f);
+        this.movePrevent = this.p_lastMovePrevent;
+        this.inSlash = false;
     }
+
+
 
     /* -----------------Esto es lo nuevo que se a�adio hoy------------------------ */
 
-    public void Finish_Damage()
-    {
-        damage = false;
-        Debug.Log("Finish Damage");
-    }
 
     public void Vida()
     {
@@ -331,9 +341,8 @@ public class Player : MonoBehaviour, AttackForce
     {
         if (damage || invulnerable) return;
         hp.HP -= data.damage; // TODO: apply defense
-        this.damage = true;
         this.moveBehaviour.Attack = data;
-
+        StartCoroutine(onDamage());
     }
 
 
@@ -346,7 +355,6 @@ public class Player : MonoBehaviour, AttackForce
             if (item == null) continue;
             attackForce += item.strength;
         }
-        Debug.Log("Attack Force: " + attackForce);
         return attackForce;
     }
 

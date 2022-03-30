@@ -56,7 +56,6 @@ public class TeleportManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             this.Display = false;
-            gameObject.SetActive(false);
         }
     }
 

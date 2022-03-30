@@ -1,0 +1,26 @@
+{
+    "name": "GameScript",
+    "rootNamespace": "",
+    "references": [
+        "UnityEditor.UIElementsModule",
+        "UnityEngine.UIElementsModule",
+        "UnityEditor.UIBuilderModule",
+        "UnityEngine.UIElementsInputSystemModule",
+        "Unity.2D.Tilemap.Extras.Editor",
+        "SuperTiled2Unity",
+        "GenericDictionary",
+        "Unity.InputSystem",
+        "Animancer",
+        "Animancer.FSM",
+        "Weaver"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -28,7 +28,8 @@ public class Enemy : MonoBehaviour, AttackForce
     GameObject player;
 
     // Variable para guardar la posición inicial
-    Vector3 initialPosition, target;
+    public Vector3 initialPosition;
+    public Vector3 target;
 
     // Animador y cuerpo cinemático con la rotación en Z congelada
     public Animator anim;
@@ -54,7 +55,7 @@ public class Enemy : MonoBehaviour, AttackForce
     private void CalculateMove()
     {
         // Por defecto nuestro target siempre será nuestra posición inicial
-        Vector3 target = initialPosition;
+        target = initialPosition;
 
         // Comprobamos un Raycast del enemigo hasta el jugador
         RaycastHit2D hit = Physics2D.Raycast(
@@ -118,7 +119,6 @@ public class Enemy : MonoBehaviour, AttackForce
 
     void Update()
     {
-        Damage_Enemy();
         if (!damage)
         {
             CalculateMove();
@@ -174,19 +174,6 @@ public class Enemy : MonoBehaviour, AttackForce
 
     }
 
-    public void Damage_Enemy()
-    {
-        if (damage)
-        {
-            // move the enemy to the knockback direction
-            // determine if it would collide with anything
-            // if not, move the enemy
-            // if it would collide, move the enemy to the closest safe spot
-
-            // PhysicsUtils.DoMoveRigidBodyByKnockback(rb2d, direction,);
-        }
-        // GetComponent<Enemy>().enabled = true;
-    }
 
     public void Finish_Damage_Enemy()
     {
