@@ -5,8 +5,11 @@ using UnityEngine;
 public class HealthUnit : MonoBehaviour
 {
     public float HP = 0;
+    [SerializeField]
     private float maxHP = 0;
+    [SerializeField]
     private float _addictiveHP = 0;
+    [SerializeField]
     private float _multiplierHP = 0;
     public float BaseHP = 0;
     [HideInInspector]

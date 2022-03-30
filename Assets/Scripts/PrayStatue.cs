@@ -13,7 +13,7 @@ public class PrayStatue : Interactable
         transform.GetChild(0).gameObject.SetActive(false);
     }
 
-    public override void OnClick()
+    public override void OnClick(Player p)
     {
         // if the player is not in the teleport dialog
         var TeleportUI = Resources.FindObjectsOfTypeAll<TeleportManager>()[0];
@@ -32,7 +32,7 @@ public class PrayStatue : Interactable
         var player = GameObject.FindGameObjectWithTag("Player");
         var fadeScript = GameObject.Find("Fade").GetComponent<Fade>();
         player.GetComponent<Animator>().enabled = false;
-        player.GetComponent<Player>().enabled = false;
+        player.GetComponent<Player>().movePrevent = true;
         yield return StartCoroutine(fadeScript.FadeIn());
 
 
@@ -43,6 +43,6 @@ public class PrayStatue : Interactable
         yield return StartCoroutine(fadeScript.FadeOut());
 
         player.GetComponent<Animator>().enabled = true;
-        player.GetComponent<Player>().enabled = true;
+        player.GetComponent<Player>().movePrevent = false;
     }
 }

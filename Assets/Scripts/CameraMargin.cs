@@ -9,4 +9,5 @@ public class CameraMargin : MonoBehaviour
     public float left = 0;
     public float right = 0;
 
+
 }

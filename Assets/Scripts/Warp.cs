@@ -33,16 +33,16 @@ public class Warp : MonoBehaviour
         {
             yield break;
         }
-        other.GetComponent<Animator>().enabled = false;
-        other.GetComponent<Player>().enabled = false;
+        // other.GetComponent<Animator>().enabled = false;
+        other.GetComponent<Player>().movePrevent = true;
         var fade = GameObject.Find("Fade").GetComponent<Fade>();
         yield return fade.FadeIn();
 
         other.transform.position = target.transform.GetChild(0).transform.position;
         Camera.main.GetComponent<CameraMovements>().setBound(targetMap);
 
-        other.GetComponent<Animator>().enabled = true;
-        other.GetComponent<Player>().enabled = true;
+        // other.GetComponent<Animator>().enabled = true;
+        other.GetComponent<Player>().movePrevent = false;
         yield return fade.FadeOut();
 
         if (needText)

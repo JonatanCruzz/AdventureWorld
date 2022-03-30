@@ -14,5 +14,5 @@
 }
 
 .unity-base-text-field__input {
-    -unity-text-align: upper left;
+    -unity-text-align: upper-left;
 }

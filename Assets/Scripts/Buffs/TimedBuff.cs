@@ -31,7 +31,8 @@ public abstract class TimedBuff
      */
     public void Activate()
     {
-        if (Buff.IsEffectStacked || Duration <= 0)
+        Debug.Log("Activating buff: " + Buff.name + " of type: " + Buff.GetType().Name);
+        if (Buff.IsEffectStacked || EffectStacks <= 0)
         {
             ApplyEffect();
             EffectStacks++;

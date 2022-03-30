@@ -23,14 +23,17 @@ public class BuffBehaviour : MonoBehaviour
 
     public void AddBuff(TimedBuff buff)
     {
+        Debug.Log("Adding buff: " + buff.Buff.name + " of type: " + buff.Buff.GetType().Name);
         if (_buffs.ContainsKey(buff.Buff))
         {
             _buffs[buff.Buff].Activate();
+            Debug.Log("Buff already exists, activating it");
         }
         else
         {
             _buffs.Add(buff.Buff, buff);
             buff.Activate();
+            Debug.Log("Buff added");
         }
     }
 }

@@ -7,7 +7,7 @@ public class ChestScript : Interactable
     public Inventory defaultInventory;
     private Inventory chestInventory;
 
-    public override void OnClick()
+    public override void OnClick(Player p)
     {
         Debug.Log("Opening chest");
         if (chestInventory == null)

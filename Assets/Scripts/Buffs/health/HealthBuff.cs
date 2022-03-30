@@ -27,6 +27,7 @@ public class TimedHealthBuff : TimedBuff
         //Add Health increase to MovementComponent
         HealthBuff HealthBuff = (HealthBuff)Buff;
         _healthComponent.AddictiveHP += HealthBuff.HealthIncrease;
+        Debug.Log("HealthBuff: " + _healthComponent.AddictiveHP);
     }
 
     public override void End()
@@ -35,5 +36,6 @@ public class TimedHealthBuff : TimedBuff
         HealthBuff HealthBuff = (HealthBuff)Buff;
         _healthComponent.AddictiveHP -= HealthBuff.HealthIncrease * EffectStacks;
         EffectStacks = 0;
+        Debug.Log("HealthBuffEnd: " + _healthComponent.AddictiveHP);
     }
 }

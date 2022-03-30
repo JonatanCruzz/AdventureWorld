@@ -20,6 +20,6 @@ MonoBehaviour:
   _itemName: potion
   _stackable: 1
   _stackSize: 42
-  healthRestored: 10
+  healthRestored: 2
   buffs:
   - {fileID: 11400000, guid: cc46c21613acb054d8ad859208066857, type: 2}

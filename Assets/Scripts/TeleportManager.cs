@@ -49,12 +49,6 @@ public class TeleportManager : MonoBehaviour
 
     }
 
-    void OnDisable()
-    {
-        // enable player movement when the list is closed
-        GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().enabled = true;
-    }
-
     void Update()
     {
         if (!this.Display) return;

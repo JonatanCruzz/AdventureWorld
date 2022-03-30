@@ -15,6 +15,8 @@ public class DialogManager : MonoBehaviour
     public event Action OnShowDialog;
     public event Action OnSCloseDialog;
 
+    public bool interacting = false;
+
     public static DialogManager Instance { get; private set; } //static function for any class we want
     private void Awake()
     {
@@ -22,7 +24,12 @@ public class DialogManager : MonoBehaviour
     }
     Dialog dialog;
     int currentLine = 0;
-    bool isTyping;
+    public bool isTyping;
+    public void Update()
+    {
+        if (!this.interacting) return;
+        this.HandleUpdate();
+    }
 
     public IEnumerator ShowDialog(Dialog dialog)
     {
@@ -31,34 +38,49 @@ public class DialogManager : MonoBehaviour
         OnShowDialog?.Invoke();
 
         this.dialog = dialog;
-
+        this.interacting = true;
+        this.currentLine = 0;
         dialogBox.SetActive(true);
-
+        Debug.Log("Showing dialog");
         StartCoroutine(TypeDialog(dialog.Lines[0])); //first line of dialog
     }
+    private IEnumerator CloseDialog()
+    {
+        currentLine = 0;
 
+        dialogBox.SetActive(false);
+
+        this.dialog = null;
+        this.isTyping = false;
+        this.interacting = false;
+
+        OnSCloseDialog?.Invoke();
+        yield return new WaitForEndOfFrame();
+
+        var player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        player.canInteract = true;
+    }
     public void HandleUpdate()
     { //this function show the next dialog...
-        Debug.Log("HandleUpdate");
         if (Input.GetKeyDown(KeyCode.E) && !isTyping)
         {
             ++currentLine;
 
             if (currentLine < dialog.Lines.Count)
             {
-
-                StartCoroutine(TypeDialog(dialog.Lines[currentLine]));
+                Debug.Log("Showing next line");
+                if (this.typeRoutine != null) StopCoroutine(this.typeRoutine);
+                this.typeRoutine = StartCoroutine(TypeDialog(dialog.Lines[currentLine]));
             }
             else
             {
-                currentLine = 0;
-
-                dialogBox.SetActive(false);
-
-                OnSCloseDialog?.Invoke();
+                Debug.Log("End of dialog");
+                if (this.typeRoutine != null) StopCoroutine(this.typeRoutine);
+                StartCoroutine(CloseDialog());
             }
         }
     }
+    private Coroutine typeRoutine = null;
 
 
     public IEnumerator TypeDialog(string line) //before actually completing the current dialog
