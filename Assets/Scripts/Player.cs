@@ -40,10 +40,9 @@ public class Player : MonoBehaviour, AttackForce
     public Color FlashColor = Color.white;
     public Color NormalColor = Color.white;
 
-    [UnityEngine.Header("Knockback")]
-    public Vector2 knockback;
-    public float knockbackForce = 50;
+    [UnityEngine.Header("Attack")]
     public int attackKnockback = 10;
+    public int baseAttack = 1;
     public bool attacking;
     public bool canInteract
     {
@@ -186,34 +185,24 @@ public class Player : MonoBehaviour, AttackForce
                         break;
                 }
                 break;
-            case "Fire":
+            case "Attack":
+
                 switch (ctx.phase)
                 {
                     case InputActionPhase.Started:
-                        this.movePrevent = true;
-                        anim.SetTrigger("loading");
-                        aura.AuraStart();
+                        AnimatorStateInfo stateInfo = anim.GetCurrentAnimatorStateInfo(0);
+                        attacking = stateInfo.IsName("Player_Attack");
+                        if (attacking) return;
+                        anim.SetTrigger("attacking");
+                        // attackCollider.enabled = true;
                         break;
                     case InputActionPhase.Canceled:
-                        anim.SetTrigger("attacking");
-                        if (aura.IsLoaded())
-                        {
-                            float angle = Mathf.Atan2(anim.GetFloat("movY"), anim.GetFloat("movX")) * Mathf.Rad2Deg;
-
-                            GameObject slashObj = Instantiate(slashPrefab, transform.position, Quaternion.AngleAxis(angle, Vector3.forward));
-
-                            Slash slash = slashObj.GetComponent<Slash>();
-                            slash.mov.x = anim.GetFloat("movX");
-                            slash.mov.y = anim.GetFloat("movY");
-                            if (slash.mov == Vector2.zero)
-                            {
-                                slash.mov = new Vector2(1, 0);
-                            }
-                        }
-                        aura.AuraStop();
-                        StartCoroutine(EnableMovementsAfter(0.4f));
+                        // attackCollider.enabled = false;
                         break;
                 }
+                break;
+            case "Fire":
+                slashAttack(ctx);
                 break;
         }
     }
@@ -237,8 +226,6 @@ public class Player : MonoBehaviour, AttackForce
             {
                 Animations();
                 SwordAttack();
-                // slashAttack();
-
 
                 // if user press the button "I" to open the inventory UI
                 if (Input.GetKeyDown(KeyCode.I))
@@ -281,12 +268,6 @@ public class Player : MonoBehaviour, AttackForce
         AnimatorStateInfo stateInfo = anim.GetCurrentAnimatorStateInfo(0);
         attacking = stateInfo.IsName("Player_Attack");
 
-        if (Input.GetKeyDown("x") && !attacking)
-        {
-            anim.SetTrigger("attacking");
-
-        }
-
         if (this.moveBehaviour.moveDirection != Vector2.zero) attackCollider.offset = new Vector2(this.moveBehaviour.moveDirection.x / 2, this.moveBehaviour.moveDirection.y / 2);
 
         if (attacking)
@@ -296,14 +277,34 @@ public class Player : MonoBehaviour, AttackForce
             else attackCollider.enabled = false;
         }
     }
-    public void slashAttack()
+    public void slashAttack(InputAction.CallbackContext ctx)
     {
-        AnimatorStateInfo stateInfo = anim.GetCurrentAnimatorStateInfo(0);
-        bool isInSlash = stateInfo.IsName("Player_Slash");
-
-        if (isInSlash)
+        switch (ctx.phase)
         {
-            movePrevent = true;
+            case InputActionPhase.Started:
+                this.movePrevent = true;
+                anim.SetTrigger("loading");
+                aura.AuraStart();
+                break;
+            case InputActionPhase.Canceled:
+                anim.SetTrigger("attacking");
+                if (aura.IsLoaded())
+                {
+                    float angle = Mathf.Atan2(anim.GetFloat("movY"), anim.GetFloat("movX")) * Mathf.Rad2Deg;
+
+                    GameObject slashObj = Instantiate(slashPrefab, transform.position, Quaternion.AngleAxis(angle, Vector3.forward));
+
+                    Slash slash = slashObj.GetComponent<Slash>();
+                    slash.mov.x = anim.GetFloat("movX");
+                    slash.mov.y = anim.GetFloat("movY");
+                    if (slash.mov == Vector2.zero)
+                    {
+                        slash.mov = new Vector2(1, 0);
+                    }
+                }
+                aura.AuraStop();
+                StartCoroutine(EnableMovementsAfter(0.4f));
+                break;
         }
     }
 
@@ -333,15 +334,12 @@ public class Player : MonoBehaviour, AttackForce
         this.damage = true;
         this.moveBehaviour.Attack = data;
 
-        this.knockback = data.attackDirection;
-        this.knockbackForce = data.knockback;
-
     }
 
 
     public int getAttackForce()
     {
-        var attackForce = 1;
+        var attackForce = this.baseAttack;
         // get equitment all calculate stats
         foreach (var item in equipment.GetAllItems())
         {
