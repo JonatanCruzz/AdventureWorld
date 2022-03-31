@@ -1,0 +1,28 @@
+{
+    "name": "DevionModuleEditor",
+    "rootNamespace": "",
+    "references": [
+        "DevionGames.InventorySystem",
+        "DevionGames.UIWidgets",
+        "DevionGames.StatSystem",
+        "DevionGames.Triggers",
+        "DevionGames.Graphs",
+        "DevionGames.ThirdPersonController",
+        "UnityEditor.UIBuilderModule",
+        "UnityEngine.UI",
+        "UnityEngine.UIElementsModule",
+        "GameScript",
+        "DevionGames.Utilities"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
