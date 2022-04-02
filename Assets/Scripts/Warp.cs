@@ -8,10 +8,8 @@ using UnityEngine.Assertions;
 public class Warp : MonoBehaviour
 {
     public GameObject target;
-    public GameObject targetMap;
+    public BaseCameraMargin targetMap;
     public bool needText;
-
-    float alpha = 0;
 
     GameObject area;
 
@@ -39,7 +37,7 @@ public class Warp : MonoBehaviour
         yield return fade.FadeIn();
 
         other.transform.position = target.transform.GetChild(0).transform.position;
-        Camera.main.GetComponent<CameraMovements>().setBound(targetMap);
+        Camera.main.GetComponent<CameraMovements>().setBound(targetMap.gameObject);
 
         // other.GetComponent<Animator>().enabled = true;
         other.GetComponent<Player>().movePrevent = false;

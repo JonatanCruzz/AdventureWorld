@@ -2,62 +2,46 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Camera))]
 public class CameraMovements : MonoBehaviour
 {
-    Transform target;
-    // Bound object to set limits of the camera
-    public GameObject bound;
+    private Transform _target;
+    public BaseCameraMargin margin;
+    public Vector2 offset;
 
-    public float LX, LY, RX, RY;
-    public CameraMargin margin;
+    private Transform _transform;
+
     private void Start()
     {
+        this._transform = transform;
         Screen.SetResolution(1920, 1080, true);
-
     }
-    void Awake()
+
+    private void Awake()
     {
-        target = GameObject.FindGameObjectWithTag("Player").transform;
+        _target = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
 
-    void Update()
+    private void Update()
     {
         if (!Screen.fullScreen)
         {
             Screen.SetResolution(1920, 1080, true);
         }
 
-
-
-        if (Input.GetKey("escape")) Application.Quit();
-
-        transform.position = new Vector3(
-            Mathf.Clamp(target.position.x, LX, RX),
-            Mathf.Clamp(target.position.y, RY, LY),
-            transform.position.z
-            );
-
+        var pos = _target.position;
+        _transform.position = this.margin.limitCamera(new Vector3(pos.x, pos.y, _transform.position.z),
+            Camera.main!.orthographicSize) + (Vector3)offset;
     }
 
     public void setBound(GameObject map)
     {
-        SuperTiled2Unity.SuperMap config = map.GetComponent<SuperTiled2Unity.SuperMap>();
+        // var config = map.GetComponent<SuperTiled2Unity.SuperMap>();
         // if map has a component of type CameraMargins then set the camera limits
-        var mapMargin = map.GetComponent<CameraMargin>();
+        var mapMargin = map.GetComponent<BaseCameraMargin>();
         if (mapMargin == null)
-            mapMargin = map.AddComponent<CameraMargin>();
-
+            mapMargin = map.AddComponent<EmptyCameraMargin>();
         this.margin = mapMargin;
-
-        float cameraSize = Camera.main.orthographicSize;
-
-
-        LX = map.transform.position.x + cameraSize - mapMargin.left;
-        LY = map.transform.position.y - cameraSize + mapMargin.top;
-        RX = map.transform.position.x + config.m_Width - cameraSize + mapMargin.right;
-        RY = map.transform.position.y - config.m_Height + cameraSize - mapMargin.bottom;
-
-
     }
 }

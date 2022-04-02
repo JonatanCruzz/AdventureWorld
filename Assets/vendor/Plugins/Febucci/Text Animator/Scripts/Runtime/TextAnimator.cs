@@ -148,7 +148,7 @@ namespace Febucci.UI
                     return _tAnimPlayer;
 
 #if UNITY_2019_2_OR_NEWER
-                if(!TryGetComponent(out _tAnimPlayer))
+                if (!TryGetComponent(out _tAnimPlayer))
                 {
                     Debug.LogError($"Text Animator component is null on GameObject {gameObject.name}");
                 }
@@ -205,7 +205,7 @@ namespace Febucci.UI
         [SerializeField, Tooltip("True if you want effects time to be reset when a new text is set (default option), false otherwise.")]
         public bool isResettingEffectsOnNewText = true;
 
-        
+
         #endregion
 
         #region Public Variables
@@ -223,7 +223,7 @@ namespace Febucci.UI
                     return _tmproText;
 
 #if UNITY_2019_2_OR_NEWER
-                if(!TryGetComponent(out _tmproText))
+                if (!TryGetComponent(out _tmproText))
                 {
                     Debug.LogError("TextAnimator: TMproText component is null.");
                 }
@@ -296,21 +296,21 @@ namespace Febucci.UI
                 {
                     return characters[index].data.passedTime > 0;
                 }
-                
+
                 //searches for the first character or the last one first, since they're most probably the first ones to be shown (based on orientation)
-                if (IsCharacterVisible(0) || IsCharacterVisible(tmproText.textInfo.characterCount-1))
+                if (IsCharacterVisible(0) || IsCharacterVisible(tmproText.textInfo.characterCount - 1))
                     return true;
-                
+
                 //searches for the other, which might still be running their appearance/disappearance
-                for(int i=1;i<tmproText.textInfo.characterCount-1;i++)
+                for (int i = 1; i < tmproText.textInfo.characterCount - 1; i++)
                     if (IsCharacterVisible(i))
                         return true;
 
                 return false;
             }
-            
+
         }
-            
+
         /// <summary>
         /// The latest TextMeshPro character shown by the typewriter.
         /// </summary>
@@ -370,7 +370,7 @@ namespace Febucci.UI
 
         void AssertCharacterTimes()
         {
-            
+
             bool IsCharacterShown(int i)
             {
                 return i <= textInfo.characterCount
@@ -724,7 +724,7 @@ namespace Febucci.UI
                     var tags = tagsToConvert[i].Split(' ');
                     string actualEffect = tags[0]; //removes probable modifiers
 
-                    foreach(var effect in temp_fallbackEffects)
+                    foreach (var effect in temp_fallbackEffects)
                     {
                         if (effect.regionManager.entireRichTextTag.Equals(tagsToConvert[i])) continue; //same effect has already been added
                     }
@@ -904,7 +904,7 @@ namespace Febucci.UI
             }
         }
 
-        void TryProcessingModifier<T>(string [] tags, ref T effect) where T : EffectsBase
+        void TryProcessingModifier<T>(string[] tags, ref T effect) where T : EffectsBase
         {
             int equalsIndex;
             //Searches for modifiers inside the effect region (after the first tag, which we used to check the type of effect to add)
@@ -1090,8 +1090,8 @@ namespace Febucci.UI
             skipAppearanceEffects = false;
             hasActions = false;
             noparseEnabled = false;
-            
-            if(isResettingEffectsOnNewText)
+
+            if (isResettingEffectsOnNewText)
                 m_time.ResetData(); //resets time
 
             behaviorEffects.Clear();
@@ -1630,10 +1630,9 @@ namespace Febucci.UI
                 //Avoids updating if we're on an invisible character, like a spacebar
                 //Do not switch this with "i<visibleCharacters", since the plugin has to update not yet visible characters
                 if (!textInfo.characterInfo[i].isVisible) continue;
-
+                if (characters.Length < i) continue;
                 //Updates TMP char info
                 textInfo.characterInfo[i] = characters[i].data.tmp_CharInfo;
-
                 //Updates vertices
                 for (byte k = 0; k < TextUtilities.verticesPerChar; k++)
                 {
@@ -1807,7 +1806,7 @@ namespace Febucci.UI
 
         void UpdateEffectsToMesh()
         {
-            
+
 
             m_time.UpdateDeltaTime(timeScale);
             m_time.IncreaseTime();
@@ -1950,10 +1949,10 @@ namespace Febucci.UI
         {
             //The mesh might have changed when the gameObject was disabled (eg. change of "autoSize")
             forceMeshRefresh = true;
-            
+
             textInfo = tmproText.textInfo;
             UpdateEffectsToMesh();
-            
+
 #if UNITY_EDITOR
             TAnim_EditorHelper.onChangesApplied += EDITORONLY_ResetEffects;
 #endif
@@ -2010,7 +2009,7 @@ namespace Febucci.UI
             if (!Application.isPlaying)
                 return;
 
-            if (behaviorEffects != null && appearanceEffects != null && disappearanceEffects != null) 
+            if (behaviorEffects != null && appearanceEffects != null && disappearanceEffects != null)
             {
                 //---sets intensity---
                 for (int i = 0; i < behaviorEffects.Count; i++)

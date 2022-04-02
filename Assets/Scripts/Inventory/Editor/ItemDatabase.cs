@@ -9,40 +9,6 @@ using System.IO;
 using System;
 using System.Linq;
 
-class SavePrefabWindow : EditorWindow
-{
-
-    string prefabName;
-
-    void OnGUI()
-    {
-        prefabName = EditorGUILayout.TextField("Prefab Name", prefabName);
-
-        if (GUILayout.Button("Save Prefab"))
-        {
-            OnClickSavePrefab();
-            GUIUtility.ExitGUI();
-        }
-    }
-
-    void OnClickSavePrefab()
-    {
-        prefabName = prefabName.Trim();
-
-        if (string.IsNullOrEmpty(prefabName))
-        {
-            EditorUtility.DisplayDialog("Unable to save prefab", "Please specify a valid prefab name.", "Close");
-            return;
-        }
-
-        // You may also want to check for illegal characters :)
-
-        // Save your prefab
-
-        Close();
-    }
-
-}
 public class ItemDatabase : EditorWindow
 {
     private Sprite m_DefaultItemIcon;
@@ -56,7 +22,7 @@ public class ItemDatabase : EditorWindow
     private ScrollView m_DetailSection;
     private VisualElement m_LargeDisplayIcon;
     private Item m_activeItem;
-    private static readonly string ItemsFolder = "Assets/Items/";
+    private static readonly string ItemsFolder = "Resources/Items/";
 
     [MenuItem("WUG/Item Database")]
     public static void Init()
@@ -219,11 +185,11 @@ public class ItemDatabase : EditorWindow
     {
         m_ItemDatabase.Clear();
 
-        string[] allPaths = Directory.GetFiles("Assets/Items", "*.asset", SearchOption.AllDirectories);
-        foreach (string path in allPaths)
+        var allPaths = Directory.GetFiles("Assets/Items", "*.asset", SearchOption.AllDirectories);
+        foreach (var path in allPaths)
         {
-            string cleanedPath = path.Replace("\\", "/");
-            Item item = AssetDatabase.LoadAssetAtPath<Item>(cleanedPath);
+            var cleanedPath = path.Replace("\\", "/");
+            var item = AssetDatabase.LoadAssetAtPath<Item>(cleanedPath);
             if (item != null)
             {
                 m_ItemDatabase.Add(item);

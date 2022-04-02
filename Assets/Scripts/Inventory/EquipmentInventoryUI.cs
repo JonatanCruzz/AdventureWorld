@@ -37,6 +37,9 @@ public class EquipmentInventoryUI
 
     }
 
+    public void refreshInventory()
+    {
+    }
     private void OnEquipmentChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
     {
         switch (e.PropertyName)

@@ -76,7 +76,7 @@ PlayerSettings:
   androidFullscreenMode: 1
   defaultIsNativeResolution: 1
   macRetinaSupport: 1
-  runInBackground: 0
+  runInBackground: 1
   captureSingleScreen: 0
   muteOtherAudioSources: 0
   Prepare IOS For Recording: 0
@@ -563,12 +563,25 @@ PlayerSettings:
   webGLThreadsSupport: 0
   webGLDecompressionFallback: 0
   scriptingDefineSymbols:
-    1: USE_NEW_INPUT;USE_PHYSICS2D;TMP_PRESENT
-    13: USE_NEW_INPUT;USE_PHYSICS2D;TMP_PRESENT
-    14: USE_NEW_INPUT;USE_PHYSICS2D;TMP_PRESENT
+    1: USE_NEW_INPUT;USE_PHYSICS2D;TMP_PRESENT;INPUT_SYSTEM_PACKAGE
+    4: INPUT_SYSTEM_PACKAGE
+    7: INPUT_SYSTEM_PACKAGE
+    13: USE_NEW_INPUT;USE_PHYSICS2D;TMP_PRESENT;INPUT_SYSTEM_PACKAGE
+    14: USE_NEW_INPUT;USE_PHYSICS2D;TMP_PRESENT;INPUT_SYSTEM_PACKAGE
+    19: INPUT_SYSTEM_PACKAGE
+    21: INPUT_SYSTEM_PACKAGE
+    25: INPUT_SYSTEM_PACKAGE
+    27: INPUT_SYSTEM_PACKAGE
+    28: INPUT_SYSTEM_PACKAGE
+    29: INPUT_SYSTEM_PACKAGE
+    30: INPUT_SYSTEM_PACKAGE
+    31: INPUT_SYSTEM_PACKAGE
+    32: INPUT_SYSTEM_PACKAGE
+    33: INPUT_SYSTEM_PACKAGE
   additionalCompilerArguments: {}
   platformArchitecture: {}
-  scriptingBackend: {}
+  scriptingBackend:
+    Standalone: 1
   il2cppCompilerConfiguration: {}
   managedStrippingLevel: {}
   incrementalIl2cppBuild: {}
@@ -583,7 +596,7 @@ PlayerSettings:
   assemblyVersionValidation: 1
   gcWBarrierValidation: 0
   apiCompatibilityLevelPerPlatform:
-    Standalone: 6
+    Standalone: 3
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
   metroPackageName: 2DBuiltInRenderer

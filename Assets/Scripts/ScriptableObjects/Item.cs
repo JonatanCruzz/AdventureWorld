@@ -4,15 +4,6 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using UnityEngine;
 
-public enum EquipableItemSlotType
-{
-    Head,
-    Chest,
-    Feet,
-    MainHand,
-    OffHand
-}
-
 [CreateAssetMenu]
 public class Item : ScriptableObject, INotifyPropertyChanged
 {

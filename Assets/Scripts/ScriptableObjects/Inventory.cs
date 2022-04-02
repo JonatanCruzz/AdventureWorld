@@ -1,25 +1,7 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.ComponentModel;
 using UnityEngine;
 
-public static class InventoryExtensions
-{
-    public static void TryMoveToInv(this Inventory targetInv, InventorySlot sourceSlot)
-    {
-        var left = targetInv.AddItem(sourceSlot.item, sourceSlot.numberOfItem);
-        if (left == 0)
-        {
-            sourceSlot.item = null;
-            sourceSlot.numberOfItem = 0;
-        }
-        else
-        {
-            sourceSlot.numberOfItem = left;
-        }
-    }
-}
 [CreateAssetMenu(fileName = "Inventory", menuName = "Inventory/Normal", order = 1)]
 public class Inventory : ScriptableObject
 {
@@ -84,94 +66,4 @@ public class Inventory : ScriptableObject
 
 
 
-}
-
-[Serializable]
-public class InventorySlot : INotifyPropertyChanged
-{
-
-
-    public event PropertyChangedEventHandler PropertyChanged;
-    private void OnPropertyChanged(string propertyName)
-    {
-        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-    }
-    [SerializeField]
-    private Item _item;
-    [SerializeField]
-    private int _numberOfItem;
-    public Item item
-    {
-        get => _item;
-        set
-        {
-            if (_item != value)
-            {
-                _item = value;
-                OnPropertyChanged(nameof(item));
-            }
-        }
-    }
-    public int numberOfItem
-    {
-        get => _numberOfItem;
-        set
-        {
-            if (_numberOfItem != value)
-            {
-                _numberOfItem = value;
-                OnPropertyChanged(nameof(numberOfItem));
-            }
-        }
-    }
-
-    public InventorySlot(Item item, int numberOfItem)
-    {
-        this.item = item;
-        this.numberOfItem = numberOfItem;
-    }
-
-    public InventorySlot()
-    {
-        this.item = null;
-        this.numberOfItem = 0;
-    }
-    private void addAmount(int amount, out int numberOfItemLeft)
-    {
-        var numberOfItem = this.numberOfItem + amount;
-        numberOfItemLeft = amount;
-        if (!this.item.stackable)
-        {
-            if (this.numberOfItem != 0) return;
-            numberOfItem = 1;
-            numberOfItemLeft = amount - 1;
-        }
-        else if (this.item.stackSize < numberOfItem)
-        {
-            numberOfItemLeft = numberOfItem - this.item.stackSize;
-            numberOfItem = this.item.stackSize;
-        }
-        else
-        {
-            numberOfItemLeft = 0;
-        }
-
-        this.numberOfItem = numberOfItem;
-    }
-
-    public bool AddItem(Item item, int numberOfItem, out int numberOfItemLeft)
-    {
-        numberOfItemLeft = numberOfItem;
-        if (this.item == null)
-        {
-            this.item = item;
-            this.numberOfItem = 0;
-            this.addAmount(numberOfItem, out numberOfItemLeft);
-        }
-        else if (this.item.itemName == item.itemName)
-        {
-            this.addAmount(numberOfItem, out numberOfItemLeft);
-        }
-        return numberOfItemLeft == 0;
-    }
 }

@@ -3,10 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 // create a class that defines a GameObject that can be interacted with
 // this class will be inherited by other classes
-// An interactable Object should have a collider and a script attached to it
+// An interactable Object should have a radius to be able to interact with it
 // An interactable Object should have a key to interact with it
 // An interactable Object should have a description of what it does
 // An interactable Object should have a method to execute when interacted with
@@ -18,54 +19,76 @@ public abstract class Interactable : MonoBehaviour
     public string description;
     public float radius = 1.5f;
     public Vector2 offset = new Vector2(0, 0f);
-    private Player p_Player;
-    private UnityEngine.InputSystem.InputAction action;
-    // this method will be overridden by other classes
-    public abstract void OnClick(Player player);
 
-    public abstract bool isClicked();
+    private bool canShowKey = false;
+    private Coroutine listenKeyCoroutine;
+    // this method will be overridden by other classes
+    protected abstract void OnClick(Player player);
+
     private bool _isClicked;
     public void Start()
     {
-        this.p_Player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        // create a child gameobject with a trigger collider with the radius of the interactable object
+        // this will be used to detect if the player is within the radius of the interactable object
+        // it should have a script attached to it that will call the OnTriggerEnter2D method
+        var trigger = new GameObject("Trigger", new []{typeof(CircleCollider2D), typeof(InteractableTrigger)})
+        {
+            transform =
+            {
+                parent = this.transform,
+                localPosition = new Vector3(0, 0, 0)
+            }
+        };
+        var triggerCollider = trigger.GetComponent<CircleCollider2D>();
+        triggerCollider.radius = this.radius;
+        triggerCollider.isTrigger = true;
+        triggerCollider.offset = this.offset;
     }
     // determine if the player is inside the collider
-    public bool IsCloseEnough()
-    {
 
-        return Vector2.Distance(transform.position, p_Player.transform.position) < radius;
-    }
     public virtual bool IsInteracting()
     {
         return _isClicked;
     }
 
-    private IEnumerator _onClick()
+    private bool canInteract()
+    {
+        return !_isClicked && canShowKey && !IsInteracting();
+    }
+
+
+    public void ShowKey(Player p)
+    {
+       
+        canShowKey = true;
+
+    }
+
+    public void HideKey()
+    {
+        canShowKey = false;
+       
+    }
+
+    private IEnumerator _doClick(Player p_Player)
     {
         OnClick(p_Player);
         _isClicked = true;
         yield return new WaitForSeconds(1);
-        _isClicked = false;
+        _isClicked = false; 
+    }
+
+    public void DoClick(Player p_Player)
+    {
+        StartCoroutine(_doClick(p_Player));
     }
 
     public void Update()
     {
-        if (!_isClicked && p_Player.canInteract && !IsInteracting() && IsCloseEnough())
-        {
-            uiKey.SetActive(true);
-            if (isClicked())
-            {
-                StartCoroutine(_onClick());
-            }
-        }
-        else
-        {
-            uiKey.SetActive(false);
-        }
+        uiKey.SetActive(canInteract());
     }
 
-    // Podemos dibujar el radio de visión y ataque sobre la escena dibujando una esfera
-    void OnDrawGizmosSelected()
+    private void OnDrawGizmosSelected()
     {
 
         Gizmos.color = Color.yellow;

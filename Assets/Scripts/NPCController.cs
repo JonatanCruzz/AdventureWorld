@@ -8,7 +8,7 @@ public class NPCController : Interactable
 {
     [SerializeField] Dialog dialog;
 
-    public override void OnClick(Player player)
+    protected override void OnClick(Player player)
     {
 
         // dialog
@@ -20,9 +20,6 @@ public class NPCController : Interactable
 
 
     }
-    public override bool isClicked()
-    {
-        return Input.GetKeyDown(KeyCode.E);
-    }
+   
 
 }

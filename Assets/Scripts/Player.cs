@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Assertions;
@@ -7,7 +8,7 @@ using Animancer;
 [RequireComponent(typeof(HealthUnit))]
 [RequireComponent(typeof(BuffBehaviour))]
 [RequireComponent(typeof(MoveBehaviour))]
-
+[System.Serializable]
 public class Player : MonoBehaviour, AttackForce
 {
     /*---- Variables ----*/
@@ -78,7 +79,20 @@ public class Player : MonoBehaviour, AttackForce
     [SerializeField] private EquipmentInventory defaultEquipment;
     public InventoryUI inventoryUI;
 
+    private Interactable _interactable;
 
+    public Interactable interactable
+    {
+        get => _interactable;
+        set
+        {
+            if (_interactable != null)
+                _interactable.HideKey();
+            _interactable = value;
+            if (_interactable != null)
+                _interactable.ShowKey(this);
+        }
+    }
 
     /*---- Variables ----*/
     private IEnumerator Flash()
@@ -193,6 +207,15 @@ public class Player : MonoBehaviour, AttackForce
                     case InputActionPhase.Canceled:
                         // attackCollider.enabled = false;
                         break;
+                }
+                break;
+            case "Interact":
+                if(ctx.phase == InputActionPhase.Started)
+                {
+                    if (this.canInteract && this.interactable != null)
+                    {
+                        this.interactable.DoClick(this);
+                    }
                 }
                 break;
             case "Fire":

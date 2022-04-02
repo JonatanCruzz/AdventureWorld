@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Runtime.Serialization;
 using UnityEngine;
 
 // create a clas to manage the equiped items
@@ -197,4 +198,5 @@ public class EquipmentInventory : ScriptableObject, INotifyPropertyChanged
         }
         return output;
     }
+
 }

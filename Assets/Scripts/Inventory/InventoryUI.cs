@@ -3,12 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
-enum InventoryUIState
-{
-    equipment,
-    other,
-    none
-}
+
 public class InventoryUI : MonoBehaviour
 {
     public VisualTreeAsset inventorySlotPrefab;
@@ -27,6 +22,8 @@ public class InventoryUI : MonoBehaviour
     private void display()
     {
         m_Root.style.display = DisplayStyle.Flex;
+        m_mainInventory.Inventory = player.inventory;
+
         player.enabled = false;
     }
     public void Show()
@@ -74,7 +71,6 @@ public class InventoryUI : MonoBehaviour
         m_OtherIventoryWindow = new InventoryWindowManager(inventorySlotPrefab, m_Root.Q<VisualElement>("OtherInventoryWindow"));
         m_equipmentWindow = new EquipmentInventoryUI(m_Root.Q<VisualElement>("EquipmentWindow"), player);
 
-        m_mainInventory.Inventory = player.inventory;
 
         m_mainInventory.OnSlotClick += OnMainInventorySlotClick;
         m_OtherIventoryWindow.OnSlotClick += OnOtherInventorySlotClick;
@@ -84,36 +80,36 @@ public class InventoryUI : MonoBehaviour
     {
 
         var itemSlot = uiSlot.slot;
-        if (itemSlot.item != null)
+        if (itemSlot.item == null) return;
+        switch (this.state)
         {
-            switch (this.state)
-            {
-                case InventoryUIState.equipment:
-                    switch (itemSlot.item)
-                    {
-                        case EquipableItem equipable:
-                            var output = player.equipment.AddItem(equipable);
-                            itemSlot.item = output;
-                            itemSlot.numberOfItem = output == null ? 0 : 1;
-                            break;
-                        case ConsumableItem consumable:
-                            itemSlot.item.AddBuff(player);
+            case InventoryUIState.equipment:
+                switch (itemSlot.item)
+                {
+                    case EquipableItem equipable:
+                        var output = player.equipment.AddItem(equipable);
+                        itemSlot.item = output;
+                        itemSlot.numberOfItem = output == null ? 0 : 1;
+                        break;
+                    case ConsumableItem consumable:
+                        itemSlot.item.AddBuff(player);
 
-                            itemSlot.numberOfItem--;
-                            if (itemSlot.numberOfItem <= 0)
-                            {
-                                itemSlot.item = null;
-                            }
+                        itemSlot.numberOfItem--;
+                        if (itemSlot.numberOfItem <= 0)
+                        {
+                            itemSlot.item = null;
+                        }
 
-                            break;
-                    }
-                    break;
-                case InventoryUIState.other:
-                    m_OtherIventoryWindow.Inventory.TryMoveToInv(itemSlot);
-                    break;
-            }
-
-
+                        break;
+                }
+                break;
+            case InventoryUIState.other:
+                m_OtherIventoryWindow.Inventory.TryMoveToInv(itemSlot);
+                break;
+            case InventoryUIState.none:
+            default:
+                Debug.LogWarning("Invalid state: " + this.state);
+                break;
         }
     }
 

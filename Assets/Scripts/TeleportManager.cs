@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -22,11 +23,14 @@ public class TeleportManager : MonoBehaviour
             if (this.Display)
             {
                 // disable player movement while the list is open
-                GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().enabled = false;
+                GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().canInteract = false;
+                GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().movePrevent = true;
             }
             else
             {
-                GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().enabled = true;
+                
+                GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().canInteract = true;
+                GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().movePrevent = false;
 
             }
         }
@@ -39,13 +43,16 @@ public class TeleportManager : MonoBehaviour
         listView = uiRoot.Q<ListView>("local-games-list");
         listView.makeItem = MakeItem;
         listView.bindItem = BindItem;
-        this.Display = false;
 
         // find all objects with the tag "TeleportObjective"
         teleportObjectives = FindObjectsOfType<PrayStatue>();
 
         listView.itemsSource = teleportObjectives;
+    }
 
+    private void Start()
+    {
+        this.Display = false;
 
     }
 

@@ -10,7 +10,7 @@ public class LittleChest : Interactable
     private Inventory chestInventory;
 
 
-    public override void OnClick(Player player)
+    protected override void OnClick(Player player)
     {
         Debug.Log("Opening chest");
         if (chestInventory == null)
@@ -31,8 +31,5 @@ public class LittleChest : Interactable
         return isOpen;
     }
 
-    public override bool isClicked()
-    {
-        return Input.GetKeyDown(KeyCode.E);
-    }
+  
 }

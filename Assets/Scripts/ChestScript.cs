@@ -7,7 +7,7 @@ public class ChestScript : Interactable
     public Inventory defaultInventory;
     private Inventory chestInventory;
 
-    public override void OnClick(Player p)
+    protected override void OnClick(Player p)
     {
         Debug.Log("Opening chest");
         if (chestInventory == null)
@@ -17,10 +17,5 @@ public class ChestScript : Interactable
         }
         // FindObjectOfType<InventoryUI>().OpenChest(chestInventory);
 
-    }
-
-    public override bool isClicked()
-    {
-        return Input.GetKeyDown(KeyCode.E);
     }
 }

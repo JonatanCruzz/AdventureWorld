@@ -1,10 +1,11 @@
 using System.Collections;
+using PixelCrushers;
 using UnityEngine;
 
 public class PrayStatue : Interactable
 {
     public string objectiveDescription;
-    public SuperTiled2Unity.SuperMap targetMap;
+    public BaseCameraMargin targetMap;
 
 
     public void Awake()
@@ -13,26 +14,22 @@ public class PrayStatue : Interactable
         transform.GetChild(0).gameObject.SetActive(false);
     }
 
-    public override void OnClick(Player p)
+    protected override void OnClick(Player p)
     {
         // if the player is not in the teleport dialog
+        SaveSystem.SaveToSlot(0);
         var TeleportUI = Resources.FindObjectsOfTypeAll<TeleportManager>()[0];
         TeleportUI.Display = true;
 
 
     }
 
-    public override bool isClicked()
-    {
-        return Input.GetKeyDown(KeyCode.E);
-    }
-
     public IEnumerator doTeleport()
     {
         var player = GameObject.FindGameObjectWithTag("Player");
         var fadeScript = GameObject.Find("Fade").GetComponent<Fade>();
-        player.GetComponent<Animator>().enabled = false;
         player.GetComponent<Player>().movePrevent = true;
+        player.GetComponent<Player>().canInteract = false;
         yield return StartCoroutine(fadeScript.FadeIn());
 
 
@@ -42,7 +39,7 @@ public class PrayStatue : Interactable
         Camera.main.GetComponent<CameraMovements>().setBound(targetMap.gameObject);
         yield return StartCoroutine(fadeScript.FadeOut());
 
-        player.GetComponent<Animator>().enabled = true;
         player.GetComponent<Player>().movePrevent = false;
+        player.GetComponent<Player>().canInteract = true;
     }
 }

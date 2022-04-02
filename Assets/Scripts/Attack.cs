@@ -2,11 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface AttackForce
-{
-    int getAttackForce();
-    int getKnockbackForce();
-}
 public class Attack : MonoBehaviour
 {
     public Animator source;

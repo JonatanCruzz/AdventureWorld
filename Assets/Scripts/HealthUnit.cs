@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+[System.Serializable]
 public class HealthUnit : MonoBehaviour
 {
     public float HP = 0;
@@ -38,6 +38,7 @@ public class HealthUnit : MonoBehaviour
     }
     private void updateMaxHP()
     {
+        if (disableUpdate) return;
         var relativeHp = maxHP != 0 ? HP / maxHP : 1;
         maxHP = (BaseHP + AddictiveHP) * (MultiplierHP + 1);
         HP = Mathf.Clamp(maxHP * relativeHp, 0, maxHP);
@@ -51,4 +52,6 @@ public class HealthUnit : MonoBehaviour
         this.updateMaxHP();
 
     }
+
+    public bool disableUpdate = false;
 }
