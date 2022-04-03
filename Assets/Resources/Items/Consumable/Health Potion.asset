@@ -23,3 +23,4 @@ MonoBehaviour:
   healthRestored: 2
   buffs:
   - {fileID: 11400000, guid: cc46c21613acb054d8ad859208066857, type: 2}
+  - {fileID: 11400000, guid: cc46c21613acb054d8ad859208066857, type: 2}

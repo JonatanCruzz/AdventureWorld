@@ -2,56 +2,53 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 [CreateAssetMenu]
 public class Item : ScriptableObject, INotifyPropertyChanged
 {
-    private void setProperty(string propertyName, string localPropertyName, object value)
+    private void SetProperty(string propertyName, string localPropertyName, object value)
     {
         var prop = this.GetType().GetProperty(localPropertyName);
-        if (prop != null && !prop.GetValue(this).Equals(value))
-        {
-            prop.SetValue(this, value);
-            OnPropertyChanged(propertyName);
-        }
+        if (prop == null || prop.GetValue(this).Equals(value)) return;
+        prop.SetValue(this, value);
+        OnPropertyChanged(propertyName);
     }
 
     #region Properties
+    [PropertyOrder(-1)]
     public string ID = Guid.NewGuid().ToString().ToUpper();
 
     public int BuyPrice
     {
         get => _buyPrice;
-        set => setProperty(nameof(BuyPrice), nameof(_buyPrice), value);
+        set => SetProperty(nameof(BuyPrice), nameof(_buyPrice), value);
     }
     public float SellPercentage
     {
         get => _sellPercentage;
-        set => setProperty(nameof(SellPercentage), nameof(_sellPercentage), value);
+        set => SetProperty(nameof(SellPercentage), nameof(_sellPercentage), value);
     }
     public Sprite itemSprite
     {
         get => _itemSprite;
-        set => setProperty(nameof(itemSprite), nameof(_itemSprite), value);
+        set => SetProperty(nameof(itemSprite), nameof(_itemSprite), value);
     }
-    public string itemDescription
+    public string ItemDescription
     {
         get => _itemDescription;
-        set => setProperty(nameof(itemDescription), nameof(_itemDescription), value);
+        set => SetProperty(nameof(ItemDescription), nameof(_itemDescription), value);
     }
-    public string itemName
+    public string ItemName
     {
-        get
-        {
-            return _itemName;
-        }
+        get => _itemName;
         set
         {
             if (value != _itemName)
             {
                 _itemName = value;
-                OnPropertyChanged(nameof(itemName));
+                OnPropertyChanged(nameof(ItemName));
             }
         }
     }
@@ -90,27 +87,26 @@ public class Item : ScriptableObject, INotifyPropertyChanged
     [SerializeField]
     private int _buyPrice;
     [SerializeField]
-    [Range(0, 1)]
+    [ProgressBar(0, 100)]
+    [Range(0, 100)]
     private float _sellPercentage;
     [SerializeField]
+    [PreviewField, Required, AssetsOnly, HideLabel, PropertyOrder(-1), HorizontalGroup("Split", Width=50)]
     private Sprite _itemSprite;
     [SerializeField]
+    [TextArea(3, 5)]
     private string _itemDescription;
     [SerializeField]
+    [VerticalGroup("Split/Properties")]
     private string _itemName;
 
     [SerializeField]
+    [VerticalGroup("Split/Properties")]
     private bool _stackable;
     [SerializeField]
+    [VerticalGroup("Split/Properties"), ShowIf("@this._stackable")]
     private int _stackSize;
     #endregion
-
-    public void Use()
-    {
-        Debug.Log("Using " + itemName);
-
-
-    }
 
     // method to add the buff to the player
     public virtual void AddBuff(Player player)

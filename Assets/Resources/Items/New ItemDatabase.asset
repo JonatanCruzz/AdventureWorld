@@ -90,23 +90,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 138669a60fd8dc345859b20ddc2ad589, type: 3}
+  m_Script: {fileID: 0}
   m_Name: New ItemDatabase
   m_EditorClassIdentifier: 
-  items:
-  - {fileID: -2793686114526978510}
-  currencies: []
-  raritys: []
-  categories:
-  - {fileID: -5032685865838728112}
-  equipments: []
-  itemGroups: []
-  settings:
-  - {fileID: -6827163362496577720}
-  - {fileID: 7371694185199694237}
-  - {fileID: 4935804796690545080}
-  - {fileID: 5321674659094606232}
-  - {fileID: 7057633902403193970}
 --- !u!114 &4935804796690545080
 MonoBehaviour:
   m_ObjectHideFlags: 1

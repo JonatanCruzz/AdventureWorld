@@ -85,7 +85,7 @@ public class InventorySlot : INotifyPropertyChanged,ISerializable
             this.numberOfItem = 0;
             this.addAmount(numberOfItem, out numberOfItemLeft);
         }
-        else if (this.item.itemName == item.itemName)
+        else if (this.item.ItemName == item.ItemName)
         {
             this.addAmount(numberOfItem, out numberOfItemLeft);
         }

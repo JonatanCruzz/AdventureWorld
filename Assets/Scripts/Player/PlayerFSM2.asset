@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f945e777233a59f4aba40aeca29093a6, type: 3}
+  m_Name: PlayerFSM2
+  m_EditorClassIdentifier: 
+  _serializedGraph: '{"type":"NodeCanvas.StateMachines.FSM","nodes":[{"_actionList":{"executionMode":1,"actions":[{"inputActionAsset":1,"saveValueAs":{"_type":"UnityEngine.Vector2","_name":"move","_targetVariableID":"cb3e8607-317c-447b-a9fe-97ae724d3d8e"},"selectedActionID":"5e842395-4996-4c5a-871b-32a14915844e","$type":"NodeCanvas.Tasks.Actions.GetActionInputValue"}]},"_repeatStateActions":true,"_transitionEvaluation":1,"_position":{"x":517.0,"y":155.0},"$type":"NodeCanvas.StateMachines.ActionState","$id":"0"},{"_actionList":{"executionMode":1,"actions":[{"log":{"_value":"finish
+    move"},"$type":"NodeCanvas.Tasks.Actions.DebugLogText"}]},"_position":{"x":375.0,"y":293.0},"$type":"NodeCanvas.StateMachines.ActionState","$id":"1"}],"connections":[{"_condition":{"valueA":{"_name":"move","_targetVariableID":"cb3e8607-317c-447b-a9fe-97ae724d3d8e"},"valueB":{},"$type":"NodeCanvas.Tasks.Conditions.CheckVariable`1[[UnityEngine.Vector2,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.StateMachines.FSMConnection"}],"canvasGroups":[],"localBlackboard":{"_variables":{}}}'
+  _objectReferences:
+  - {fileID: 0}
+  - {fileID: -944628639613478452, guid: 84a60137aae80924eb6b01cb48f7249b, type: 3}
+  _graphSource:
+    _version: 3.22
+    _category: 
+    _comments: 
+    _translation: {x: 0, y: 0}
+    _zoomFactor: 1
+  _haltSerialization: 0

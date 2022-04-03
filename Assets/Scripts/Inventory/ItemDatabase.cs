@@ -1,11 +1,14 @@
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
 namespace AdventureWorld.Prueba
 {
-    class ItemDatabase: MonoBehaviour
+    
+    class ItemDatabase
     {
-        public Item[] items;
+        public static readonly string ITEMS_PATH = "Assets/Resources/Items";
+        public List<Item> items;
         
         public  Item GetItem(string id)
         {
@@ -13,25 +16,11 @@ namespace AdventureWorld.Prueba
             
             return items.FirstOrDefault(item => item.ID == id);
         }
-        
-        public static ItemDatabase instance;
-        private void Awake()
-        {
-            if(instance != null && instance != this)
-            {
-                Destroy(this);
-                return;
-            } 
-            instance = this;
-            DontDestroyOnLoad(this);
-            this.init();
-
-        }
-
-        private void init()
+        public void init()
         {
             //Load all items
-            items = Resources.LoadAll<Item>("Items");
+            items = Resources.LoadAll<Item>("Items").ToList();
         }
+
     }
 }

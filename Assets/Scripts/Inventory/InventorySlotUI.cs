@@ -46,7 +46,7 @@ public class InventorySlotUI
         {
             item.PropertyChanged += OnItemPropertyChanged;
             image.sprite = item.itemSprite;
-            label.text = item.itemName;
+            label.text = item.ItemName;
         }
         else
         {

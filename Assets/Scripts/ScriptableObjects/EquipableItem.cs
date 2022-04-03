@@ -1,19 +1,23 @@
-
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Equipable", menuName = "Items/Equipable")]
 public class EquipableItem : Item
 {
+    [Title("Equipment Type")] [EnumToggleButtons]
     public EquipableItemSlotType itemSlot;
 
-    public int armor;
-    public int strength;
-    public int agility;
+    [FoldoutGroup("Stats")] public int armor;
+    [FoldoutGroup("Stats")] public int strength;
+
+    [FoldoutGroup("Stats")] public int agility;
+
     // public int intellect;
     // public int stamina;
     // public int staminaRegen;
-    public int health;
-    public int healthRegen;
+    [FoldoutGroup("Stats")] public int health;
+
+    [FoldoutGroup("Stats")] public int healthRegen;
     // public int mana;
     // public int manaRegen;
     // public int critChance;
@@ -21,7 +25,7 @@ public class EquipableItem : Item
 
     public void onEquip()
     {
-        Debug.Log("Equipped " + itemName);
+        Debug.Log("Equipped " + ItemName);
     }
 
     public override void AddBuff(Player player)
@@ -38,7 +42,5 @@ public class EquipableItem : Item
         var hp = player.GetComponent<HealthUnit>();
         hp.AddictiveHP -= health;
         Debug.Log("Removed " + health + " to HP");
-
     }
-
 }

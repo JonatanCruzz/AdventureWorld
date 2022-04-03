@@ -25,7 +25,7 @@ namespace AdventureWorld.Prueba
         {
             inventory.items = items.Select(item => new InventorySlot()
             {
-                item = item.Item != "" ? ItemDatabase.instance.GetItem(item.Item) : null,
+                item = item.Item != "" ? ItemDatabaseBehaviour.instance.GetItem(item.Item) : null,
                 numberOfItem = item.Amount
             }).ToList();
             inventory.numberOfKey = numberOfKey;

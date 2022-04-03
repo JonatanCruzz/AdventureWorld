@@ -45,7 +45,7 @@ public class Fade : MonoBehaviour
 
     void Start()
     {
-        StartCoroutine(FadeInAndOut());
+        // StartCoroutine(FadeInAndOut());
     }
 
     private IEnumerator FadeInAndOut()

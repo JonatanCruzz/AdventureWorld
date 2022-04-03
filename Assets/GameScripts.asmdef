@@ -18,7 +18,8 @@
         "Unity.2D.IK.Runtime",
         "Febucci.TextAnimator.Runtime",
         "Ink-Libraries",
-        "InkEditor"
+        "InkEditor",
+        "ParadoxNotion"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

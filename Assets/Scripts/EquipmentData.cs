@@ -22,11 +22,11 @@ namespace AdventureWorld.Prueba
 
         public void toPlayerEquipment(EquipmentInventory playerEquipment)
         {
-            playerEquipment.Head =  (EquipableItem) ItemDatabase.instance.GetItem(Head);
-            playerEquipment.Chest =  (EquipableItem) ItemDatabase.instance.GetItem(Chest);
-            playerEquipment.Feet =  (EquipableItem) ItemDatabase.instance.GetItem(Feet);
-            playerEquipment.MainHand =  (EquipableItem) ItemDatabase.instance.GetItem(MainHand);
-            playerEquipment.OffHand =  (EquipableItem) ItemDatabase.instance.GetItem(OffHand);
+            playerEquipment.Head =  (EquipableItem) ItemDatabaseBehaviour.instance.GetItem(Head);
+            playerEquipment.Chest =  (EquipableItem) ItemDatabaseBehaviour.instance.GetItem(Chest);
+            playerEquipment.Feet =  (EquipableItem) ItemDatabaseBehaviour.instance.GetItem(Feet);
+            playerEquipment.MainHand =  (EquipableItem) ItemDatabaseBehaviour.instance.GetItem(MainHand);
+            playerEquipment.OffHand =  (EquipableItem) ItemDatabaseBehaviour.instance.GetItem(OffHand);
         }
     }
 }
