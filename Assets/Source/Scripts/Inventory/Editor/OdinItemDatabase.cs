@@ -9,7 +9,7 @@ namespace AdventureWorld.Prueba.Editor
 {
     public class OdinItemDatabase : OdinMenuEditorWindow
     {
-        [MenuItem("My Game/My Editor")]
+        [MenuItem("Tools/My Game/My Editor")]
         private static void OpenWindow()
         {
             GetWindow<OdinItemDatabase>().Show();
