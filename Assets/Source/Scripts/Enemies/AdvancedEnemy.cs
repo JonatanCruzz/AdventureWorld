@@ -34,16 +34,16 @@ public class AdvancedEnemy : MonoBehaviour
         if (distance < 10)
         {
             agent.SetDestination(playerPos);
-            animancer.Play(walk);
-
+            // animancer.Play(walk);
+        
             if (distance < 2)
             {
-                animancer.Play(attack);
+                // animancer.Play(attack);
             }
         }
         else
         {
-            animancer.Play(idle);
+            // animancer.Play(idle);
         }
     }
 }
