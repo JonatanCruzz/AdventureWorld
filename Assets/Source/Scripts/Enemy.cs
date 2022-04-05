@@ -6,7 +6,7 @@ using UnityEngine;
 [RequireComponent(typeof(MoveBehaviour))]
 public class Enemy : MonoBehaviour, AttackForce
 {
-
+    
     // Variables para gestionar el radio de visión, el de ataque y la velocidad
     public float visionRadius;
     public float attackRadius;

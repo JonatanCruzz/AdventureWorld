@@ -572,6 +572,7 @@ MonoBehaviour:
   _addictiveHP: 0
   _multiplierHP: 0
   BaseHP: 10
+  disableUpdate: 0
 --- !u!114 &114021906635618245
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -5,7 +5,7 @@ using System.Runtime.Serialization;
 using UnityEngine;
 
 // create a clas to manage the equiped items
-[CreateAssetMenu(fileName = "EquipmentInventory", menuName = "Inventory/EquipmentInventory")]
+[CreateAssetMenu(fileName = "EquipmentInventory", menuName = "AdventureWorld/Inventory/EquipmentInventory")]
 [System.Serializable]
 public class EquipmentInventory : ScriptableObject, INotifyPropertyChanged
 {

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
+
 [RequireComponent(typeof(Rigidbody2D))]
 public class MoveBehaviour : MonoBehaviour
 {
@@ -16,13 +17,14 @@ public class MoveBehaviour : MonoBehaviour
     private Animator _animator;
     private HealthUnit _health;
     public bool movePrevent;
-
+    public bool disableAnimation = false;
     public bool Dashing
     {
         get => Dash_T > 0;
     }
 
     public AttackSpecifications Attack;
+
     public void Move(InputAction.CallbackContext ctx)
     {
         if (this.Dashing)
@@ -30,6 +32,7 @@ public class MoveBehaviour : MonoBehaviour
             p_moveDirection = ctx.ReadValue<Vector2>();
             return;
         }
+
         this.moveDirection = ctx.ReadValue<Vector2>();
 
         // UnityEngine.Input.ac
@@ -41,6 +44,7 @@ public class MoveBehaviour : MonoBehaviour
         p_moveDirection = this.moveDirection;
         this.Dash_T = this.DashTime;
     }
+
     public void StopDash()
     {
         this.Dash_T = 0;
@@ -52,10 +56,19 @@ public class MoveBehaviour : MonoBehaviour
         _animator = GetComponent<Animator>();
         _health = GetComponent<HealthUnit>();
     }
+
     private bool isAlive()
     {
         return _health == null || _health.HP > 0;
     }
+
+    private void applyAnimation(Vector2 direction)
+    {
+        if (disableAnimation || this._animator == null) return;
+        _animator.SetFloat("movX", direction.x);
+        _animator.SetFloat("movY", direction.y);
+    }
+
     private void FixedUpdate()
     {
         if (!isAlive()) return;
@@ -67,19 +80,20 @@ public class MoveBehaviour : MonoBehaviour
             {
                 this.moveDirection = p_moveDirection;
             }
+
             _rigidbody.velocity = this.moveDirection * this.moveSpeed * this.dashFactor;
             return;
         }
+
         if (this.Attack.attackDirection != Vector2.zero)
         {
-            _animator.SetFloat("movX", this.Attack.attackDirection.x);
-            _animator.SetFloat("movY", this.Attack.attackDirection.y);
-            PhysicsUtils.DoMoveRigidBodyByKnockback(_rigidbody, this.Attack.attackDirection, this.Attack.knockback, Time.fixedDeltaTime);
+            this.applyAnimation(this.Attack.attackDirection);
+            PhysicsUtils.DoMoveRigidBodyByKnockback(_rigidbody, this.Attack.attackDirection, this.Attack.knockback,
+                Time.fixedDeltaTime);
             return;
         }
-        _rigidbody.MovePosition(_rigidbody.position + moveDirection * moveSpeed * Time.fixedDeltaTime);
-        _animator.SetFloat("movX", moveDirection.x);
-        _animator.SetFloat("movY", moveDirection.y);
-    }
 
+        _rigidbody.MovePosition(_rigidbody.position + moveDirection * moveSpeed * Time.fixedDeltaTime);
+        this.applyAnimation(moveDirection);
+    }
 }

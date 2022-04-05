@@ -51,8 +51,8 @@ public class Rock : MonoBehaviour
                     var attack = new AttackSpecifications
                     {
                         attackDirection = dir,
-                        knockback = this.source != null ? this.source.getAttackForce() : Attack.knockbackForce,
-                        damage = this.source != null ? this.source.getAttackForce() : 10
+                        knockback = this.source?.getKnockbackForce() ?? Attack.knockbackForce,
+                        damage = this.source?.getAttackForce() ?? 10
                     };
                     collision.SendMessage("Attacked", attack);
                 }

@@ -19,7 +19,8 @@
         "Febucci.TextAnimator.Runtime",
         "Ink-Libraries",
         "InkEditor",
-        "ParadoxNotion"
+        "ParadoxNotion",
+        "XNode"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

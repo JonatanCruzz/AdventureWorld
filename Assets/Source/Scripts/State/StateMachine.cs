@@ -4,35 +4,26 @@ namespace AdventureWorld.Prueba.State
    
     public class StateMachine : MonoBehaviour
     {
-        public IState currentState;
-        public IState previousState;
-        public IState globalState;
+        public BaseState CurrentBaseState;
+        public BaseState PreviousBaseState;
 
-        public void ChangeState(IState newState)
+        public void ChangeState(BaseState newBaseState)
         {
-            if (currentState != null)
-            {
-                currentState.OnExit();
-            }
-            previousState = currentState;
-            currentState = newState;
-            currentState.OnEnter();
+            CurrentBaseState?.OnExit(newBaseState);
+            
+            PreviousBaseState = CurrentBaseState;
+            CurrentBaseState = newBaseState;
+            CurrentBaseState.OnEnter(PreviousBaseState);
         }
 
         public void Update()
         {
-            if (currentState != null)
-            {
-                currentState.Update(Time.deltaTime);
-            }
+            CurrentBaseState?.Update(Time.deltaTime);
         }
 
         public void FixedUpdate()
         {
-            if (currentState != null)
-            {
-                currentState.FixedUpdate(Time.deltaTime);
-            }
+            CurrentBaseState?.FixedUpdate(Time.deltaTime);
         }
     }
 }

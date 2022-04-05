@@ -2,7 +2,7 @@ using Unity;
 using UnityEngine;
 
 
-[CreateAssetMenu(menuName = "Buffs/HealthBuff")]
+[CreateAssetMenu(menuName = "AdventureWorld/Buffs/HealthBuff")]
 public class HealthBuff : ScriptableBuff
 {
     public float HealthIncrease;

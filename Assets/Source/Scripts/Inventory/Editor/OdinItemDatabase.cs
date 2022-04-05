@@ -12,20 +12,8 @@ namespace AdventureWorld.Prueba.Editor
         [MenuItem("My Game/My Editor")]
         private static void OpenWindow()
         {
-            var ui = GetWindow<OdinItemDatabase>();
-            ui.onLoad();
+            GetWindow<OdinItemDatabase>().Show();
         }
-
-        private void onLoad()
-        {
-            // Load the database
-            var database = new ItemDatabase();
-            database.init();
-            this.items = database.items;
-        }
-
-
-        public List<Item> items = new List<Item>();
 
         private static string AskForFile(string basePath, string baseName = "InitialName.asset",
             string msg = "Save your prefab")

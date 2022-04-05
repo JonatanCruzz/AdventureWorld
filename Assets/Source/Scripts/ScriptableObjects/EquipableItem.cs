@@ -1,7 +1,7 @@
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Equipable", menuName = "Items/Equipable")]
+[CreateAssetMenu(fileName = "Equipable", menuName = "AdventureWorld/Items/Equipable")]
 public class EquipableItem : Item
 {
     [Title("Equipment Type")] [EnumToggleButtons]

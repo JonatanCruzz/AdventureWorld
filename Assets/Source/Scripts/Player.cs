@@ -41,7 +41,7 @@ public class Player : MonoBehaviour, AttackForce
 
     [Header("Animation")]
     // public Animator anim;
-    private HybridAnimancerComponent animancer;
+    [HideInInspector]public HybridAnimancerComponent animancer;
     [SerializeField] private AnimationClip _DamageClip;
     [SerializeField] private MixerTransition2DAsset.UnShared _AttackTransition;
     private PlayerState state;

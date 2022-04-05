@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Consumable", menuName = "Items/Consumable")]
+[CreateAssetMenu(fileName = "Consumable", menuName = "AdventureWorld/Items/Consumable")]
 public class ConsumableItem : Item
 {
 

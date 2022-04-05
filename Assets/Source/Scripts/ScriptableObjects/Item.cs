@@ -5,7 +5,7 @@ using System.ComponentModel;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-[CreateAssetMenu]
+[CreateAssetMenu(menuName = "AdventureWorld/Item")]
 public class Item : ScriptableObject, INotifyPropertyChanged
 {
     private void SetProperty(string propertyName, string localPropertyName, object value)
