@@ -69,12 +69,11 @@ public class Player : MonoBehaviour, AttackForce
         damage = false;
     }
 
-
     private void Awake()
     {
         Assert.IsNotNull(initialmap);
         Assert.IsNotNull(slashPrefab);
-
+        
     }
 
     void Start()
