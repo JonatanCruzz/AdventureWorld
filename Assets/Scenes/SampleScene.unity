@@ -3011,7 +3011,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1442880973596821706, guid: 50a8db46b4ed0924b9ae98ffed188e06, type: 3}
       propertyPath: m_AnimatedTiles.Array.data[2].second.m_AnimationSpeed
-      value: 0.03
+      value: 0.030000001
       objectReference: {fileID: 0}
     - target: {fileID: 1442880973596821706, guid: 50a8db46b4ed0924b9ae98ffed188e06, type: 3}
       propertyPath: m_AnimatedTiles.Array.data[3].second.m_AnimationSpeed
@@ -4408,7 +4408,47 @@ MonoBehaviour:
   uiKey: {fileID: 1153793334}
   description: 
   radius: 1.5
+  defaultInventory: {fileID: 0}
   offset: {x: 0, y: 0}
+--- !u!61 &306554095
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 306554092}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.9375, y: 1}
+    newSize: {x: 0.9375, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.27, y: 2.41}
+  m_EdgeRadius: 0
+--- !u!114 &306554096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 306554092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8422e42e273b9454386edd2d86788d7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  contents: {fileID: 0}
   isOpen: 0
   defaultInventory: {fileID: 11400000, guid: 0ab7094b762bb6d4b9dcb14bcc0e8284, type: 2}
 --- !u!61 &306554097
@@ -4764,7 +4804,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uiKey: {fileID: 1746536474}
   description: Interactable
-  radius: 2.24
+  radius: 3.21
   offset: {x: 0, y: 0}
   dialog:
     lines:
@@ -4783,7 +4823,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.027387977, y: -0.13881257}
+  m_Offset: {x: -0.10689807, y: 0.19597936}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -4794,7 +4834,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.3488448, y: 1.7223749}
+  m_Size: {x: 2.2137952, y: 2.3919582}
   m_EdgeRadius: 0
 --- !u!114 &366934055
 MonoBehaviour:
@@ -19910,7 +19950,7 @@ Tilemap:
       - {fileID: -619457787615731422, guid: 3cbef485da095b84b901db74ee023c50, type: 3}
       - {fileID: -155129313630589030, guid: 3cbef485da095b84b901db74ee023c50, type: 3}
       - {fileID: -7534579444850916856, guid: 3cbef485da095b84b901db74ee023c50, type: 3}
-      m_AnimationSpeed: 0.03
+      m_AnimationSpeed: 0.030000001
       m_AnimationTimeOffset: 0
       m_IsLooping: 1
   - first: {x: 24, y: -14, z: 0}
@@ -19950,7 +19990,7 @@ Tilemap:
       - {fileID: -6014281745691687770, guid: d24c508531cef2646b0431ec6b377130, type: 3}
       - {fileID: -6313443057074804713, guid: d24c508531cef2646b0431ec6b377130, type: 3}
       - {fileID: -2173500157470449120, guid: d24c508531cef2646b0431ec6b377130, type: 3}
-      m_AnimationSpeed: 0.030000001
+      m_AnimationSpeed: 0.03
       m_AnimationTimeOffset: 0
       m_IsLooping: 1
   - first: {x: 23, y: -5, z: 0}
