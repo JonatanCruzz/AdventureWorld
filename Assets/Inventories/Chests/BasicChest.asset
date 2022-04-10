@@ -12,13 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 291c477ce9c8af449934b6edd2a94b20, type: 3}
   m_Name: BasicChest
   m_EditorClassIdentifier: 
-  currentItems: {fileID: 0}
   items:
   - _item: {fileID: 11400000, guid: aac5ea2cf1034b842a18ac3f6cb2ece0, type: 2}
     _numberOfItem: 1
-  - _item: {fileID: 11400000, guid: aac5ea2cf1034b842a18ac3f6cb2ece0, type: 2}
+  - _item: {fileID: 11400000, guid: efc4f355ba6dd6f4692ff3246390684d, type: 2}
     _numberOfItem: 1
-  - _item: {fileID: 11400000, guid: aac5ea2cf1034b842a18ac3f6cb2ece0, type: 2}
-    _numberOfItem: 1
+  - _item: {fileID: 11400000, guid: b280622e35348a64aa8f45c76f69006b, type: 2}
+    _numberOfItem: 5
   numberOfKey: 0
   maxSlots: 10

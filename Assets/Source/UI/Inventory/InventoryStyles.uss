@@ -1,0 +1,14 @@
+.inventorySlot{
+    width:128px;
+    height:128px;
+    margin:5px;
+    border-color: rgb(48, 48, 48);
+    background-color: rgb(9,19,21);
+    border-radius: 3px;
+}
+
+.slotIcon{
+    padding: 15px;
+    flex-shrink: 0;
+    flex-grow: 1;
+}
