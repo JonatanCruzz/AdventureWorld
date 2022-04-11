@@ -1460,7 +1460,7 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
-  isReadable: 0
+  isReadable: 1
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
@@ -1558,7 +1558,7 @@ TextureImporter:
       name: cryptofthedamned-tileset_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 192
         y: 240
         width: 16
         height: 16
@@ -1579,7 +1579,7 @@ TextureImporter:
       name: cryptofthedamned-tileset_1
       rect:
         serializedVersion: 2
-        x: 16
+        x: 208
         y: 240
         width: 16
         height: 16
@@ -1600,7 +1600,7 @@ TextureImporter:
       name: cryptofthedamned-tileset_2
       rect:
         serializedVersion: 2
-        x: 32
+        x: 224
         y: 240
         width: 16
         height: 16
@@ -1622,7 +1622,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 192
-        y: 240
+        y: 224
         width: 16
         height: 16
       alignment: 0
@@ -1643,7 +1643,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 208
-        y: 240
+        y: 224
         width: 16
         height: 16
       alignment: 0
@@ -1664,7 +1664,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 224
-        y: 240
+        y: 224
         width: 16
         height: 16
       alignment: 0
@@ -1685,7 +1685,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 240
-        y: 240
+        y: 224
         width: 16
         height: 16
       alignment: 0
@@ -1706,7 +1706,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 256
-        y: 240
+        y: 224
         width: 16
         height: 16
       alignment: 0
@@ -1727,7 +1727,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 272
-        y: 240
+        y: 224
         width: 16
         height: 16
       alignment: 0
@@ -1747,8 +1747,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_18
       rect:
         serializedVersion: 2
-        x: 288
-        y: 240
+        x: 384
+        y: 224
         width: 16
         height: 16
       alignment: 0
@@ -1768,8 +1768,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_19
       rect:
         serializedVersion: 2
-        x: 304
-        y: 240
+        x: 400
+        y: 224
         width: 16
         height: 16
       alignment: 0
@@ -1789,8 +1789,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_20
       rect:
         serializedVersion: 2
-        x: 320
-        y: 240
+        x: 416
+        y: 224
         width: 16
         height: 16
       alignment: 0
@@ -1810,8 +1810,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_21
       rect:
         serializedVersion: 2
-        x: 336
-        y: 240
+        x: 432
+        y: 224
         width: 16
         height: 16
       alignment: 0
@@ -1831,8 +1831,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_22
       rect:
         serializedVersion: 2
-        x: 352
-        y: 240
+        x: 464
+        y: 224
         width: 16
         height: 16
       alignment: 0
@@ -1852,8 +1852,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_23
       rect:
         serializedVersion: 2
-        x: 368
-        y: 240
+        x: 192
+        y: 208
         width: 16
         height: 16
       alignment: 0
@@ -1873,8 +1873,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_24
       rect:
         serializedVersion: 2
-        x: 384
-        y: 240
+        x: 208
+        y: 208
         width: 16
         height: 16
       alignment: 0
@@ -1894,8 +1894,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_25
       rect:
         serializedVersion: 2
-        x: 400
-        y: 240
+        x: 224
+        y: 208
         width: 16
         height: 16
       alignment: 0
@@ -1915,8 +1915,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_26
       rect:
         serializedVersion: 2
-        x: 416
-        y: 240
+        x: 240
+        y: 208
         width: 16
         height: 16
       alignment: 0
@@ -1936,8 +1936,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_27
       rect:
         serializedVersion: 2
-        x: 432
-        y: 240
+        x: 256
+        y: 208
         width: 16
         height: 16
       alignment: 0
@@ -1957,8 +1957,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_28
       rect:
         serializedVersion: 2
-        x: 448
-        y: 240
+        x: 272
+        y: 208
         width: 16
         height: 16
       alignment: 0
@@ -1978,8 +1978,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_29
       rect:
         serializedVersion: 2
-        x: 464
-        y: 240
+        x: 400
+        y: 208
         width: 16
         height: 16
       alignment: 0
@@ -1999,8 +1999,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_30
       rect:
         serializedVersion: 2
-        x: 0
-        y: 224
+        x: 416
+        y: 208
         width: 16
         height: 16
       alignment: 0
@@ -2020,8 +2020,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_31
       rect:
         serializedVersion: 2
-        x: 16
-        y: 224
+        x: 432
+        y: 208
         width: 16
         height: 16
       alignment: 0
@@ -2041,8 +2041,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_32
       rect:
         serializedVersion: 2
-        x: 32
-        y: 224
+        x: 448
+        y: 208
         width: 16
         height: 16
       alignment: 0
@@ -2062,8 +2062,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_33
       rect:
         serializedVersion: 2
-        x: 48
-        y: 224
+        x: 464
+        y: 208
         width: 16
         height: 16
       alignment: 0
@@ -2083,8 +2083,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_34
       rect:
         serializedVersion: 2
-        x: 64
-        y: 224
+        x: 192
+        y: 192
         width: 16
         height: 16
       alignment: 0
@@ -2104,8 +2104,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_35
       rect:
         serializedVersion: 2
-        x: 80
-        y: 224
+        x: 208
+        y: 192
         width: 16
         height: 16
       alignment: 0
@@ -2125,8 +2125,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_36
       rect:
         serializedVersion: 2
-        x: 96
-        y: 224
+        x: 224
+        y: 192
         width: 16
         height: 16
       alignment: 0
@@ -2146,8 +2146,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_37
       rect:
         serializedVersion: 2
-        x: 112
-        y: 224
+        x: 240
+        y: 192
         width: 16
         height: 16
       alignment: 0
@@ -2167,8 +2167,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_38
       rect:
         serializedVersion: 2
-        x: 128
-        y: 224
+        x: 256
+        y: 192
         width: 16
         height: 16
       alignment: 0
@@ -2188,8 +2188,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_39
       rect:
         serializedVersion: 2
-        x: 144
-        y: 224
+        x: 272
+        y: 192
         width: 16
         height: 16
       alignment: 0
@@ -2209,8 +2209,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_42
       rect:
         serializedVersion: 2
-        x: 192
-        y: 224
+        x: 320
+        y: 192
         width: 16
         height: 16
       alignment: 0
@@ -2230,8 +2230,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_43
       rect:
         serializedVersion: 2
-        x: 208
-        y: 224
+        x: 400
+        y: 192
         width: 16
         height: 16
       alignment: 0
@@ -2251,8 +2251,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_44
       rect:
         serializedVersion: 2
-        x: 224
-        y: 224
+        x: 416
+        y: 192
         width: 16
         height: 16
       alignment: 0
@@ -2272,8 +2272,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_45
       rect:
         serializedVersion: 2
-        x: 240
-        y: 224
+        x: 432
+        y: 192
         width: 16
         height: 16
       alignment: 0
@@ -2293,8 +2293,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_46
       rect:
         serializedVersion: 2
-        x: 256
-        y: 224
+        x: 448
+        y: 192
         width: 16
         height: 16
       alignment: 0
@@ -2314,8 +2314,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_47
       rect:
         serializedVersion: 2
-        x: 272
-        y: 224
+        x: 464
+        y: 192
         width: 16
         height: 16
       alignment: 0
@@ -2335,8 +2335,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_48
       rect:
         serializedVersion: 2
-        x: 288
-        y: 224
+        x: 48
+        y: 176
         width: 16
         height: 16
       alignment: 0
@@ -2356,8 +2356,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_49
       rect:
         serializedVersion: 2
-        x: 304
-        y: 224
+        x: 64
+        y: 176
         width: 16
         height: 16
       alignment: 0
@@ -2377,8 +2377,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_50
       rect:
         serializedVersion: 2
-        x: 320
-        y: 224
+        x: 80
+        y: 176
         width: 16
         height: 16
       alignment: 0
@@ -2398,8 +2398,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_51
       rect:
         serializedVersion: 2
-        x: 336
-        y: 224
+        x: 192
+        y: 176
         width: 16
         height: 16
       alignment: 0
@@ -2419,8 +2419,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_52
       rect:
         serializedVersion: 2
-        x: 352
-        y: 224
+        x: 208
+        y: 176
         width: 16
         height: 16
       alignment: 0
@@ -2440,8 +2440,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_53
       rect:
         serializedVersion: 2
-        x: 368
-        y: 224
+        x: 224
+        y: 176
         width: 16
         height: 16
       alignment: 0
@@ -2461,8 +2461,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_54
       rect:
         serializedVersion: 2
-        x: 384
-        y: 224
+        x: 240
+        y: 176
         width: 16
         height: 16
       alignment: 0
@@ -2482,8 +2482,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_55
       rect:
         serializedVersion: 2
-        x: 400
-        y: 224
+        x: 256
+        y: 176
         width: 16
         height: 16
       alignment: 0
@@ -2503,8 +2503,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_56
       rect:
         serializedVersion: 2
-        x: 416
-        y: 224
+        x: 272
+        y: 176
         width: 16
         height: 16
       alignment: 0
@@ -2524,8 +2524,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_57
       rect:
         serializedVersion: 2
-        x: 432
-        y: 224
+        x: 288
+        y: 176
         width: 16
         height: 16
       alignment: 0
@@ -2545,8 +2545,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_58
       rect:
         serializedVersion: 2
-        x: 448
-        y: 224
+        x: 304
+        y: 176
         width: 16
         height: 16
       alignment: 0
@@ -2566,8 +2566,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_59
       rect:
         serializedVersion: 2
-        x: 464
-        y: 224
+        x: 320
+        y: 176
         width: 16
         height: 16
       alignment: 0
@@ -2587,8 +2587,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_60
       rect:
         serializedVersion: 2
-        x: 0
-        y: 208
+        x: 384
+        y: 176
         width: 16
         height: 16
       alignment: 0
@@ -2608,8 +2608,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_61
       rect:
         serializedVersion: 2
-        x: 16
-        y: 208
+        x: 400
+        y: 176
         width: 16
         height: 16
       alignment: 0
@@ -2629,8 +2629,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_62
       rect:
         serializedVersion: 2
-        x: 32
-        y: 208
+        x: 432
+        y: 176
         width: 16
         height: 16
       alignment: 0
@@ -2650,8 +2650,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_63
       rect:
         serializedVersion: 2
-        x: 48
-        y: 208
+        x: 448
+        y: 176
         width: 16
         height: 16
       alignment: 0
@@ -2671,8 +2671,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_64
       rect:
         serializedVersion: 2
-        x: 64
-        y: 208
+        x: 464
+        y: 176
         width: 16
         height: 16
       alignment: 0
@@ -2692,8 +2692,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_65
       rect:
         serializedVersion: 2
-        x: 80
-        y: 208
+        x: 48
+        y: 160
         width: 16
         height: 16
       alignment: 0
@@ -2713,8 +2713,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_66
       rect:
         serializedVersion: 2
-        x: 96
-        y: 208
+        x: 64
+        y: 160
         width: 16
         height: 16
       alignment: 0
@@ -2734,8 +2734,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_67
       rect:
         serializedVersion: 2
-        x: 112
-        y: 208
+        x: 80
+        y: 160
         width: 16
         height: 16
       alignment: 0
@@ -2755,8 +2755,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_68
       rect:
         serializedVersion: 2
-        x: 128
-        y: 208
+        x: 192
+        y: 160
         width: 16
         height: 16
       alignment: 0
@@ -2776,8 +2776,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_69
       rect:
         serializedVersion: 2
-        x: 144
-        y: 208
+        x: 208
+        y: 160
         width: 16
         height: 16
       alignment: 0
@@ -2797,8 +2797,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_72
       rect:
         serializedVersion: 2
-        x: 192
-        y: 208
+        x: 256
+        y: 160
         width: 16
         height: 16
       alignment: 0
@@ -2818,8 +2818,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_73
       rect:
         serializedVersion: 2
-        x: 208
-        y: 208
+        x: 272
+        y: 160
         width: 16
         height: 16
       alignment: 0
@@ -2839,8 +2839,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_74
       rect:
         serializedVersion: 2
-        x: 224
-        y: 208
+        x: 288
+        y: 160
         width: 16
         height: 16
       alignment: 0
@@ -2860,8 +2860,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_75
       rect:
         serializedVersion: 2
-        x: 240
-        y: 208
+        x: 304
+        y: 160
         width: 16
         height: 16
       alignment: 0
@@ -2881,8 +2881,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_76
       rect:
         serializedVersion: 2
-        x: 256
-        y: 208
+        x: 320
+        y: 160
         width: 16
         height: 16
       alignment: 0
@@ -2902,8 +2902,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_77
       rect:
         serializedVersion: 2
-        x: 272
-        y: 208
+        x: 384
+        y: 160
         width: 16
         height: 16
       alignment: 0
@@ -2923,8 +2923,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_78
       rect:
         serializedVersion: 2
-        x: 288
-        y: 208
+        x: 400
+        y: 160
         width: 16
         height: 16
       alignment: 0
@@ -2944,8 +2944,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_79
       rect:
         serializedVersion: 2
-        x: 304
-        y: 208
+        x: 416
+        y: 160
         width: 16
         height: 16
       alignment: 0
@@ -2965,8 +2965,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_80
       rect:
         serializedVersion: 2
-        x: 320
-        y: 208
+        x: 432
+        y: 160
         width: 16
         height: 16
       alignment: 0
@@ -2986,8 +2986,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_81
       rect:
         serializedVersion: 2
-        x: 336
-        y: 208
+        x: 448
+        y: 160
         width: 16
         height: 16
       alignment: 0
@@ -3007,8 +3007,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_82
       rect:
         serializedVersion: 2
-        x: 352
-        y: 208
+        x: 464
+        y: 160
         width: 16
         height: 16
       alignment: 0
@@ -3028,8 +3028,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_83
       rect:
         serializedVersion: 2
-        x: 368
-        y: 208
+        x: 48
+        y: 144
         width: 16
         height: 16
       alignment: 0
@@ -3049,8 +3049,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_84
       rect:
         serializedVersion: 2
-        x: 384
-        y: 208
+        x: 64
+        y: 144
         width: 16
         height: 16
       alignment: 0
@@ -3070,8 +3070,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_85
       rect:
         serializedVersion: 2
-        x: 400
-        y: 208
+        x: 80
+        y: 144
         width: 16
         height: 16
       alignment: 0
@@ -3091,8 +3091,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_86
       rect:
         serializedVersion: 2
-        x: 416
-        y: 208
+        x: 192
+        y: 144
         width: 16
         height: 16
       alignment: 0
@@ -3112,8 +3112,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_87
       rect:
         serializedVersion: 2
-        x: 432
-        y: 208
+        x: 208
+        y: 144
         width: 16
         height: 16
       alignment: 0
@@ -3133,8 +3133,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_88
       rect:
         serializedVersion: 2
-        x: 448
-        y: 208
+        x: 224
+        y: 144
         width: 16
         height: 16
       alignment: 0
@@ -3154,8 +3154,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_89
       rect:
         serializedVersion: 2
-        x: 464
-        y: 208
+        x: 240
+        y: 144
         width: 16
         height: 16
       alignment: 0
@@ -3175,8 +3175,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_90
       rect:
         serializedVersion: 2
-        x: 0
-        y: 192
+        x: 256
+        y: 144
         width: 16
         height: 16
       alignment: 0
@@ -3196,8 +3196,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_91
       rect:
         serializedVersion: 2
-        x: 16
-        y: 192
+        x: 272
+        y: 144
         width: 16
         height: 16
       alignment: 0
@@ -3217,8 +3217,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_92
       rect:
         serializedVersion: 2
-        x: 32
-        y: 192
+        x: 288
+        y: 144
         width: 16
         height: 16
       alignment: 0
@@ -3238,8 +3238,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_93
       rect:
         serializedVersion: 2
-        x: 48
-        y: 192
+        x: 304
+        y: 144
         width: 16
         height: 16
       alignment: 0
@@ -3259,8 +3259,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_94
       rect:
         serializedVersion: 2
-        x: 64
-        y: 192
+        x: 320
+        y: 144
         width: 16
         height: 16
       alignment: 0
@@ -3280,8 +3280,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_95
       rect:
         serializedVersion: 2
-        x: 80
-        y: 192
+        x: 384
+        y: 144
         width: 16
         height: 16
       alignment: 0
@@ -3301,8 +3301,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_96
       rect:
         serializedVersion: 2
-        x: 96
-        y: 192
+        x: 400
+        y: 144
         width: 16
         height: 16
       alignment: 0
@@ -3322,8 +3322,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_97
       rect:
         serializedVersion: 2
-        x: 112
-        y: 192
+        x: 416
+        y: 144
         width: 16
         height: 16
       alignment: 0
@@ -3343,8 +3343,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_98
       rect:
         serializedVersion: 2
-        x: 128
-        y: 192
+        x: 432
+        y: 144
         width: 16
         height: 16
       alignment: 0
@@ -3364,8 +3364,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_99
       rect:
         serializedVersion: 2
-        x: 144
-        y: 192
+        x: 448
+        y: 144
         width: 16
         height: 16
       alignment: 0
@@ -3385,8 +3385,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_102
       rect:
         serializedVersion: 2
-        x: 192
-        y: 192
+        x: 64
+        y: 128
         width: 16
         height: 16
       alignment: 0
@@ -3406,8 +3406,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_103
       rect:
         serializedVersion: 2
-        x: 208
-        y: 192
+        x: 80
+        y: 128
         width: 16
         height: 16
       alignment: 0
@@ -3427,8 +3427,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_104
       rect:
         serializedVersion: 2
-        x: 224
-        y: 192
+        x: 192
+        y: 128
         width: 16
         height: 16
       alignment: 0
@@ -3448,8 +3448,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_105
       rect:
         serializedVersion: 2
-        x: 240
-        y: 192
+        x: 208
+        y: 128
         width: 16
         height: 16
       alignment: 0
@@ -3469,8 +3469,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_106
       rect:
         serializedVersion: 2
-        x: 256
-        y: 192
+        x: 224
+        y: 128
         width: 16
         height: 16
       alignment: 0
@@ -3490,8 +3490,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_107
       rect:
         serializedVersion: 2
-        x: 272
-        y: 192
+        x: 240
+        y: 128
         width: 16
         height: 16
       alignment: 0
@@ -3511,8 +3511,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_108
       rect:
         serializedVersion: 2
-        x: 288
-        y: 192
+        x: 256
+        y: 128
         width: 16
         height: 16
       alignment: 0
@@ -3532,8 +3532,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_109
       rect:
         serializedVersion: 2
-        x: 304
-        y: 192
+        x: 272
+        y: 128
         width: 16
         height: 16
       alignment: 0
@@ -3553,8 +3553,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_110
       rect:
         serializedVersion: 2
-        x: 320
-        y: 192
+        x: 288
+        y: 128
         width: 16
         height: 16
       alignment: 0
@@ -3574,8 +3574,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_111
       rect:
         serializedVersion: 2
-        x: 336
-        y: 192
+        x: 304
+        y: 128
         width: 16
         height: 16
       alignment: 0
@@ -3595,8 +3595,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_112
       rect:
         serializedVersion: 2
-        x: 352
-        y: 192
+        x: 320
+        y: 128
         width: 16
         height: 16
       alignment: 0
@@ -3616,8 +3616,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_113
       rect:
         serializedVersion: 2
-        x: 368
-        y: 192
+        x: 384
+        y: 128
         width: 16
         height: 16
       alignment: 0
@@ -3637,8 +3637,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_114
       rect:
         serializedVersion: 2
-        x: 384
-        y: 192
+        x: 400
+        y: 128
         width: 16
         height: 16
       alignment: 0
@@ -3658,8 +3658,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_115
       rect:
         serializedVersion: 2
-        x: 400
-        y: 192
+        x: 416
+        y: 128
         width: 16
         height: 16
       alignment: 0
@@ -3679,8 +3679,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_116
       rect:
         serializedVersion: 2
-        x: 416
-        y: 192
+        x: 432
+        y: 128
         width: 16
         height: 16
       alignment: 0
@@ -3700,8 +3700,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_117
       rect:
         serializedVersion: 2
-        x: 432
-        y: 192
+        x: 448
+        y: 128
         width: 16
         height: 16
       alignment: 0
@@ -3721,8 +3721,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_118
       rect:
         serializedVersion: 2
-        x: 448
-        y: 192
+        x: 464
+        y: 128
         width: 16
         height: 16
       alignment: 0
@@ -3742,8 +3742,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_119
       rect:
         serializedVersion: 2
-        x: 464
-        y: 192
+        x: 192
+        y: 112
         width: 16
         height: 16
       alignment: 0
@@ -3763,8 +3763,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_120
       rect:
         serializedVersion: 2
-        x: 0
-        y: 176
+        x: 208
+        y: 112
         width: 16
         height: 16
       alignment: 0
@@ -3784,8 +3784,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_121
       rect:
         serializedVersion: 2
-        x: 16
-        y: 176
+        x: 224
+        y: 112
         width: 16
         height: 16
       alignment: 0
@@ -3805,8 +3805,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_122
       rect:
         serializedVersion: 2
-        x: 32
-        y: 176
+        x: 240
+        y: 112
         width: 16
         height: 16
       alignment: 0
@@ -3826,8 +3826,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_123
       rect:
         serializedVersion: 2
-        x: 48
-        y: 176
+        x: 256
+        y: 112
         width: 16
         height: 16
       alignment: 0
@@ -3847,8 +3847,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_124
       rect:
         serializedVersion: 2
-        x: 64
-        y: 176
+        x: 272
+        y: 112
         width: 16
         height: 16
       alignment: 0
@@ -3868,8 +3868,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_125
       rect:
         serializedVersion: 2
-        x: 80
-        y: 176
+        x: 304
+        y: 112
         width: 16
         height: 16
       alignment: 0
@@ -3889,8 +3889,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_126
       rect:
         serializedVersion: 2
-        x: 96
-        y: 176
+        x: 320
+        y: 112
         width: 16
         height: 16
       alignment: 0
@@ -3910,8 +3910,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_127
       rect:
         serializedVersion: 2
-        x: 112
-        y: 176
+        x: 352
+        y: 112
         width: 16
         height: 16
       alignment: 0
@@ -3931,8 +3931,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_128
       rect:
         serializedVersion: 2
-        x: 128
-        y: 176
+        x: 368
+        y: 112
         width: 16
         height: 16
       alignment: 0
@@ -3952,8 +3952,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_129
       rect:
         serializedVersion: 2
-        x: 144
-        y: 176
+        x: 384
+        y: 112
         width: 16
         height: 16
       alignment: 0
@@ -3973,8 +3973,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_132
       rect:
         serializedVersion: 2
-        x: 192
-        y: 176
+        x: 432
+        y: 112
         width: 16
         height: 16
       alignment: 0
@@ -3994,8 +3994,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_133
       rect:
         serializedVersion: 2
-        x: 208
-        y: 176
+        x: 448
+        y: 112
         width: 16
         height: 16
       alignment: 0
@@ -4015,8 +4015,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_134
       rect:
         serializedVersion: 2
-        x: 224
-        y: 176
+        x: 464
+        y: 112
         width: 16
         height: 16
       alignment: 0
@@ -4036,8 +4036,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_135
       rect:
         serializedVersion: 2
-        x: 240
-        y: 176
+        x: 192
+        y: 96
         width: 16
         height: 16
       alignment: 0
@@ -4057,8 +4057,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_136
       rect:
         serializedVersion: 2
-        x: 256
-        y: 176
+        x: 208
+        y: 96
         width: 16
         height: 16
       alignment: 0
@@ -4078,8 +4078,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_137
       rect:
         serializedVersion: 2
-        x: 272
-        y: 176
+        x: 224
+        y: 96
         width: 16
         height: 16
       alignment: 0
@@ -4099,8 +4099,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_138
       rect:
         serializedVersion: 2
-        x: 288
-        y: 176
+        x: 240
+        y: 96
         width: 16
         height: 16
       alignment: 0
@@ -4120,8 +4120,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_139
       rect:
         serializedVersion: 2
-        x: 304
-        y: 176
+        x: 256
+        y: 96
         width: 16
         height: 16
       alignment: 0
@@ -4141,8 +4141,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_140
       rect:
         serializedVersion: 2
-        x: 320
-        y: 176
+        x: 272
+        y: 96
         width: 16
         height: 16
       alignment: 0
@@ -4162,8 +4162,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_141
       rect:
         serializedVersion: 2
-        x: 336
-        y: 176
+        x: 288
+        y: 96
         width: 16
         height: 16
       alignment: 0
@@ -4183,8 +4183,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_142
       rect:
         serializedVersion: 2
-        x: 352
-        y: 176
+        x: 304
+        y: 96
         width: 16
         height: 16
       alignment: 0
@@ -4204,8 +4204,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_143
       rect:
         serializedVersion: 2
-        x: 368
-        y: 176
+        x: 320
+        y: 96
         width: 16
         height: 16
       alignment: 0
@@ -4225,8 +4225,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_144
       rect:
         serializedVersion: 2
-        x: 384
-        y: 176
+        x: 336
+        y: 96
         width: 16
         height: 16
       alignment: 0
@@ -4246,8 +4246,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_145
       rect:
         serializedVersion: 2
-        x: 400
-        y: 176
+        x: 352
+        y: 96
         width: 16
         height: 16
       alignment: 0
@@ -4267,8 +4267,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_146
       rect:
         serializedVersion: 2
-        x: 416
-        y: 176
+        x: 368
+        y: 96
         width: 16
         height: 16
       alignment: 0
@@ -4288,8 +4288,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_147
       rect:
         serializedVersion: 2
-        x: 432
-        y: 176
+        x: 384
+        y: 96
         width: 16
         height: 16
       alignment: 0
@@ -4309,8 +4309,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_148
       rect:
         serializedVersion: 2
-        x: 448
-        y: 176
+        x: 400
+        y: 96
         width: 16
         height: 16
       alignment: 0
@@ -4330,8 +4330,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_149
       rect:
         serializedVersion: 2
-        x: 464
-        y: 176
+        x: 416
+        y: 96
         width: 16
         height: 16
       alignment: 0
@@ -4351,8 +4351,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_150
       rect:
         serializedVersion: 2
-        x: 0
-        y: 160
+        x: 432
+        y: 96
         width: 16
         height: 16
       alignment: 0
@@ -4372,8 +4372,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_151
       rect:
         serializedVersion: 2
-        x: 16
-        y: 160
+        x: 448
+        y: 96
         width: 16
         height: 16
       alignment: 0
@@ -4393,8 +4393,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_152
       rect:
         serializedVersion: 2
-        x: 32
-        y: 160
+        x: 464
+        y: 96
         width: 16
         height: 16
       alignment: 0
@@ -4414,8 +4414,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_153
       rect:
         serializedVersion: 2
-        x: 48
-        y: 160
+        x: 192
+        y: 80
         width: 16
         height: 16
       alignment: 0
@@ -4435,8 +4435,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_154
       rect:
         serializedVersion: 2
-        x: 64
-        y: 160
+        x: 208
+        y: 80
         width: 16
         height: 16
       alignment: 0
@@ -4456,8 +4456,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_155
       rect:
         serializedVersion: 2
-        x: 80
-        y: 160
+        x: 224
+        y: 80
         width: 16
         height: 16
       alignment: 0
@@ -4477,8 +4477,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_156
       rect:
         serializedVersion: 2
-        x: 96
-        y: 160
+        x: 240
+        y: 80
         width: 16
         height: 16
       alignment: 0
@@ -4498,8 +4498,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_157
       rect:
         serializedVersion: 2
-        x: 112
-        y: 160
+        x: 256
+        y: 80
         width: 16
         height: 16
       alignment: 0
@@ -4519,8 +4519,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_158
       rect:
         serializedVersion: 2
-        x: 128
-        y: 160
+        x: 272
+        y: 80
         width: 16
         height: 16
       alignment: 0
@@ -4540,8 +4540,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_159
       rect:
         serializedVersion: 2
-        x: 144
-        y: 160
+        x: 288
+        y: 80
         width: 16
         height: 16
       alignment: 0
@@ -4561,8 +4561,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_162
       rect:
         serializedVersion: 2
-        x: 192
-        y: 160
+        x: 336
+        y: 80
         width: 16
         height: 16
       alignment: 0
@@ -4582,8 +4582,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_163
       rect:
         serializedVersion: 2
-        x: 208
-        y: 160
+        x: 352
+        y: 80
         width: 16
         height: 16
       alignment: 0
@@ -4603,8 +4603,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_164
       rect:
         serializedVersion: 2
-        x: 224
-        y: 160
+        x: 368
+        y: 80
         width: 16
         height: 16
       alignment: 0
@@ -4624,8 +4624,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_165
       rect:
         serializedVersion: 2
-        x: 240
-        y: 160
+        x: 384
+        y: 80
         width: 16
         height: 16
       alignment: 0
@@ -4645,8 +4645,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_166
       rect:
         serializedVersion: 2
-        x: 256
-        y: 160
+        x: 400
+        y: 80
         width: 16
         height: 16
       alignment: 0
@@ -4666,8 +4666,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_167
       rect:
         serializedVersion: 2
-        x: 272
-        y: 160
+        x: 416
+        y: 80
         width: 16
         height: 16
       alignment: 0
@@ -4687,8 +4687,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_168
       rect:
         serializedVersion: 2
-        x: 288
-        y: 160
+        x: 432
+        y: 80
         width: 16
         height: 16
       alignment: 0
@@ -4708,8 +4708,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_169
       rect:
         serializedVersion: 2
-        x: 304
-        y: 160
+        x: 448
+        y: 80
         width: 16
         height: 16
       alignment: 0
@@ -4729,8 +4729,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_170
       rect:
         serializedVersion: 2
-        x: 320
-        y: 160
+        x: 464
+        y: 80
         width: 16
         height: 16
       alignment: 0
@@ -4750,8 +4750,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_171
       rect:
         serializedVersion: 2
-        x: 336
-        y: 160
+        x: 192
+        y: 64
         width: 16
         height: 16
       alignment: 0
@@ -4771,8 +4771,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_172
       rect:
         serializedVersion: 2
-        x: 352
-        y: 160
+        x: 208
+        y: 64
         width: 16
         height: 16
       alignment: 0
@@ -4792,8 +4792,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_173
       rect:
         serializedVersion: 2
-        x: 368
-        y: 160
+        x: 224
+        y: 64
         width: 16
         height: 16
       alignment: 0
@@ -4813,8 +4813,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_174
       rect:
         serializedVersion: 2
-        x: 384
-        y: 160
+        x: 240
+        y: 64
         width: 16
         height: 16
       alignment: 0
@@ -4834,8 +4834,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_175
       rect:
         serializedVersion: 2
-        x: 400
-        y: 160
+        x: 256
+        y: 64
         width: 16
         height: 16
       alignment: 0
@@ -4855,8 +4855,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_176
       rect:
         serializedVersion: 2
-        x: 416
-        y: 160
+        x: 272
+        y: 64
         width: 16
         height: 16
       alignment: 0
@@ -4876,8 +4876,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_177
       rect:
         serializedVersion: 2
-        x: 432
-        y: 160
+        x: 288
+        y: 64
         width: 16
         height: 16
       alignment: 0
@@ -4897,8 +4897,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_178
       rect:
         serializedVersion: 2
-        x: 448
-        y: 160
+        x: 304
+        y: 64
         width: 16
         height: 16
       alignment: 0
@@ -4918,8 +4918,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_179
       rect:
         serializedVersion: 2
-        x: 464
-        y: 160
+        x: 320
+        y: 64
         width: 16
         height: 16
       alignment: 0
@@ -4939,8 +4939,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_180
       rect:
         serializedVersion: 2
-        x: 0
-        y: 144
+        x: 336
+        y: 64
         width: 16
         height: 16
       alignment: 0
@@ -4960,8 +4960,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_181
       rect:
         serializedVersion: 2
-        x: 16
-        y: 144
+        x: 352
+        y: 64
         width: 16
         height: 16
       alignment: 0
@@ -4981,8 +4981,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_182
       rect:
         serializedVersion: 2
-        x: 32
-        y: 144
+        x: 368
+        y: 64
         width: 16
         height: 16
       alignment: 0
@@ -5002,8 +5002,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_183
       rect:
         serializedVersion: 2
-        x: 48
-        y: 144
+        x: 384
+        y: 64
         width: 16
         height: 16
       alignment: 0
@@ -5023,8 +5023,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_184
       rect:
         serializedVersion: 2
-        x: 64
-        y: 144
+        x: 400
+        y: 64
         width: 16
         height: 16
       alignment: 0
@@ -5044,8 +5044,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_185
       rect:
         serializedVersion: 2
-        x: 80
-        y: 144
+        x: 416
+        y: 64
         width: 16
         height: 16
       alignment: 0
@@ -5065,8 +5065,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_186
       rect:
         serializedVersion: 2
-        x: 96
-        y: 144
+        x: 432
+        y: 64
         width: 16
         height: 16
       alignment: 0
@@ -5086,8 +5086,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_187
       rect:
         serializedVersion: 2
-        x: 112
-        y: 144
+        x: 448
+        y: 64
         width: 16
         height: 16
       alignment: 0
@@ -5107,8 +5107,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_188
       rect:
         serializedVersion: 2
-        x: 128
-        y: 144
+        x: 464
+        y: 64
         width: 16
         height: 16
       alignment: 0
@@ -5128,8 +5128,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_189
       rect:
         serializedVersion: 2
-        x: 144
-        y: 144
+        x: 192
+        y: 48
         width: 16
         height: 16
       alignment: 0
@@ -5149,8 +5149,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_192
       rect:
         serializedVersion: 2
-        x: 192
-        y: 144
+        x: 240
+        y: 48
         width: 16
         height: 16
       alignment: 0
@@ -5170,8 +5170,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_193
       rect:
         serializedVersion: 2
-        x: 208
-        y: 144
+        x: 256
+        y: 48
         width: 16
         height: 16
       alignment: 0
@@ -5191,8 +5191,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_194
       rect:
         serializedVersion: 2
-        x: 224
-        y: 144
+        x: 272
+        y: 48
         width: 16
         height: 16
       alignment: 0
@@ -5212,8 +5212,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_195
       rect:
         serializedVersion: 2
-        x: 240
-        y: 144
+        x: 288
+        y: 48
         width: 16
         height: 16
       alignment: 0
@@ -5233,8 +5233,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_196
       rect:
         serializedVersion: 2
-        x: 256
-        y: 144
+        x: 304
+        y: 48
         width: 16
         height: 16
       alignment: 0
@@ -5254,8 +5254,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_197
       rect:
         serializedVersion: 2
-        x: 272
-        y: 144
+        x: 320
+        y: 48
         width: 16
         height: 16
       alignment: 0
@@ -5275,8 +5275,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_198
       rect:
         serializedVersion: 2
-        x: 288
-        y: 144
+        x: 336
+        y: 48
         width: 16
         height: 16
       alignment: 0
@@ -5296,8 +5296,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_199
       rect:
         serializedVersion: 2
-        x: 304
-        y: 144
+        x: 352
+        y: 48
         width: 16
         height: 16
       alignment: 0
@@ -5317,8 +5317,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_200
       rect:
         serializedVersion: 2
-        x: 320
-        y: 144
+        x: 368
+        y: 48
         width: 16
         height: 16
       alignment: 0
@@ -5338,8 +5338,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_201
       rect:
         serializedVersion: 2
-        x: 336
-        y: 144
+        x: 384
+        y: 48
         width: 16
         height: 16
       alignment: 0
@@ -5359,8 +5359,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_202
       rect:
         serializedVersion: 2
-        x: 352
-        y: 144
+        x: 400
+        y: 48
         width: 16
         height: 16
       alignment: 0
@@ -5380,8 +5380,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_203
       rect:
         serializedVersion: 2
-        x: 368
-        y: 144
+        x: 416
+        y: 48
         width: 16
         height: 16
       alignment: 0
@@ -5401,8 +5401,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_204
       rect:
         serializedVersion: 2
-        x: 384
-        y: 144
+        x: 432
+        y: 48
         width: 16
         height: 16
       alignment: 0
@@ -5422,8 +5422,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_205
       rect:
         serializedVersion: 2
-        x: 400
-        y: 144
+        x: 448
+        y: 48
         width: 16
         height: 16
       alignment: 0
@@ -5443,8 +5443,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_206
       rect:
         serializedVersion: 2
-        x: 416
-        y: 144
+        x: 464
+        y: 48
         width: 16
         height: 16
       alignment: 0
@@ -5464,8 +5464,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_207
       rect:
         serializedVersion: 2
-        x: 432
-        y: 144
+        x: 192
+        y: 32
         width: 16
         height: 16
       alignment: 0
@@ -5485,8 +5485,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_208
       rect:
         serializedVersion: 2
-        x: 448
-        y: 144
+        x: 208
+        y: 32
         width: 16
         height: 16
       alignment: 0
@@ -5506,8 +5506,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_209
       rect:
         serializedVersion: 2
-        x: 464
-        y: 144
+        x: 224
+        y: 32
         width: 16
         height: 16
       alignment: 0
@@ -5527,8 +5527,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_210
       rect:
         serializedVersion: 2
-        x: 0
-        y: 128
+        x: 240
+        y: 32
         width: 16
         height: 16
       alignment: 0
@@ -5548,8 +5548,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_211
       rect:
         serializedVersion: 2
-        x: 16
-        y: 128
+        x: 256
+        y: 32
         width: 16
         height: 16
       alignment: 0
@@ -5569,8 +5569,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_212
       rect:
         serializedVersion: 2
-        x: 32
-        y: 128
+        x: 272
+        y: 32
         width: 16
         height: 16
       alignment: 0
@@ -5590,8 +5590,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_213
       rect:
         serializedVersion: 2
-        x: 48
-        y: 128
+        x: 288
+        y: 32
         width: 16
         height: 16
       alignment: 0
@@ -5611,8 +5611,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_214
       rect:
         serializedVersion: 2
-        x: 64
-        y: 128
+        x: 304
+        y: 32
         width: 16
         height: 16
       alignment: 0
@@ -5632,8 +5632,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_215
       rect:
         serializedVersion: 2
-        x: 80
-        y: 128
+        x: 320
+        y: 32
         width: 16
         height: 16
       alignment: 0
@@ -5653,8 +5653,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_216
       rect:
         serializedVersion: 2
-        x: 96
-        y: 128
+        x: 336
+        y: 32
         width: 16
         height: 16
       alignment: 0
@@ -5674,8 +5674,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_217
       rect:
         serializedVersion: 2
-        x: 112
-        y: 128
+        x: 352
+        y: 32
         width: 16
         height: 16
       alignment: 0
@@ -5695,8 +5695,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_218
       rect:
         serializedVersion: 2
-        x: 128
-        y: 128
+        x: 368
+        y: 32
         width: 16
         height: 16
       alignment: 0
@@ -5716,8 +5716,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_219
       rect:
         serializedVersion: 2
-        x: 144
-        y: 128
+        x: 384
+        y: 32
         width: 16
         height: 16
       alignment: 0
@@ -5737,8 +5737,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_222
       rect:
         serializedVersion: 2
-        x: 192
-        y: 128
+        x: 432
+        y: 32
         width: 16
         height: 16
       alignment: 0
@@ -5758,8 +5758,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_223
       rect:
         serializedVersion: 2
-        x: 208
-        y: 128
+        x: 448
+        y: 32
         width: 16
         height: 16
       alignment: 0
@@ -5779,8 +5779,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_224
       rect:
         serializedVersion: 2
-        x: 224
-        y: 128
+        x: 464
+        y: 32
         width: 16
         height: 16
       alignment: 0
@@ -5800,8 +5800,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_225
       rect:
         serializedVersion: 2
-        x: 240
-        y: 128
+        x: 192
+        y: 16
         width: 16
         height: 16
       alignment: 0
@@ -5821,8 +5821,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_226
       rect:
         serializedVersion: 2
-        x: 256
-        y: 128
+        x: 208
+        y: 16
         width: 16
         height: 16
       alignment: 0
@@ -5842,8 +5842,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_227
       rect:
         serializedVersion: 2
-        x: 272
-        y: 128
+        x: 224
+        y: 16
         width: 16
         height: 16
       alignment: 0
@@ -5863,8 +5863,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_228
       rect:
         serializedVersion: 2
-        x: 288
-        y: 128
+        x: 240
+        y: 16
         width: 16
         height: 16
       alignment: 0
@@ -5884,8 +5884,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_229
       rect:
         serializedVersion: 2
-        x: 304
-        y: 128
+        x: 256
+        y: 16
         width: 16
         height: 16
       alignment: 0
@@ -5905,8 +5905,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_230
       rect:
         serializedVersion: 2
-        x: 320
-        y: 128
+        x: 272
+        y: 16
         width: 16
         height: 16
       alignment: 0
@@ -5926,8 +5926,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_231
       rect:
         serializedVersion: 2
-        x: 336
-        y: 128
+        x: 288
+        y: 16
         width: 16
         height: 16
       alignment: 0
@@ -5947,8 +5947,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_232
       rect:
         serializedVersion: 2
-        x: 352
-        y: 128
+        x: 304
+        y: 16
         width: 16
         height: 16
       alignment: 0
@@ -5968,8 +5968,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_233
       rect:
         serializedVersion: 2
-        x: 368
-        y: 128
+        x: 320
+        y: 16
         width: 16
         height: 16
       alignment: 0
@@ -5989,8 +5989,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_234
       rect:
         serializedVersion: 2
-        x: 384
-        y: 128
+        x: 336
+        y: 16
         width: 16
         height: 16
       alignment: 0
@@ -6010,8 +6010,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_235
       rect:
         serializedVersion: 2
-        x: 400
-        y: 128
+        x: 352
+        y: 16
         width: 16
         height: 16
       alignment: 0
@@ -6031,8 +6031,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_236
       rect:
         serializedVersion: 2
-        x: 416
-        y: 128
+        x: 368
+        y: 16
         width: 16
         height: 16
       alignment: 0
@@ -6052,8 +6052,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_237
       rect:
         serializedVersion: 2
-        x: 432
-        y: 128
+        x: 384
+        y: 16
         width: 16
         height: 16
       alignment: 0
@@ -6073,8 +6073,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_238
       rect:
         serializedVersion: 2
-        x: 448
-        y: 128
+        x: 400
+        y: 16
         width: 16
         height: 16
       alignment: 0
@@ -6094,8 +6094,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_239
       rect:
         serializedVersion: 2
-        x: 464
-        y: 128
+        x: 416
+        y: 16
         width: 16
         height: 16
       alignment: 0
@@ -6115,8 +6115,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_240
       rect:
         serializedVersion: 2
-        x: 0
-        y: 112
+        x: 432
+        y: 16
         width: 16
         height: 16
       alignment: 0
@@ -6136,8 +6136,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_241
       rect:
         serializedVersion: 2
-        x: 16
-        y: 112
+        x: 448
+        y: 16
         width: 16
         height: 16
       alignment: 0
@@ -6157,8 +6157,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_242
       rect:
         serializedVersion: 2
-        x: 32
-        y: 112
+        x: 464
+        y: 16
         width: 16
         height: 16
       alignment: 0
@@ -6178,8 +6178,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_243
       rect:
         serializedVersion: 2
-        x: 48
-        y: 112
+        x: 192
+        y: 0
         width: 16
         height: 16
       alignment: 0
@@ -6199,8 +6199,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_244
       rect:
         serializedVersion: 2
-        x: 64
-        y: 112
+        x: 208
+        y: 0
         width: 16
         height: 16
       alignment: 0
@@ -6220,8 +6220,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_245
       rect:
         serializedVersion: 2
-        x: 80
-        y: 112
+        x: 224
+        y: 0
         width: 16
         height: 16
       alignment: 0
@@ -6241,8 +6241,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_246
       rect:
         serializedVersion: 2
-        x: 96
-        y: 112
+        x: 240
+        y: 0
         width: 16
         height: 16
       alignment: 0
@@ -6262,8 +6262,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_247
       rect:
         serializedVersion: 2
-        x: 112
-        y: 112
+        x: 256
+        y: 0
         width: 16
         height: 16
       alignment: 0
@@ -6283,8 +6283,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_248
       rect:
         serializedVersion: 2
-        x: 128
-        y: 112
+        x: 272
+        y: 0
         width: 16
         height: 16
       alignment: 0
@@ -6304,8 +6304,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_249
       rect:
         serializedVersion: 2
-        x: 144
-        y: 112
+        x: 288
+        y: 0
         width: 16
         height: 16
       alignment: 0
@@ -6325,8 +6325,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_252
       rect:
         serializedVersion: 2
-        x: 192
-        y: 112
+        x: 336
+        y: 0
         width: 16
         height: 16
       alignment: 0
@@ -6346,8 +6346,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_253
       rect:
         serializedVersion: 2
-        x: 208
-        y: 112
+        x: 352
+        y: 0
         width: 16
         height: 16
       alignment: 0
@@ -6367,8 +6367,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_254
       rect:
         serializedVersion: 2
-        x: 224
-        y: 112
+        x: 368
+        y: 0
         width: 16
         height: 16
       alignment: 0
@@ -6388,8 +6388,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_255
       rect:
         serializedVersion: 2
-        x: 240
-        y: 112
+        x: 384
+        y: 0
         width: 16
         height: 16
       alignment: 0
@@ -6409,8 +6409,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_256
       rect:
         serializedVersion: 2
-        x: 256
-        y: 112
+        x: 400
+        y: 0
         width: 16
         height: 16
       alignment: 0
@@ -6430,8 +6430,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_257
       rect:
         serializedVersion: 2
-        x: 272
-        y: 112
+        x: 416
+        y: 0
         width: 16
         height: 16
       alignment: 0
@@ -6451,8 +6451,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_258
       rect:
         serializedVersion: 2
-        x: 288
-        y: 112
+        x: 432
+        y: 0
         width: 16
         height: 16
       alignment: 0
@@ -6472,8 +6472,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_259
       rect:
         serializedVersion: 2
-        x: 304
-        y: 112
+        x: 448
+        y: 0
         width: 16
         height: 16
       alignment: 0
@@ -6493,8 +6493,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_260
       rect:
         serializedVersion: 2
-        x: 320
-        y: 112
+        x: 464
+        y: 0
         width: 16
         height: 16
       alignment: 0
@@ -6511,4588 +6511,10 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cryptofthedamned-tileset_261
-      rect:
-        serializedVersion: 2
-        x: 336
-        y: 112
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2d8be5fd7f7d09560800000000000000
-      internalID: 7318586854081476818
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_262
-      rect:
-        serializedVersion: 2
-        x: 352
-        y: 112
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3c2a2a9bdf2774890800000000000000
-      internalID: -7473878622531312957
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_263
-      rect:
-        serializedVersion: 2
-        x: 368
-        y: 112
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 989e64df70b5cc8f0800000000000000
-      internalID: -518939767182268023
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_264
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 112
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f9e97a24426c77e10800000000000000
-      internalID: 2195441202405809823
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_265
-      rect:
-        serializedVersion: 2
-        x: 400
-        y: 112
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 47bbe7a7bfaf26cd0800000000000000
-      internalID: -2566212879648900236
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_266
-      rect:
-        serializedVersion: 2
-        x: 416
-        y: 112
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d6e0f9b900fb1e730800000000000000
-      internalID: 4026709551177731693
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_267
-      rect:
-        serializedVersion: 2
-        x: 432
-        y: 112
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 78816d87283e28d20800000000000000
-      internalID: 3279433628191692935
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_268
-      rect:
-        serializedVersion: 2
-        x: 448
-        y: 112
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9f59034b508cc0120800000000000000
-      internalID: 2381498229795624441
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_269
-      rect:
-        serializedVersion: 2
-        x: 464
-        y: 112
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f293abc88be40f8d0800000000000000
-      internalID: -2814663212564596433
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_270
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 96
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 50b5b205726eb1180800000000000000
-      internalID: -9143461561922528507
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_271
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 96
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f8cd0d82fc5e7d4f0800000000000000
-      internalID: -803921330556576625
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_272
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 96
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c85fbae6ec8eaeb00800000000000000
-      internalID: 858754652285171084
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_273
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 96
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b3f90c2d5b23ec4d0800000000000000
-      internalID: -3112494535960125637
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_274
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 96
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3f00642929a16b820800000000000000
-      internalID: 2933561424100065523
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_275
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 96
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 74d5ebe44b47b3ab0800000000000000
-      internalID: -5027296241264992953
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_276
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 96
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 27fe5b8305b77ee40800000000000000
-      internalID: 5685648639057588082
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_277
-      rect:
-        serializedVersion: 2
-        x: 112
-        y: 96
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d60d61040269d7630800000000000000
-      internalID: 3926459515395297389
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_278
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 96
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e52a5334bd759d9a0800000000000000
-      internalID: -6207834012116475298
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_279
-      rect:
-        serializedVersion: 2
-        x: 144
-        y: 96
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2a6bf52335d2280e0800000000000000
-      internalID: -2269201426890639710
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_281
-      rect:
-        serializedVersion: 2
-        x: 176
-        y: 96
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a974677778dead0d0800000000000000
-      internalID: -3397141802817009766
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_282
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 96
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1bcc4b115e7d75fc0800000000000000
-      internalID: -3506096406040097615
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_283
-      rect:
-        serializedVersion: 2
-        x: 208
-        y: 96
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1b5d71003f3ef0480800000000000000
-      internalID: -8930668903234284111
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_284
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 96
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9dfc247466d9f3490800000000000000
-      internalID: -7764314169955659815
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_285
-      rect:
-        serializedVersion: 2
-        x: 240
-        y: 96
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 055a9f16a1eca0400800000000000000
-      internalID: 291271738627040592
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_286
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 96
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e03f30f1314dc63d0800000000000000
-      internalID: -3211959255632186610
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_287
-      rect:
-        serializedVersion: 2
-        x: 272
-        y: 96
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: af117eba26e035c70800000000000000
-      internalID: 8958519900723679738
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_288
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 96
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7a920399446e2e120800000000000000
-      internalID: 2441767130290465191
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_289
-      rect:
-        serializedVersion: 2
-        x: 304
-        y: 96
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: be4e71e303581cd80800000000000000
-      internalID: -8232152201609878293
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_290
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 96
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b8956fb1c414192a0800000000000000
-      internalID: -6732528172799731317
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_291
-      rect:
-        serializedVersion: 2
-        x: 336
-        y: 96
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 75cdcf7d97e96fd00800000000000000
-      internalID: 1006165812915788887
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_292
-      rect:
-        serializedVersion: 2
-        x: 352
-        y: 96
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: aa25d2303acc536f0800000000000000
-      internalID: -705432766108577110
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_293
-      rect:
-        serializedVersion: 2
-        x: 368
-        y: 96
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 952ec94d856245b10800000000000000
-      internalID: 1969241100033778265
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_294
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 96
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: afe5821188dba13b0800000000000000
-      internalID: -5540907999424913670
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_295
-      rect:
-        serializedVersion: 2
-        x: 400
-        y: 96
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cefa285ac5b155d30800000000000000
-      internalID: 4419468694061756396
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_296
-      rect:
-        serializedVersion: 2
-        x: 416
-        y: 96
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3a37e8875004f1910800000000000000
-      internalID: 1810235967467844515
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_297
-      rect:
-        serializedVersion: 2
-        x: 432
-        y: 96
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 12c52ccfb99b29a70800000000000000
-      internalID: 8832325898838629409
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_298
-      rect:
-        serializedVersion: 2
-        x: 448
-        y: 96
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 85ace66b091ae2f20800000000000000
-      internalID: 3399832411619379800
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_299
-      rect:
-        serializedVersion: 2
-        x: 464
-        y: 96
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 021e19ed112b95d00800000000000000
-      internalID: 961995785238602016
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_300
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 80
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9163e0ee156b7c3e0800000000000000
-      internalID: -2033456243731974631
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_301
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 80
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 046dc0d068f890520800000000000000
-      internalID: 2668822060101064256
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_302
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 80
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d382c5c23cf478cc0800000000000000
-      internalID: -3708908068434859971
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_303
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 80
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ca4798cdbe756ba90800000000000000
-      internalID: -7298549475578383188
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_304
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 80
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f611a28b3fd991ee0800000000000000
-      internalID: -1289826148172557969
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_305
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 80
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 45a6a2a3d521ee750800000000000000
-      internalID: 6336021917373983316
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_306
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 80
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 346d55afe45eeb760800000000000000
-      internalID: 7475664558851741251
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_307
-      rect:
-        serializedVersion: 2
-        x: 112
-        y: 80
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cda86dbae07465780800000000000000
-      internalID: -8694683902254085412
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_308
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 80
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c36973e60c7b077c0800000000000000
-      internalID: -4075555625659558340
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_309
-      rect:
-        serializedVersion: 2
-        x: 144
-        y: 80
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fb85ccc9b2b9c40b0800000000000000
-      internalID: -5743044813187688257
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_310
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 80
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cb3a4901247dbdba0800000000000000
-      internalID: -6063015794578250820
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_311
-      rect:
-        serializedVersion: 2
-        x: 176
-        y: 80
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6d07976fe5cc6dfa0800000000000000
-      internalID: -5776204763821936426
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_312
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 80
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 594f5c35e490abbc0800000000000000
-      internalID: -3766687906324417387
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_313
-      rect:
-        serializedVersion: 2
-        x: 208
-        y: 80
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 51520affdfedcdb80800000000000000
-      internalID: -8368568825064446699
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_314
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 80
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d32947a3a4dcced10800000000000000
-      internalID: 2156324040295617085
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_315
-      rect:
-        serializedVersion: 2
-        x: 240
-        y: 80
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d125f2b69e1261d50800000000000000
-      internalID: 6707585981424292381
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_316
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 80
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bc7bf2ddbad723570800000000000000
-      internalID: 8444950428376872907
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_317
-      rect:
-        serializedVersion: 2
-        x: 272
-        y: 80
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: abf041904e46a2d50800000000000000
-      internalID: 6713289125116776378
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_318
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 80
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c76d1ecc8b850b360800000000000000
-      internalID: 7183338956390520444
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_319
-      rect:
-        serializedVersion: 2
-        x: 304
-        y: 80
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4af094d2ccf098390800000000000000
-      internalID: -7815698308717277276
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_320
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 80
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 533eaa3e7b2cac700800000000000000
-      internalID: 561475198615479093
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_321
-      rect:
-        serializedVersion: 2
-        x: 336
-        y: 80
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4ff47f868c9666980800000000000000
-      internalID: -8546026933413523468
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_322
-      rect:
-        serializedVersion: 2
-        x: 352
-        y: 80
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 34cea719895924df0800000000000000
-      internalID: -197430951142560701
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_323
-      rect:
-        serializedVersion: 2
-        x: 368
-        y: 80
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3f432203f9dc8f470800000000000000
-      internalID: 8428712786214925555
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_324
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 80
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 57ac1238b16c55010800000000000000
-      internalID: 1177064699093699189
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_325
-      rect:
-        serializedVersion: 2
-        x: 400
-        y: 80
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3ded39ac8c9aa14a0800000000000000
-      internalID: -6621793622237651245
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_326
-      rect:
-        serializedVersion: 2
-        x: 416
-        y: 80
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4c274adaecef67ae0800000000000000
-      internalID: -1551772857952603452
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_327
-      rect:
-        serializedVersion: 2
-        x: 432
-        y: 80
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3fa65548ecc785b60800000000000000
-      internalID: 7735069586434124531
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_328
-      rect:
-        serializedVersion: 2
-        x: 448
-        y: 80
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3e3093ff22bf78540800000000000000
-      internalID: 5010249238202352611
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_329
-      rect:
-        serializedVersion: 2
-        x: 464
-        y: 80
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ffe814568902225f0800000000000000
-      internalID: -783027546303131905
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_330
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 64
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: eb432d35056bf0020800000000000000
-      internalID: 2310265589984277694
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_331
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 64
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b55d6fb2692a0f0b0800000000000000
-      internalID: -5696874762757286565
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_332
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 64
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e3c2170b132eabc10800000000000000
-      internalID: 2070215681771646014
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_333
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 64
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0ffe5406445b747b0800000000000000
-      internalID: -5240020336144683024
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_334
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 64
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c2e2fce3ed0e33d80800000000000000
-      internalID: -8272020845408342484
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_335
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 64
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7378edca86359bd70800000000000000
-      internalID: 9059363834474432311
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_336
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 64
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 242169a2962eb6f90800000000000000
-      internalID: -6959219857857047998
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_337
-      rect:
-        serializedVersion: 2
-        x: 112
-        y: 64
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 98c56718aed9f9c10800000000000000
-      internalID: 2062540784878902409
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_338
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 64
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 93748a365b0aee750800000000000000
-      internalID: 6336178426678363961
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_339
-      rect:
-        serializedVersion: 2
-        x: 144
-        y: 64
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d48c9b65a7c71d910800000000000000
-      internalID: 1860404985963595853
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_340
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 64
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 57b85de1c2e1c7180800000000000000
-      internalID: -9116378370860020875
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_341
-      rect:
-        serializedVersion: 2
-        x: 176
-        y: 64
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 372a6f4f970c03850800000000000000
-      internalID: 6354790704253149811
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_342
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 64
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 799ac1f8c2b724170800000000000000
-      internalID: 8161220906058557847
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_343
-      rect:
-        serializedVersion: 2
-        x: 208
-        y: 64
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8d4567884239bd410800000000000000
-      internalID: 1502956685775754456
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_344
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 64
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 89a2006a317dfe570800000000000000
-      internalID: 8498247501260794520
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_345
-      rect:
-        serializedVersion: 2
-        x: 240
-        y: 64
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 45bd5e7a00ecb2bf0800000000000000
-      internalID: -347958043978900652
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_346
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 64
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f84d5adb51b4019d0800000000000000
-      internalID: -2805660011103660913
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_347
-      rect:
-        serializedVersion: 2
-        x: 272
-        y: 64
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 33024583ee714a3f0800000000000000
-      internalID: -890560514397822925
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_348
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 64
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fc672b6f633833e00800000000000000
-      internalID: 1023305812433598159
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_349
-      rect:
-        serializedVersion: 2
-        x: 304
-        y: 64
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7076791ed1e91c770800000000000000
-      internalID: 8629352212194617095
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_350
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 64
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 60463a0f4d22ed9e0800000000000000
-      internalID: -1594798920076925946
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_351
-      rect:
-        serializedVersion: 2
-        x: 336
-        y: 64
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5c5cd8c837c21edb0800000000000000
-      internalID: -4764478055990311483
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_352
-      rect:
-        serializedVersion: 2
-        x: 352
-        y: 64
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2db04deda7ed481f0800000000000000
-      internalID: -1043464594337297454
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_353
-      rect:
-        serializedVersion: 2
-        x: 368
-        y: 64
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 97e249138f0c22a40800000000000000
-      internalID: 5342044280231046777
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_354
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 64
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dd8833d554e2b5170800000000000000
-      internalID: 8168173224617806045
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_355
-      rect:
-        serializedVersion: 2
-        x: 400
-        y: 64
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 94477d1e2d21facc0800000000000000
-      internalID: -3697716072106462135
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_356
-      rect:
-        serializedVersion: 2
-        x: 416
-        y: 64
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b0e43d738cbe882c0800000000000000
-      internalID: -4429030988356301301
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_357
-      rect:
-        serializedVersion: 2
-        x: 432
-        y: 64
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2ee4134c8078083a0800000000000000
-      internalID: -6665178976787280158
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_358
-      rect:
-        serializedVersion: 2
-        x: 448
-        y: 64
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 93c8a092875ce6460800000000000000
-      internalID: 7236938771106270265
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_359
-      rect:
-        serializedVersion: 2
-        x: 464
-        y: 64
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 18af981fe07d6f9b0800000000000000
-      internalID: -5046609873240196479
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_360
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 48
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ca9138d8c8dcac3e0800000000000000
-      internalID: -2032586278251062868
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_361
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 48
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5b64afa89468eec50800000000000000
-      internalID: 6696437346368898741
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_362
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 48
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 48030e283b843f470800000000000000
-      internalID: 8427159263572406404
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_363
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 48
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b934a2b586c543bd0800000000000000
-      internalID: -2651392677338528869
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_364
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 48
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fbdb3653f90cc3430800000000000000
-      internalID: 3764095178602954175
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_365
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 48
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 972a22defefabe120800000000000000
-      internalID: 2444240667789140601
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_366
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 48
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d2cfeacecc2c7ddc0800000000000000
-      internalID: -3614205990541525971
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_367
-      rect:
-        serializedVersion: 2
-        x: 112
-        y: 48
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 48134be1233a48ee0800000000000000
-      internalID: -1259702560098078332
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_368
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 48
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5a15bf42d0c82f7c0800000000000000
-      internalID: -4039011927714999899
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_369
-      rect:
-        serializedVersion: 2
-        x: 144
-        y: 48
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7e2e78b224dc04560800000000000000
-      internalID: 7296057080422064871
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_370
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 48
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e000b18952fce1820800000000000000
-      internalID: 2890975771191083022
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_371
-      rect:
-        serializedVersion: 2
-        x: 176
-        y: 48
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 943bec4e99f98b850800000000000000
-      internalID: 6393035154369983305
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_372
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 48
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 593faa3b5419fe450800000000000000
-      internalID: 6120270147172889493
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_373
-      rect:
-        serializedVersion: 2
-        x: 208
-        y: 48
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8d8de7c3cc855c8a0800000000000000
-      internalID: -6285520070714140456
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_374
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 48
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 66f22e69e37be41a0800000000000000
-      internalID: -6823314905972461722
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_375
-      rect:
-        serializedVersion: 2
-        x: 240
-        y: 48
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e26bf4ef50bc68160800000000000000
-      internalID: 7027527495160149550
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_376
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 48
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f4f3c26545a3bc1e0800000000000000
-      internalID: -2176581861006098609
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_377
-      rect:
-        serializedVersion: 2
-        x: 272
-        y: 48
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 903066017ac279b10800000000000000
-      internalID: 1988106856553644809
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_378
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 48
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 03fa4d518ffc11a90800000000000000
-      internalID: -7344860852839469264
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_379
-      rect:
-        serializedVersion: 2
-        x: 304
-        y: 48
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: df534998a7afe3250800000000000000
-      internalID: 5926449563867297277
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_380
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 48
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c32459eb241848bb0800000000000000
-      internalID: -4934677168025943492
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_381
-      rect:
-        serializedVersion: 2
-        x: 336
-        y: 48
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 47d8468bed46393e0800000000000000
-      internalID: -2048182497784328844
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_382
-      rect:
-        serializedVersion: 2
-        x: 352
-        y: 48
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 45a2e630a75adde60800000000000000
-      internalID: 7988723257487272532
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_383
-      rect:
-        serializedVersion: 2
-        x: 368
-        y: 48
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 60d84a4eea4e10020800000000000000
-      internalID: 2306375924001836294
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_384
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 48
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a2da6db3715c69a60800000000000000
-      internalID: 7680542918105804074
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_385
-      rect:
-        serializedVersion: 2
-        x: 400
-        y: 48
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8a76a2135ceae8670800000000000000
-      internalID: 8542957705125062568
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_386
-      rect:
-        serializedVersion: 2
-        x: 416
-        y: 48
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2c86b6b1284239e20800000000000000
-      internalID: 3356066288545523906
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_387
-      rect:
-        serializedVersion: 2
-        x: 432
-        y: 48
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 39d8b1b3041bfa950800000000000000
-      internalID: 6462578879727635859
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_388
-      rect:
-        serializedVersion: 2
-        x: 448
-        y: 48
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 06165b02582c08470800000000000000
-      internalID: 8394923582453801312
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_389
-      rect:
-        serializedVersion: 2
-        x: 464
-        y: 48
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 696b0abf3074fc050800000000000000
-      internalID: 5822950925645428374
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_390
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bed733c4219139890800000000000000
-      internalID: -7452585391989490197
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_391
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f9461b7565edd1c50800000000000000
-      internalID: 6637705888233776287
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_392
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6aa72753b88c91540800000000000000
-      internalID: 4979231363257498278
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_393
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 25eee8f8ed6e2d2c0800000000000000
-      internalID: -4408207241676657070
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_394
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ddacd184b065f8000800000000000000
-      internalID: 40345528124164829
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_395
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6e9386dbc59da9d80800000000000000
-      internalID: -8243037175610328602
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_396
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b57a539779520f370800000000000000
-      internalID: 8354218641276118875
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_397
-      rect:
-        serializedVersion: 2
-        x: 112
-        y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2734d59855c046180800000000000000
-      internalID: -9123153383629438094
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_398
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d8b1387d163de9c70800000000000000
-      internalID: 8979847124204329869
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_399
-      rect:
-        serializedVersion: 2
-        x: 144
-        y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1b5119fd710cb86f0800000000000000
-      internalID: -681239709848889935
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_400
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9a6afe56eb474b4d0800000000000000
-      internalID: -3119740280758098263
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_401
-      rect:
-        serializedVersion: 2
-        x: 176
-        y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 544b02d6db1fda790800000000000000
-      internalID: -7517086407129516987
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_402
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7f043b3ff5f144250800000000000000
-      internalID: 5927897506497380599
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_403
-      rect:
-        serializedVersion: 2
-        x: 208
-        y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7147b2ad154b9b360800000000000000
-      internalID: 7185972944091968535
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_404
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d62eae46bf88abf70800000000000000
-      internalID: 9203819401796313709
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_405
-      rect:
-        serializedVersion: 2
-        x: 240
-        y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 14f0625e7ccb267e0800000000000000
-      internalID: -1773647736501563583
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_406
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 529c86c5d2ce15df0800000000000000
-      internalID: -193113629432166107
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_407
-      rect:
-        serializedVersion: 2
-        x: 272
-        y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6046167eb48dc38b0800000000000000
-      internalID: -5171020451612105722
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_408
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e0cf879234c82f9d0800000000000000
-      internalID: -2741975003028718578
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_409
-      rect:
-        serializedVersion: 2
-        x: 304
-        y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a5de28748be65adf0800000000000000
-      internalID: -169607673203724966
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_410
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 20733b715c3381c80800000000000000
-      internalID: -8351868587359389950
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_411
-      rect:
-        serializedVersion: 2
-        x: 336
-        y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 95e402192a98802a0800000000000000
-      internalID: -6771010708439019943
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_412
-      rect:
-        serializedVersion: 2
-        x: 352
-        y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8d8f717592d620610800000000000000
-      internalID: 1585950043110111448
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_413
-      rect:
-        serializedVersion: 2
-        x: 368
-        y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e5bbd29e828a12b90800000000000000
-      internalID: -7268343429935023266
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_414
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b4ebd0b4cb87fd940800000000000000
-      internalID: 5323106034683592267
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_415
-      rect:
-        serializedVersion: 2
-        x: 400
-        y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1f2472770bb056210800000000000000
-      internalID: 1325478517871690481
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_416
-      rect:
-        serializedVersion: 2
-        x: 416
-        y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cc4dbcb6d13896470800000000000000
-      internalID: 8388379943340070092
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_417
-      rect:
-        serializedVersion: 2
-        x: 432
-        y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e19029f4d84266c40800000000000000
-      internalID: 5505127783850969374
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_418
-      rect:
-        serializedVersion: 2
-        x: 448
-        y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a6cedd5ff9afd0fc0800000000000000
-      internalID: -3526887368229524374
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_419
-      rect:
-        serializedVersion: 2
-        x: 464
-        y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: aa397d0d6c0743140800000000000000
-      internalID: 4698504310463894442
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_420
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 01a7f2bfb69ff9f50800000000000000
-      internalID: 6890500197071157776
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_421
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dbb3c1f0a7b8172a0800000000000000
-      internalID: -6741453810841142339
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_422
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7f6dd428926e55ba0800000000000000
-      internalID: -6100717054249281801
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_423
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 853dd3a2057425290800000000000000
-      internalID: -7903175986450148520
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_424
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 22d3e6340d90f6120800000000000000
-      internalID: 2409155115755650338
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_425
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3e5dbd1227d931810800000000000000
-      internalID: 1734903394987660771
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_426
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 36d14998bb3ea8fb0800000000000000
-      internalID: -4644649671072670365
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_427
-      rect:
-        serializedVersion: 2
-        x: 112
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2a19fb4e7f2b059d0800000000000000
-      internalID: -2787531391577910878
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_428
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9714732aa2e606b90800000000000000
-      internalID: -7250674270677286535
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_429
-      rect:
-        serializedVersion: 2
-        x: 144
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a3d834b50304a4590800000000000000
-      internalID: -7689262837347939014
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_430
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cb38c577294d99ef0800000000000000
-      internalID: -100815791106260036
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_431
-      rect:
-        serializedVersion: 2
-        x: 176
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 99ebe030ade3b0ac0800000000000000
-      internalID: -3887944747229200743
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_432
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8e6fa77eedbe45150800000000000000
-      internalID: 5860568357714720488
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_433
-      rect:
-        serializedVersion: 2
-        x: 208
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 263dabf28db12b7d0800000000000000
-      internalID: -2904228194372889758
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_434
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bd678a71cb0d998e0800000000000000
-      internalID: -1686087079204194597
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_435
-      rect:
-        serializedVersion: 2
-        x: 240
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e66ce37b44db36280800000000000000
-      internalID: -9051182723254794642
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_436
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e219cd4d86b7d7fa0800000000000000
-      internalID: -5801345054805290706
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_437
-      rect:
-        serializedVersion: 2
-        x: 272
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 333b96cb99a79d960800000000000000
-      internalID: 7627262244638274355
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_438
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e3c8b89b1afd72e60800000000000000
-      internalID: 7937558753959447614
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_439
-      rect:
-        serializedVersion: 2
-        x: 304
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 68c0d5a4c10f0d390800000000000000
-      internalID: -7795466950680966010
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_440
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5858ecf9813f80ec0800000000000000
-      internalID: -3600360614996834939
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_441
-      rect:
-        serializedVersion: 2
-        x: 336
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1ef1ab311125577c0800000000000000
-      internalID: -4074260054587858975
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_442
-      rect:
-        serializedVersion: 2
-        x: 352
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e4a8ef7616b743170800000000000000
-      internalID: 8157280483361589838
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_443
-      rect:
-        serializedVersion: 2
-        x: 368
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5650ba84cc5993bf0800000000000000
-      internalID: -344079191892097691
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_444
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a9aa345fa0d533730800000000000000
-      internalID: 3977625197544188570
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_445
-      rect:
-        serializedVersion: 2
-        x: 400
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8653ef2b7ad8e90a0800000000000000
-      internalID: -6872900229918739096
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_446
-      rect:
-        serializedVersion: 2
-        x: 416
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7d52048aecb4a1d00800000000000000
-      internalID: 944150422845662679
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_447
-      rect:
-        serializedVersion: 2
-        x: 432
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 14d1e148ff363cff0800000000000000
-      internalID: -17060024494973631
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_448
-      rect:
-        serializedVersion: 2
-        x: 448
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 764c700717ab64710800000000000000
-      internalID: 1677232907615716455
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_449
-      rect:
-        serializedVersion: 2
-        x: 464
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bf15c9b20bec90230800000000000000
-      internalID: 3605640232728023547
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_450
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8b01567d3f4228d20800000000000000
-      internalID: 3279224108388520120
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_451
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 99ca3e512307be690800000000000000
-      internalID: -7571834988075438951
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_452
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6fd29ae6d1c2ec2f0800000000000000
-      internalID: -950773966406341130
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_453
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: eb2dde3a7f6dc4320800000000000000
-      internalID: 2543644248653025982
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_454
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2ccc205b7a95e1c70800000000000000
-      internalID: 8943684486835653826
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_455
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 33be501136435ef70800000000000000
-      internalID: 9215829812575595315
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_456
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fa7b33242eb261f60800000000000000
-      internalID: 8004633638470924207
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_457
-      rect:
-        serializedVersion: 2
-        x: 112
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1e5c0e5975a2f9b80800000000000000
-      internalID: -8385937425475516959
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_458
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 31bd0595d9f71bbe0800000000000000
-      internalID: -1463248090133636333
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_459
-      rect:
-        serializedVersion: 2
-        x: 144
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6a7d977658857d6b0800000000000000
-      internalID: -5271647508823943258
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_460
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6f71d8e30b96902e0800000000000000
-      internalID: -2159078340662847498
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_461
-      rect:
-        serializedVersion: 2
-        x: 176
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 779935a6d172598e0800000000000000
-      internalID: -1687399478088984201
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_462
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 25ad8e8178a8dc5d0800000000000000
-      internalID: -3040621860562085294
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_463
-      rect:
-        serializedVersion: 2
-        x: 208
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f904ebcc9ff1a80d0800000000000000
-      internalID: -3419885809292132193
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_464
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d1091bc21ba0ae900800000000000000
-      internalID: 714395246966968349
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_465
-      rect:
-        serializedVersion: 2
-        x: 240
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 93a7b32833ff2bc90800000000000000
-      internalID: -7155376261244945863
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_466
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3a1b64430cacac560800000000000000
-      internalID: 7334897869985853859
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_467
-      rect:
-        serializedVersion: 2
-        x: 272
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 35eb1e8b6265ee610800000000000000
-      internalID: 1652352837602098771
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_468
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 432f10dbb476364c0800000000000000
-      internalID: -4295476044590091724
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_469
-      rect:
-        serializedVersion: 2
-        x: 304
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ae952fb5b59307570800000000000000
-      internalID: 8462326764376578538
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_470
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a165c76754b6d9170800000000000000
-      internalID: 8186817643714205210
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_471
-      rect:
-        serializedVersion: 2
-        x: 336
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b4350484c778957e0800000000000000
-      internalID: -1776239610163080373
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_472
-      rect:
-        serializedVersion: 2
-        x: 352
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ffbf4c978b551e9d0800000000000000
-      internalID: -2746820046913995777
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_473
-      rect:
-        serializedVersion: 2
-        x: 368
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cb39be7ad9e8407a0800000000000000
-      internalID: -6411843161690500164
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_474
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1ec8a7a1917569020800000000000000
-      internalID: 2348160021050330337
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_475
-      rect:
-        serializedVersion: 2
-        x: 400
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 76e054d0b40ca9ef0800000000000000
-      internalID: -100556613084705177
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_476
-      rect:
-        serializedVersion: 2
-        x: 416
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b0054ef3480a82c80800000000000000
-      internalID: -8347245419463159797
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_477
-      rect:
-        serializedVersion: 2
-        x: 432
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ad879f2db07072b50800000000000000
-      internalID: 6568226328908757210
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_478
-      rect:
-        serializedVersion: 2
-        x: 448
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b6dbd16cc08db3b30800000000000000
-      internalID: 4268242621238721899
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_479
-      rect:
-        serializedVersion: 2
-        x: 464
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cbe39084ad01756a0800000000000000
-      internalID: -6460676610742206788
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: cryptofthedamned-tileset_3
       rect:
         serializedVersion: 2
-        x: 48
+        x: 240
         y: 240
         width: 16
         height: 16
@@ -11113,7 +6535,7 @@ TextureImporter:
       name: cryptofthedamned-tileset_4
       rect:
         serializedVersion: 2
-        x: 64
+        x: 256
         y: 240
         width: 16
         height: 16
@@ -11134,7 +6556,7 @@ TextureImporter:
       name: cryptofthedamned-tileset_5
       rect:
         serializedVersion: 2
-        x: 80
+        x: 272
         y: 240
         width: 16
         height: 16
@@ -11155,7 +6577,7 @@ TextureImporter:
       name: cryptofthedamned-tileset_6
       rect:
         serializedVersion: 2
-        x: 96
+        x: 384
         y: 240
         width: 16
         height: 16
@@ -11176,7 +6598,7 @@ TextureImporter:
       name: cryptofthedamned-tileset_7
       rect:
         serializedVersion: 2
-        x: 112
+        x: 400
         y: 240
         width: 16
         height: 16
@@ -11197,7 +6619,7 @@ TextureImporter:
       name: cryptofthedamned-tileset_8
       rect:
         serializedVersion: 2
-        x: 128
+        x: 416
         y: 240
         width: 16
         height: 16
@@ -11218,7 +6640,7 @@ TextureImporter:
       name: cryptofthedamned-tileset_9
       rect:
         serializedVersion: 2
-        x: 144
+        x: 432
         y: 240
         width: 16
         height: 16
@@ -11239,7 +6661,7 @@ TextureImporter:
       name: cryptofthedamned-tileset_10
       rect:
         serializedVersion: 2
-        x: 160
+        x: 448
         y: 240
         width: 16
         height: 16
@@ -11260,7 +6682,7 @@ TextureImporter:
       name: cryptofthedamned-tileset_11
       rect:
         serializedVersion: 2
-        x: 176
+        x: 464
         y: 240
         width: 16
         height: 16
@@ -11281,8 +6703,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_40
       rect:
         serializedVersion: 2
-        x: 160
-        y: 224
+        x: 288
+        y: 192
         width: 16
         height: 16
       alignment: 0
@@ -11302,8 +6724,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_41
       rect:
         serializedVersion: 2
-        x: 176
-        y: 224
+        x: 304
+        y: 192
         width: 16
         height: 16
       alignment: 0
@@ -11323,8 +6745,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_70
       rect:
         serializedVersion: 2
-        x: 160
-        y: 208
+        x: 224
+        y: 160
         width: 16
         height: 16
       alignment: 0
@@ -11344,8 +6766,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_71
       rect:
         serializedVersion: 2
-        x: 176
-        y: 208
+        x: 240
+        y: 160
         width: 16
         height: 16
       alignment: 0
@@ -11365,8 +6787,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_100
       rect:
         serializedVersion: 2
-        x: 160
-        y: 192
+        x: 464
+        y: 144
         width: 16
         height: 16
       alignment: 0
@@ -11386,8 +6808,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_101
       rect:
         serializedVersion: 2
-        x: 176
-        y: 192
+        x: 48
+        y: 128
         width: 16
         height: 16
       alignment: 0
@@ -11407,8 +6829,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_130
       rect:
         serializedVersion: 2
-        x: 160
-        y: 176
+        x: 400
+        y: 112
         width: 16
         height: 16
       alignment: 0
@@ -11428,8 +6850,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_131
       rect:
         serializedVersion: 2
-        x: 176
-        y: 176
+        x: 416
+        y: 112
         width: 16
         height: 16
       alignment: 0
@@ -11449,8 +6871,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_160
       rect:
         serializedVersion: 2
-        x: 160
-        y: 160
+        x: 304
+        y: 80
         width: 16
         height: 16
       alignment: 0
@@ -11470,8 +6892,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_161
       rect:
         serializedVersion: 2
-        x: 176
-        y: 160
+        x: 320
+        y: 80
         width: 16
         height: 16
       alignment: 0
@@ -11491,8 +6913,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_190
       rect:
         serializedVersion: 2
-        x: 160
-        y: 144
+        x: 208
+        y: 48
         width: 16
         height: 16
       alignment: 0
@@ -11512,8 +6934,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_191
       rect:
         serializedVersion: 2
-        x: 176
-        y: 144
+        x: 224
+        y: 48
         width: 16
         height: 16
       alignment: 0
@@ -11533,8 +6955,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_220
       rect:
         serializedVersion: 2
-        x: 160
-        y: 128
+        x: 400
+        y: 32
         width: 16
         height: 16
       alignment: 0
@@ -11554,8 +6976,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_221
       rect:
         serializedVersion: 2
-        x: 176
-        y: 128
+        x: 416
+        y: 32
         width: 16
         height: 16
       alignment: 0
@@ -11575,8 +6997,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_250
       rect:
         serializedVersion: 2
-        x: 160
-        y: 112
+        x: 304
+        y: 0
         width: 16
         height: 16
       alignment: 0
@@ -11596,8 +7018,8 @@ TextureImporter:
       name: cryptofthedamned-tileset_251
       rect:
         serializedVersion: 2
-        x: 176
-        y: 112
+        x: 320
+        y: 0
         width: 16
         height: 16
       alignment: 0
@@ -11609,27 +7031,6 @@ TextureImporter:
       bones: []
       spriteID: 18b9c0d6183ed8070800000000000000
       internalID: 8110388648983960449
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cryptofthedamned-tileset_280
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 96
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b9052e73d27478640800000000000000
-      internalID: 5082108964047573147
       vertices: []
       indices: 
       edges: []
