@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: RoomTemplatesSet
   m_EditorClassIdentifier: 
   RoomTemplates:
-  - {fileID: 7992043151215135863, guid: 9cbfb0db900a91342b362a5174b83f92, type: 3}
+  - {fileID: 7992043151215135863, guid: 80b5edb996890cd46b2873e827a1ec39, type: 3}
