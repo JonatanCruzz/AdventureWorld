@@ -11,6 +11,7 @@ public class Attack : MonoBehaviour
 
     public void Awake()
     {
+        
         if (this.attackForce == null)
         {
             if (this.GetComponent<Enemy>() is Enemy enemy)
@@ -28,7 +29,6 @@ public class Attack : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collision)
     {
         // if trigger is parent of self, ignore
-        Debug.Log("Collided with " + collision.gameObject.name);
         if (collision.transform.IsChildOf(this.transform))
             return;
         if (this.transform.IsChildOf(collision.transform))

@@ -1,18 +1,21 @@
-using System.Linq;
 using PixelCrushers;
 using UnityEngine;
 
 namespace AdventureWorld.Prueba
 {
-    [RequireComponent(typeof(global::Player))]
+    [RequireComponent(typeof(Player))]
     public class PlayerSaveSystem : Saver
     {
-        private global::Player _player;
+        private Player _player;
 
+        public override void OnEnable()
+        {
+            _player = GetComponent<Player>();
+        }
 
         public override string RecordData()
         {
-            _player = GetComponent<global::Player>();
+            _player = GetComponent<Player>();
 
             var playerData = new PlayerData
             {
@@ -29,7 +32,7 @@ namespace AdventureWorld.Prueba
 
             var playerData = SaveSystem.Deserialize<PlayerData>(s);
             if (playerData == null) return;
-            _player = GetComponent<global::Player>();
+            _player = GetComponent<Player>();
 
             playerData.hp.toHealthUnit(_player.hp);
          

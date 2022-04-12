@@ -46,7 +46,7 @@ public class Spawner : MonoBehaviour
         enemy.transform.parent = transform;
         var enemyScript = enemy.AddComponent<GenericEnemy>();
         enemyScript.baseEnemy = enemyData;
-        // enemyScript.Init();
+        // enemyScript.Init();  
         // enemyScript.baseEnemy = enemyData;
         spawnedEnemies.Add(enemyScript);
     }
