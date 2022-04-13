@@ -1,8 +1,0 @@
-<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <ui:VisualElement name="ItemRow" style="align-items: stretch; height: 35px;">
-        <ui:VisualElement name="Row" style="flex-direction: row; align-items: center;">
-            <ui:VisualElement name="Icon" style="width: 25px; height: 25px; background-image: url(&apos;/Assets/Sprites/UI/Inventory/UnknownIcon.png&apos;);" />
-            <ui:Label text="Unknown" display-tooltip-when-elided="true" name="Name" style="flex-grow: 1; flex-basis: auto; padding-left: 5px; padding-right: 2px; padding-top: 0; padding-bottom: 0;" />
-        </ui:VisualElement>
-    </ui:VisualElement>
-</ui:UXML>
