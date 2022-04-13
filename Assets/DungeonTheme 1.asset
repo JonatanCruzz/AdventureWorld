@@ -348,7 +348,7 @@ MonoBehaviour:
   caption: Wall
   bounds:
     serializedVersion: 2
-    x: 200
+    x: 244.801
     y: 0
     width: 120
     height: 50
@@ -356,7 +356,7 @@ MonoBehaviour:
   canBeSelected: 1
   canBeMoved: 1
   selected: 0
-  zIndex: 85
+  zIndex: 90
   inputPins: []
   outputPins:
   - {fileID: -6377072488848776525}
@@ -496,15 +496,15 @@ MonoBehaviour:
   caption: Sprite Node
   bounds:
     serializedVersion: 2
-    x: 320.7
-    y: 147.1
+    x: 389.08047
+    y: 208.40662
     width: 120
     height: 120
   canBeDeleted: 1
   canBeSelected: 1
   canBeMoved: 1
-  selected: 0
-  zIndex: 88
+  selected: 1
+  zIndex: 92
   inputPins:
   - {fileID: 6456973723998615821}
   outputPins:
@@ -1269,7 +1269,7 @@ MonoBehaviour:
   indexCounter:
     index: 8
   topZIndex:
-    index: 89
+    index: 92
   nodes:
   - {fileID: -2961084001086756961}
   - {fileID: -7665551701310790494}
@@ -2130,7 +2130,7 @@ MonoBehaviour:
   canBeDeleted: 1
   canBeSelected: 1
   canBeMoved: 1
-  selected: 1
+  selected: 0
   zIndex: 89
   inputPins:
   - {fileID: 4157734537808907369}

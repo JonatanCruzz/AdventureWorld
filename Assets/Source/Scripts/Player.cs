@@ -1,10 +1,14 @@
 using System;
 using System.Collections;
+using AdventureWorld.Prueba;
 using UnityEngine;
 using UnityEngine.Assertions;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using Animancer;
+using DG.Tweening;
+using UnityEngine.Events;
+
 [RequireComponent(typeof(HealthUnit))]
 [RequireComponent(typeof(BuffBehaviour))]
 [RequireComponent(typeof(MoveBehaviour))]
@@ -79,6 +83,9 @@ public class Player : MonoBehaviour, AttackForce
     [SerializeField] private EquipmentInventory defaultEquipment;
     public InventoryUI inventoryUI;
 
+    public UnityEvent onCloseMenu;
+    public UnityEvent<InputAction.CallbackContext> onUnhandledInput;
+    
     private Interactable _interactable;
 
     public Interactable interactable
@@ -177,6 +184,10 @@ public class Player : MonoBehaviour, AttackForce
 
     private void onActionTriggered(InputAction.CallbackContext ctx)
     {
+        if(GameController.Instance.IsPaused)
+        {
+            return;
+        }
         switch (ctx.action.name)
         {
             case "Move":
@@ -221,6 +232,18 @@ public class Player : MonoBehaviour, AttackForce
             case "Fire":
                 slashAttack(ctx);
                 break;
+            
+            case "CloseMenu":
+                if (ctx.phase == InputActionPhase.Started)
+                {
+                    this.onCloseMenu?.Invoke();
+                }
+
+                break;
+            
+            default:
+                this.onUnhandledInput?.Invoke(ctx);
+                break;
         }
     }
     private IEnumerator DoAttack()
@@ -249,6 +272,7 @@ public class Player : MonoBehaviour, AttackForce
 
     void Update()
     {
+       
         //el damage es lo que se agrego nuevo hoy 2-11-2021
         Vida();
         this.ghost.makeGhost = this.moveBehaviour.Dashing;
@@ -260,11 +284,11 @@ public class Player : MonoBehaviour, AttackForce
                 Animations();
                 SwordAttack();
 
-                // if user press the button "I" to open the inventory UI
-                if (Input.GetKeyDown(KeyCode.I))
-                {
-                    inventoryUI.Show();
-                }
+                // // if user press the button "I" to open the inventory UI
+                // if (Input.GetKeyDown(KeyCode.I))
+                // {
+                //     inventoryUI.Show();
+                // }
             }
         }
         /* else
@@ -384,5 +408,17 @@ public class Player : MonoBehaviour, AttackForce
     public int getKnockbackForce()
     {
         return attackKnockback;
+    }
+
+    public int money = 0;
+    public void AddGold(GoldCoin coin)
+    {
+        money += coin.value;
+        
+        // //use Dotween to animate the coin to the player
+        // coin.transform.DOMove(transform.position, 0.1f);
+        // //destroy the coin
+        // Destroy(coin.gameObject, 0.1f);
+        
     }
 }

@@ -1,10 +1,13 @@
+using System;
 using System.Collections.Generic;
 using AdventureWorld.Prueba.Enemy;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Spawner : MonoBehaviour
 {
+    public GameObject coinPrefab;
     public List<BaseEnemy> enemies;
     [ReadOnly] public List<GenericEnemy> spawnedEnemies;
     [ReadOnly] public List<GenericEnemy> deadEnemies;
@@ -56,5 +59,12 @@ public class Spawner : MonoBehaviour
         spawnedEnemies.Remove(enemy);
         deadEnemies.Add(enemy);
         enemy.gameObject.SetActive(false);
+
+        // spawn coin at enemy position
+        var coin = Instantiate(coinPrefab, enemy.transform.position, Quaternion.identity);
+
+        var coinScript = coin.AddComponent<GoldCoin>();
+        coinScript.value = Mathf.RoundToInt(Random.Range(enemy.baseEnemy.MinMaxCoins.x, enemy.baseEnemy.MinMaxCoins.y));
+        
     }
 }
