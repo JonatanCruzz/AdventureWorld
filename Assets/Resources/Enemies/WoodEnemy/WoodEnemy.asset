@@ -36,4 +36,4 @@ MonoBehaviour:
     prefab: {fileID: 6066569096904572211, guid: c4b2cde9ede95d14ea607883e07000cc, type: 3}
   comeBack: 1
   health: 10
-  MinMaxCoins: {x: 3, y: 30}
+  MinMaxCoins: {x: 53, y: 545}

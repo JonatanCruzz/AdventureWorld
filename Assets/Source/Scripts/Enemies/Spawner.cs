@@ -49,6 +49,7 @@ public class Spawner : MonoBehaviour
         enemy.transform.parent = transform;
         var enemyScript = enemy.AddComponent<GenericEnemy>();
         enemyScript.baseEnemy = enemyData;
+        enemyScript.spawner = this;
         // enemyScript.Init();  
         // enemyScript.baseEnemy = enemyData;
         spawnedEnemies.Add(enemyScript);
@@ -57,9 +58,7 @@ public class Spawner : MonoBehaviour
     public void RemoveEnemy(GenericEnemy enemy)
     {
         spawnedEnemies.Remove(enemy);
-        deadEnemies.Add(enemy);
-        enemy.gameObject.SetActive(false);
-
+        Destroy(enemy.gameObject);
         // spawn coin at enemy position
         var coin = Instantiate(coinPrefab, enemy.transform.position, Quaternion.identity);
 

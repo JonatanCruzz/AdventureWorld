@@ -47,5 +47,5 @@ public class BaseEnemy : ScriptableObject
     public bool comeBack = true;
 
     public float health;
-    [MinMaxSlider(0, 100,true)] public Vector2Int MinMaxCoins = new Vector2Int(0, 5);
+    [MinMaxSlider(0, 1000,true)] public Vector2Int MinMaxCoins = new Vector2Int(0, 5);
 }

@@ -21,17 +21,19 @@ public class Player : MonoBehaviour, AttackForce
     private bool p_canInteract = false;
     private bool damage;
     private bool invulnerable = false;
+
     [UnityEngine.Header("Invulnerability")]
     public int AmountOfFlash = 5;
+
     public float InvulnerableFlashSpeed = 0.1f;
     public Color FlashColor = Color.white;
     public Color NormalColor = Color.white;
 
-    [UnityEngine.Header("Attack")]
-    public int attackKnockback = 10;
+    [UnityEngine.Header("Attack")] public int attackKnockback = 10;
     public int baseAttack = 1;
     public bool attacking;
     private AnimancerState attackState;
+
     public bool canInteract
     {
         get => p_canInteract;
@@ -45,12 +47,13 @@ public class Player : MonoBehaviour, AttackForce
 
     [Header("Animation")]
     // public Animator anim;
-    [HideInInspector]public HybridAnimancerComponent animancer;
+    [HideInInspector]
+    public HybridAnimancerComponent animancer;
+
     [SerializeField] private AnimationClip _DamageClip;
     [SerializeField] private MixerTransition2DAsset.UnShared _AttackTransition;
     private PlayerState state;
-    [Header("Components")]
-    public Ghost ghost;
+    [Header("Components")] public Ghost ghost;
     [HideInInspector] public HealthUnit hp;
 
     [HideInInspector] public BuffBehaviour buffs;
@@ -78,14 +81,13 @@ public class Player : MonoBehaviour, AttackForce
 
     [HideInInspector] public Inventory inventory;
     [HideInInspector] public EquipmentInventory equipment;
-    [Header("Inventory")]
-    [SerializeField] private Inventory defaultInventory;
+    [Header("Inventory")] [SerializeField] private Inventory defaultInventory;
     [SerializeField] private EquipmentInventory defaultEquipment;
     public InventoryUI inventoryUI;
 
     public UnityEvent onCloseMenu;
     public UnityEvent<InputAction.CallbackContext> onUnhandledInput;
-    
+
     private Interactable _interactable;
 
     public Interactable interactable
@@ -112,10 +114,12 @@ public class Player : MonoBehaviour, AttackForce
             spriteRenderer.material.color = NormalColor;
             yield return new WaitForSeconds(InvulnerableFlashSpeed);
         }
+
         spriteRenderer.material.color = NormalColor;
 
         this.invulnerable = false;
     }
+
     private IEnumerator onDamage()
     {
         this.damage = true;
@@ -125,7 +129,6 @@ public class Player : MonoBehaviour, AttackForce
         this.moveBehaviour.Attack = new AttackSpecifications();
         damage = false;
         yield return StartCoroutine(Flash());
-
     }
 
     private void OnDisable()
@@ -136,6 +139,7 @@ public class Player : MonoBehaviour, AttackForce
         this.input.onActionTriggered -= onActionTriggered;
         this.canInteract = false;
     }
+
     private void OnEnable()
     {
         this.input.onActionTriggered += onActionTriggered;
@@ -177,17 +181,16 @@ public class Player : MonoBehaviour, AttackForce
         var TeleportUI = GameObject.FindGameObjectWithTag("TeleportUI").GetComponent<TeleportManager>();
         TeleportUI.enabled = true;
         this.state = new PlayerState(animancer.Controller);
-
     }
-
 
 
     private void onActionTriggered(InputAction.CallbackContext ctx)
     {
-        if(GameController.Instance.IsPaused)
+        if (GameController.Instance != null && GameController.Instance.IsPaused == false)
         {
             return;
         }
+
         switch (ctx.action.name)
         {
             case "Move":
@@ -206,6 +209,7 @@ public class Player : MonoBehaviour, AttackForce
                         moveBehaviour.StopDash();
                         break;
                 }
+
                 break;
             case "Attack":
 
@@ -219,20 +223,22 @@ public class Player : MonoBehaviour, AttackForce
                         // attackCollider.enabled = false;
                         break;
                 }
+
                 break;
             case "Interact":
-                if(ctx.phase == InputActionPhase.Started)
+                if (ctx.phase == InputActionPhase.Started)
                 {
                     if (this.canInteract && this.interactable != null)
                     {
                         this.interactable.DoClick(this);
                     }
                 }
+
                 break;
             case "Fire":
                 slashAttack(ctx);
                 break;
-            
+
             case "CloseMenu":
                 if (ctx.phase == InputActionPhase.Started)
                 {
@@ -240,12 +246,13 @@ public class Player : MonoBehaviour, AttackForce
                 }
 
                 break;
-            
+
             default:
                 this.onUnhandledInput?.Invoke(ctx);
                 break;
         }
     }
+
     private IEnumerator DoAttack()
     {
         this.attacking = true;
@@ -258,12 +265,10 @@ public class Player : MonoBehaviour, AttackForce
         this.animancer.Play(this.state);
 
         this.attacking = false;
-
     }
 
     void Start()
     {
-
         animancer.Play(state);
         Camera.main.GetComponent<CameraMovements>().setBound(initialmap);
         this.inventoryUI.gameObject.SetActive(true);
@@ -272,7 +277,6 @@ public class Player : MonoBehaviour, AttackForce
 
     void Update()
     {
-       
         //el damage es lo que se agrego nuevo hoy 2-11-2021
         Vida();
         this.ghost.makeGhost = this.moveBehaviour.Dashing;
@@ -304,8 +308,8 @@ public class Player : MonoBehaviour, AttackForce
 
 
         // hide teleport dialog if the player press the space key
-
     }
+
     public void Animations()
     {
         if (this.moveBehaviour.moveDirection != Vector2.zero && !this.moveBehaviour.Dashing)
@@ -316,12 +320,13 @@ public class Player : MonoBehaviour, AttackForce
         {
             this.state.Walking = false;
         }
-
     }
 
     public void SwordAttack()
     {
-        if (this.moveBehaviour.moveDirection != Vector2.zero) attackCollider.offset = new Vector2(this.moveBehaviour.moveDirection.x / 2, this.moveBehaviour.moveDirection.y / 2);
+        if (this.moveBehaviour.moveDirection != Vector2.zero)
+            attackCollider.offset = new Vector2(this.moveBehaviour.moveDirection.x / 2,
+                this.moveBehaviour.moveDirection.y / 2);
 
         if (attacking && this.attackState != null)
         {
@@ -330,6 +335,7 @@ public class Player : MonoBehaviour, AttackForce
             else attackCollider.enabled = false;
         }
     }
+
     public void slashAttack(InputAction.CallbackContext ctx)
     {
         if (this.inSlash) return;
@@ -348,7 +354,9 @@ public class Player : MonoBehaviour, AttackForce
                 break;
         }
     }
+
     private bool inSlash = false;
+
     private IEnumerator DoingSlashAttack()
     {
         this.inSlash = true;
@@ -358,7 +366,8 @@ public class Player : MonoBehaviour, AttackForce
         {
             float angle = Mathf.Atan2(this.state.movY, this.state.movX) * Mathf.Rad2Deg;
 
-            GameObject slashObj = Instantiate(slashPrefab, transform.position, Quaternion.AngleAxis(angle, Vector3.forward));
+            GameObject slashObj = Instantiate(slashPrefab, transform.position,
+                Quaternion.AngleAxis(angle, Vector3.forward));
 
             Slash slash = slashObj.GetComponent<Slash>();
             slash.mov.x = this.state.movX;
@@ -368,12 +377,12 @@ public class Player : MonoBehaviour, AttackForce
                 slash.mov = new Vector2(1, 0);
             }
         }
+
         aura.AuraStop();
         yield return new WaitForSeconds(0.4f);
         this.movePrevent = this.p_lastMovePrevent;
         this.inSlash = false;
     }
-
 
 
     /* -----------------Esto es lo nuevo que se a�adio hoy------------------------ */
@@ -402,6 +411,7 @@ public class Player : MonoBehaviour, AttackForce
             if (item == null) continue;
             attackForce += item.strength;
         }
+
         return attackForce;
     }
 
@@ -411,14 +421,14 @@ public class Player : MonoBehaviour, AttackForce
     }
 
     public int money = 0;
+
     public void AddGold(GoldCoin coin)
     {
         money += coin.value;
-        
+
         // //use Dotween to animate the coin to the player
         // coin.transform.DOMove(transform.position, 0.1f);
         // //destroy the coin
         // Destroy(coin.gameObject, 0.1f);
-        
     }
 }
