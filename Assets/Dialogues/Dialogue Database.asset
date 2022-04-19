@@ -339,7 +339,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: esto es una prueba de escribir un dialogo <wave>demasiado</wave> largo
+        value: esto es una prueba de escribir un dialogo <wave>demasiado</wave> <w>
+          largo
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -892,8 +893,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 320.52826}
-    canvasZoom: 0.7000003
+    canvasScrollPosition: {x: 134.87675, y: 78.47374}
+    canvasZoom: 0.91425025
   syncInfo:
     syncActors: 0
     syncItems: 0

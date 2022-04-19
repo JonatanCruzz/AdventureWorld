@@ -15,8 +15,7 @@ namespace AdventureWorld.Prueba.Enemy
         [ReadOnly] public bool damage;
 
         [ReadOnly] public bool canAttack = true;
-
-        bool attacking;
+        [SerializeField, ReadOnly] private bool attacking;
 
         public HealthUnit hp;
 
@@ -30,6 +29,8 @@ namespace AdventureWorld.Prueba.Enemy
         // Animador y cuerpo cinemático con la rotación en Z congelada
         public AnimancerComponent anim;
         private MoveBehaviour moveBehaviour;
+
+        private Coroutine attackCoroutine;
 
         void Start()
         {
@@ -92,10 +93,10 @@ namespace AdventureWorld.Prueba.Enemy
                 // Aquí le atacaríamos, pero por ahora simplemente cambiamos la animación
                 // Congela la animación de andar
                 moveBehaviour.moveDirection = Vector2.zero;
-                if (canAttack)
+                if (canAttack && !damage && !attacking)
                 {
                     Debug.Log("Attack");
-                    StartCoroutine(Attack(dir, baseEnemy.attackDefinition.speed));
+                    attackCoroutine = StartCoroutine(Attack(dir, baseEnemy.attackDefinition.speed));
                 }
             }
             // En caso contrario nos movemos hacia él
@@ -139,18 +140,17 @@ namespace AdventureWorld.Prueba.Enemy
 
         private IEnumerator DoChargeAttack(Vector2 dir)
         {
-            if (baseEnemy.attackDefinition.chargeTime > 0)
-            {
-                if (baseEnemy.attackChargeAnimation != null)
-                {
-                    anim.Play(baseEnemy.attackChargeAnimation
-                        .GetClip(dir));
-                    // TODO: change animation dynamically while enemy move
-                    //TODO: implement basEnemy.canMoveWhileAttacknig
-                }
+            if (baseEnemy.attackDefinition.chargeTime <= 0) yield break;
 
-                yield return new WaitForSeconds(baseEnemy.attackDefinition.chargeTime);
+            if (baseEnemy.attackChargeAnimation != null)
+            {
+                anim.Play(baseEnemy.attackChargeAnimation
+                    .GetClip(dir));
+                // TODO: change animation dynamically while enemy move
+                //TODO: implement basEnemy.canMoveWhileAttacknig
             }
+
+            yield return new WaitForSeconds(baseEnemy.attackDefinition.chargeTime);
 
             yield break;
         }
@@ -165,7 +165,6 @@ namespace AdventureWorld.Prueba.Enemy
             if (baseEnemy.attackFreezeAnimation)
             {
                 anim.Playable.PauseGraph();
-                // anim.Stop();
             }
             else
             {
@@ -194,7 +193,6 @@ namespace AdventureWorld.Prueba.Enemy
             if (baseEnemy.attackFreezeAnimation)
             {
                 anim.Playable.UnpauseGraph();
-                // anim.Stop();
             }
 
 
@@ -207,6 +205,7 @@ namespace AdventureWorld.Prueba.Enemy
         public void Attacked(AttackSpecifications data)
         {
             if (!this.enabled) return;
+
             hp.HP -= data.damage;
             if (hp.HP <= 0)
             {
@@ -220,11 +219,29 @@ namespace AdventureWorld.Prueba.Enemy
         private IEnumerator OnDamage(AttackSpecifications data)
         {
             damage = true;
+            if (this.attackCoroutine != null)
+            {
+                StopCoroutine(this.attackCoroutine);
+                Debug.Log("Stop Coroutine");
+                if (!anim.Playable.IsGraphPlaying)
+                    anim.Playable.UnpauseGraph();
+                this.canAttack = false;
+                this.attacking = false;
+            }
+
             this.moveBehaviour.Attack = data;
             yield return anim.Play(baseEnemy.damagedAnimation);
             anim.Play(baseEnemy.idleAnimation);
             damage = false;
+            Debug.Log("finished damage");
             this.moveBehaviour.Attack = new AttackSpecifications();
+            yield return new WaitForSeconds(baseEnemy.attackDefinition.cooldown);
+            this.canAttack = true;
+        }
+
+        public void Finish_Damage_Enemy()
+        {
+            // damage = false;
         }
 
         public void OnGUI()

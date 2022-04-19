@@ -106,6 +106,11 @@ namespace AdventureWorld.Prueba.Procedural
             0b1001
         };
 
+        public static HashSet<int> wallTopLeftInnerCorner = new HashSet<int>
+        {
+            0b1001
+        };
+
         public static HashSet<int> wallFullEightDirections = new HashSet<int>
         {
             0b00010100,

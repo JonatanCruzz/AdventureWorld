@@ -36,6 +36,14 @@ public class InventoryUI : MonoBehaviour
 
         this.display();
     }
+
+    public void Hide()
+    {
+        m_Root.style.display = DisplayStyle.None;
+        player.enabled = true;
+        this.state = InventoryUIState.none;
+        OnInventoryClose?.Invoke();
+    }
     public void OpenChest(Inventory chestInventory)
     {
         this.state = InventoryUIState.other;
@@ -51,14 +59,7 @@ public class InventoryUI : MonoBehaviour
     {
         if (this.player.enabled) return;
 
-        // if user press Esc, hide the inventory
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            m_Root.style.display = DisplayStyle.None;
-            player.enabled = true;
-            this.state = InventoryUIState.none;
-            OnInventoryClose?.Invoke();
-        }
+      
     }
 
     #region UI Logic 

@@ -10,16 +10,16 @@
         "RoomTemplates": [
           {
             "$id": "4",
-            "Name": "Room template",
+            "Name": "Room template 1",
             "Outline": {
               "points": [
                 {
                   "X": -5,
-                  "Y": 3
+                  "Y": 4
                 },
                 {
                   "X": 2,
-                  "Y": 3
+                  "Y": 4
                 },
                 {
                   "X": 2,
@@ -33,77 +33,57 @@
             },
             "Doors": {
               "$type": "Edgar.GraphBasedGenerator.Grid2D.ManualDoorModeGrid2D, EdgarSingleFile",
-              "Doors": null,
-              "DoorLines": [
+              "Doors": [
                 {
-                  "Line": {
-                    "From": {
-                      "X": -5,
-                      "Y": -1
-                    },
-                    "To": {
-                      "X": -5,
-                      "Y": 0
-                    },
-                    "degeneratedDirection": 0,
-                    "Length": 1
+                  "From": {
+                    "X": 2,
+                    "Y": 0
                   },
-                  "Length": 0,
-                  "DoorSocket": null,
+                  "To": {
+                    "X": 2,
+                    "Y": 0
+                  },
+                  "Socket": null,
                   "Type": 0
                 },
                 {
-                  "Line": {
-                    "From": {
-                      "X": -2,
-                      "Y": 3
-                    },
-                    "To": {
-                      "X": -1,
-                      "Y": 3
-                    },
-                    "degeneratedDirection": 0,
-                    "Length": 1
+                  "From": {
+                    "X": -5,
+                    "Y": 0
                   },
-                  "Length": 0,
-                  "DoorSocket": null,
+                  "To": {
+                    "X": -5,
+                    "Y": 0
+                  },
+                  "Socket": null,
                   "Type": 0
                 },
                 {
-                  "Line": {
-                    "From": {
-                      "X": 2,
-                      "Y": -1
-                    },
-                    "To": {
-                      "X": 2,
-                      "Y": 0
-                    },
-                    "degeneratedDirection": 0,
-                    "Length": 1
+                  "From": {
+                    "X": -2,
+                    "Y": -4
                   },
-                  "Length": 0,
-                  "DoorSocket": null,
+                  "To": {
+                    "X": -2,
+                    "Y": -4
+                  },
+                  "Socket": null,
                   "Type": 0
                 },
                 {
-                  "Line": {
-                    "From": {
-                      "X": -2,
-                      "Y": -4
-                    },
-                    "To": {
-                      "X": -1,
-                      "Y": -4
-                    },
-                    "degeneratedDirection": 0,
-                    "Length": 1
+                  "From": {
+                    "X": -2,
+                    "Y": 4
                   },
-                  "Length": 0,
-                  "DoorSocket": null,
+                  "To": {
+                    "X": -2,
+                    "Y": 4
+                  },
+                  "Socket": null,
                   "Type": 0
                 }
-              ]
+              ],
+              "DoorLines": null
             },
             "RepeatMode": 0,
             "AllowedTransformations": [
@@ -196,6 +176,62 @@
           }
         ]
       }
+    },
+    {
+      "Key": {
+        "Id": 7,
+        "Name": "Room"
+      },
+      "Value": {
+        "IsCorridor": false,
+        "RoomTemplates": [
+          {
+            "$ref": "4"
+          }
+        ]
+      }
+    },
+    {
+      "Key": {
+        "Id": 8,
+        "Name": "Room"
+      },
+      "Value": {
+        "IsCorridor": false,
+        "RoomTemplates": [
+          {
+            "$ref": "4"
+          }
+        ]
+      }
+    },
+    {
+      "Key": {
+        "Id": 9,
+        "Name": "Tresure"
+      },
+      "Value": {
+        "IsCorridor": false,
+        "RoomTemplates": [
+          {
+            "$ref": "4"
+          }
+        ]
+      }
+    },
+    {
+      "Key": {
+        "Id": 10,
+        "Name": "Room"
+      },
+      "Value": {
+        "IsCorridor": false,
+        "RoomTemplates": [
+          {
+            "$ref": "4"
+          }
+        ]
+      }
     }
   ],
   "passages": [
@@ -257,6 +293,56 @@
       "Room2": {
         "Id": 6,
         "Name": "Treasure"
+      }
+    },
+    {
+      "Room1": {
+        "Id": 5,
+        "Name": "Room"
+      },
+      "Room2": {
+        "Id": 10,
+        "Name": "Room"
+      }
+    },
+    {
+      "Room1": {
+        "Id": 6,
+        "Name": "Treasure"
+      },
+      "Room2": {
+        "Id": 7,
+        "Name": "Room"
+      }
+    },
+    {
+      "Room1": {
+        "Id": 7,
+        "Name": "Room"
+      },
+      "Room2": {
+        "Id": 8,
+        "Name": "Room"
+      }
+    },
+    {
+      "Room1": {
+        "Id": 8,
+        "Name": "Room"
+      },
+      "Room2": {
+        "Id": 9,
+        "Name": "Tresure"
+      }
+    },
+    {
+      "Room1": {
+        "Id": 9,
+        "Name": "Tresure"
+      },
+      "Room2": {
+        "Id": 10,
+        "Name": "Room"
       }
     }
   ],
