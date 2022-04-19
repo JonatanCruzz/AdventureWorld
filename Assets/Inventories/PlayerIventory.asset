@@ -17,8 +17,8 @@ MonoBehaviour:
     _numberOfItem: 1
   - _item: {fileID: 11400000, guid: b280622e35348a64aa8f45c76f69006b, type: 2}
     _numberOfItem: 2
-  - _item: {fileID: 0}
-    _numberOfItem: 0
+  - _item: {fileID: 11400000, guid: cc2db1a5b8d5c974194dddc40e34880c, type: 2}
+    _numberOfItem: 10
   - _item: {fileID: 0}
     _numberOfItem: 0
   - _item: {fileID: 0}

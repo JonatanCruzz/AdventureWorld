@@ -13,7 +13,6 @@ public class Spawner : MonoBehaviour
     [ReadOnly] public List<GenericEnemy> deadEnemies;
 
     public List<Transform> spawnPoints;
-    public float spawnInterval = 1f;
     public float spawnCooldown = 0f;
     public float spawnCooldownMax = 1f;
     public float spawnCooldownMin = 0.5f;

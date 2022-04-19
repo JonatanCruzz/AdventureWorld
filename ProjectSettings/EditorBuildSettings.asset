@@ -15,16 +15,13 @@ EditorBuildSettings:
     path: Assets/Scenes/NuevoMap.unity
     guid: b74f0397d8c54cf4792aab496e17af8e
   - enabled: 1
-    path: Assets/Dialogue System Extras/Dialogue System Menu Framework/Example/Start.unity
-    guid: 9fe40c7ca25fb054b932cd138605c801
+    path: Assets/Scenes/NuevoMap 1.unity
+    guid: cd2d2f91b61b2424b9019e4813cda539
   - enabled: 1
-    path: Assets/Dialogue System Extras/Dialogue System Menu Framework/Example/Loading.unity
-    guid: 4571227e59700254894d0dceff454827
+    path: Assets/Scenes/Loading.unity
+    guid: 5fb754351fd97a4478b05d3a5c96e0a9
   - enabled: 1
-    path: Assets/Dialogue System Extras/Dialogue System Menu Framework/Example/Gameplay.unity
-    guid: d50ef235425ff164c8eae69d959e0689
-  - enabled: 1
-    path: Assets/Dialogue System Extras/Dialogue System Menu Framework/Example/Credits.unity
-    guid: 27571bfeda66a6d46bdd8af4b145d7ca
+    path: Assets/Scenes/Procedural2.unity
+    guid: 4b8d461fa12722a4aad4efb89b0c9a41
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 8ba933244fbc5734d8e66ce2e36f6719, type: 2}

@@ -1,4 +1,5 @@
 using System;
+using NodeCanvas.Tasks.Actions;
 using Sirenix.Serialization;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -20,8 +21,19 @@ namespace AdventureWorld.Prueba
         [SerializeField] private CloseUIManager closeUI;
         [SerializeField] private PlayerInput input;
 
-        [OdinSerialize]
-        public UIState CurrentState { get;  set; } = UIState.None;
+        private Player _player;
+
+        public Player player
+        {
+            get => _player;
+            set
+            {
+                _player = value;
+                inventoryUI.player = _player;
+            }
+        }
+
+        [OdinSerialize] public UIState CurrentState { get; set; } = UIState.None;
 
         public void ShowTeleportUI()
         {
@@ -47,7 +59,7 @@ namespace AdventureWorld.Prueba
 
         public void OpenChest(Inventory inv)
         {
-            if(CurrentState != UIState.None) return;
+            if (CurrentState != UIState.None) return;
             inventoryUI.OpenChest(inv);
             CurrentState = UIState.Inventory;
         }
@@ -118,6 +130,13 @@ namespace AdventureWorld.Prueba
 
                     break;
             }
+        }
+
+        public void Start()
+        {
+            teleportUI.enabled = true;
+            this.inventoryUI.gameObject.SetActive(true);
+
         }
     }
 }

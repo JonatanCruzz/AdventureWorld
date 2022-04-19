@@ -20,7 +20,8 @@
         "Ink-Libraries",
         "InkEditor",
         "ParadoxNotion",
-        "AstarPathfindingProject"
+        "AstarPathfindingProject",
+        "ProCamera2d"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

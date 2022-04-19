@@ -6,8 +6,11 @@ using UnityEngine.Assertions;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using Animancer;
+using Com.LuisPedroFonseca.ProCamera2D;
 using DG.Tweening;
+using PixelCrushers;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(HealthUnit))]
 [RequireComponent(typeof(BuffBehaviour))]
@@ -149,7 +152,7 @@ public class Player : MonoBehaviour, AttackForce
 
     private void Awake()
     {
-        Assert.IsNotNull(initialmap);
+        // Assert.IsNotNull(initialmap);
         Assert.IsNotNull(slashPrefab);
         input = GetComponent<PlayerInput>();
         // anim = GetComponent<Animator>();
@@ -174,22 +177,23 @@ public class Player : MonoBehaviour, AttackForce
             this.equipment = Instantiate(defaultEquipment);
 
         this.equipment.Player = this;
-        this.inventoryUI.player = this;
+        GameController.Instance.uiManager.player = this;
 
         this.input.onActionTriggered += onActionTriggered;
 
-        var TeleportUI = GameObject.FindGameObjectWithTag("TeleportUI").GetComponent<TeleportManager>();
-        TeleportUI.enabled = true;
         this.state = new PlayerState(animancer.Controller);
+        ProCamera2D.Instance.AddCameraTarget(transform);
     }
+    
+
 
 
     private void onActionTriggered(InputAction.CallbackContext ctx)
     {
-        if (GameController.Instance != null && GameController.Instance.IsPaused == false)
-        {
+        
+        if (GameController.Instance != null && GameController.Instance.IsPaused)
             return;
-        }
+
 
         switch (ctx.action.name)
         {
@@ -239,13 +243,13 @@ public class Player : MonoBehaviour, AttackForce
                 slashAttack(ctx);
                 break;
 
-            case "CloseMenu":
-                if (ctx.phase == InputActionPhase.Started)
-                {
-                    this.onCloseMenu?.Invoke();
-                }
-
-                break;
+            // case "CloseMenu":
+            //     if (ctx.phase == InputActionPhase.Started)
+            //     {
+            //         this.onCloseMenu?.Invoke();
+            //     }
+            //
+            //     break;
 
             default:
                 this.onUnhandledInput?.Invoke(ctx);
@@ -270,9 +274,26 @@ public class Player : MonoBehaviour, AttackForce
     void Start()
     {
         animancer.Play(state);
-        Camera.main.GetComponent<CameraMovements>().setBound(initialmap);
-        this.inventoryUI.gameObject.SetActive(true);
+        // Camera.main.GetComponent<CameraMovements>().setBound(initialmap);
+        // this.inventoryUI.gameObject.SetActive(true);
         this.canInteract = true;
+        
+        if ( SaveSystem.playerSpawnpoint != null)
+        {
+            this.transform.position = SaveSystem.playerSpawnpoint.transform.position;
+            this.transform.rotation = SaveSystem.playerSpawnpoint.transform.rotation;
+            
+        }
+    }
+
+    public void Load(string scene)
+    {
+        PixelCrushers.SaveSystem.LoadScene(scene);
+    }
+
+    public void Kill()
+    {
+        this.hp.HP = 0;
     }
 
     void Update()
@@ -293,6 +314,18 @@ public class Player : MonoBehaviour, AttackForce
                 // {
                 //     inventoryUI.Show();
                 // }
+            }
+        }
+        else
+        {
+            hp.HP = hp.Max_HP;
+            //get the loaded scene
+            var scene = SceneManager.GetActiveScene();
+            // if the scene is "SampleScene", load the scene "NuevoMap 1"
+            if (scene.name == "SampleScene")
+            {
+                PixelCrushers.SaveSystem.LoadScene("NuevoMap 1@spawnpoint");
+                // SceneManager.LoadScene("Forest");
             }
         }
         /* else

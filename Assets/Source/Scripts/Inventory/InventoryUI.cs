@@ -55,13 +55,6 @@ public class InventoryUI : MonoBehaviour
         this.display();
     }
 
-    public void Update()
-    {
-        if (this.player.enabled) return;
-
-      
-    }
-
     #region UI Logic 
     private void OnEnable()
     {
