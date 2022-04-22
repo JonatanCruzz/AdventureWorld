@@ -1,15 +1,12 @@
 {
-    "name": "DialogueSystemExtras",
+    "name": "DialogueSystem",
     "rootNamespace": "",
     "references": [
-        "Unity.TextMeshPro",
         "PixelCrushers",
-        "DialogueSystem",
-        "UnityEditor.UI"
+        "Unity.InputSystem",
+        "Unity.TextMeshPro"
     ],
-    "includePlatforms": [
-        "Editor"
-    ],
+    "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": false,

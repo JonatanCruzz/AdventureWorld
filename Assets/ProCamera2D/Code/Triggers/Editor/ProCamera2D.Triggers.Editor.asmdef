@@ -1,11 +1,8 @@
 {
-    "name": "DialogueSystemExtras",
+    "name": "ProCamera2D.Triggers.Editor",
     "rootNamespace": "",
     "references": [
-        "Unity.TextMeshPro",
-        "PixelCrushers",
-        "DialogueSystem",
-        "UnityEditor.UI"
+        "GUID:8dc806974fa6b414bb931f370f820085"
     ],
     "includePlatforms": [
         "Editor"

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿#if UNITY_EDITOR
+using UnityEngine;
 using UnityEditor;
 
 namespace Com.LuisPedroFonseca.ProCamera2D
@@ -97,3 +98,4 @@ namespace Com.LuisPedroFonseca.ProCamera2D
         }
     }
 }
+#endif
