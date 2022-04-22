@@ -6,7 +6,6 @@ using UnityEngine;
 public class PrayStatue : Interactable
 {
     public string objectiveDescription;
-    public BaseCameraMargin targetMap;
 
     public void Awake()
     {
@@ -34,7 +33,6 @@ public class PrayStatue : Interactable
         player.transform.position = transform.GetChild(0).transform.position;
 
 
-        Camera.main.GetComponent<CameraMovements>().setBound(targetMap.gameObject);
         yield return StartCoroutine(fadeScript.FadeOut());
 
         player.GetComponent<Player>().movePrevent = false;
