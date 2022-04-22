@@ -21,7 +21,9 @@
         "InkEditor",
         "ParadoxNotion",
         "AstarPathfindingProject",
-        "ProCamera2d"
+        "ProCamera2d",
+        "PixelCrushers",
+        "DialogueSystemEditor"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
