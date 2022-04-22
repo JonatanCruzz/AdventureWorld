@@ -2,11 +2,14 @@
     "name": "DialogueSystemExtras",
     "rootNamespace": "",
     "references": [
-        "GUID:935fcc8686edc9845a81157b7e100ae4",
-        "GUID:048beef50a7368442b888ee17002f47a",
-        "GUID:6055be8ebefd69e48b49212b09b47b2f"
+        "Unity.TextMeshPro",
+        "PixelCrushers",
+        "DialogueSystem",
+        "UnityEditor.UI"
     ],
-    "includePlatforms": [],
+    "includePlatforms": [
+        "Editor"
+    ],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": false,
