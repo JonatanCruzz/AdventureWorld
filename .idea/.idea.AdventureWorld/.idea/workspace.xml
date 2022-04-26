@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a8aeb075-b774-416e-85e2-19caa30fcbe9" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-    </list>
+    <list default="true" id="a8aeb075-b774-416e-85e2-19caa30fcbe9" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -106,6 +104,7 @@
       <workItem from="1650339297045" duration="2128000" />
       <workItem from="1650634146544" duration="175000" />
       <workItem from="1650634447362" duration="2011000" />
+      <workItem from="1650939614994" duration="680000" />
     </task>
     <task id="LOCAL-00001" summary="pruebas">
       <created>1648923061360</created>
