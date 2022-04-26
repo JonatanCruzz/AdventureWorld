@@ -10,6 +10,7 @@ public enum EnemyAttackInstacementMode
     Random,
     Spread
 }
+
 [System.Serializable]
 public class EnemyAttackDefinition
 {
@@ -21,26 +22,20 @@ public class EnemyAttackDefinition
     public float range;
     public float speed;
     public bool modifyProjectileSpeed = false;
-    [ShowIf("modifyProjectileSpeed")]
-    public float projectileSpeed;
+    [ShowIf("modifyProjectileSpeed")] public float projectileSpeed;
     public float cooldown;
-    [EnumToggleButtons]
-    public EnemyAttackInstacementMode instacementMode;
-    [AssetsOnly]
-    public GameObject prefab;
+    [EnumToggleButtons] public EnemyAttackInstacementMode instacementMode;
+    [AssetsOnly] public GameObject prefab;
 }
 
 [CreateAssetMenu(menuName = "AdventureWorld/BaseEnemy")]
 public class BaseEnemy : ScriptableObject
 {
-    [AssetsOnly]
-    public GameObject prefab;
+    [AssetsOnly] public GameObject prefab;
     public AnimationClip idleAnimation;
     public DirectionalAnimationSet moveAnimation;
-    [HideIf("attackFreezeAnimation")]
-    public DirectionalAnimationSet attackAnimation;
-    [HideIf("attackFreezeAnimation")]
-    public DirectionalAnimationSet attackChargeAnimation;
+    [HideIf("attackFreezeAnimation")] public DirectionalAnimationSet attackAnimation;
+    [HideIf("attackFreezeAnimation")] public DirectionalAnimationSet attackChargeAnimation;
     public bool attackFreezeAnimation = false;
     public AnimationClip damagedAnimation;
 
@@ -52,5 +47,5 @@ public class BaseEnemy : ScriptableObject
     public bool comeBack = true;
 
     public float health;
-    
+    [MinMaxSlider(0, 1000,true)] public Vector2Int MinMaxCoins = new Vector2Int(0, 5);
 }

@@ -1,0 +1,18 @@
+{
+    "name": "ProCamera2D.Triggers.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:8dc806974fa6b414bb931f370f820085"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

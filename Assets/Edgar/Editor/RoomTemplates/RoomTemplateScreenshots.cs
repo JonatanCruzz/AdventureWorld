@@ -63,6 +63,7 @@ namespace Edgar.Unity.Editor
             var path =
                 "C:\\Users\\ondra\\Projects\\JavaScript\\Edgar-Unity\\docs\\assets\\2d\\examples\\example2\\";
 
+
             FileStream file = File.Create($"{path}{name}.png");
 
             if (!file.CanWrite)
@@ -71,7 +72,6 @@ namespace Edgar.Unity.Editor
             }
 
             file.Write(pngData, 0, pngData.Length);
-
             file.Close();
 
             Debug.Log($"Room template screenshot taken - {name}.png");

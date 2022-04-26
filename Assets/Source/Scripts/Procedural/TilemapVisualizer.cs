@@ -10,8 +10,10 @@ public class TilemapVisualizer : MonoBehaviour
     [SerializeField] private Tilemap floorTilemap;
     [SerializeField] private Tilemap wallTilemap;
     [SerializeField] private TileBase floorTile;
-    [SerializeField] private TileBase wallTopTile, wallBottomTile, wallLeftTile, wallRightTile;
+    [SerializeField] private TileBase wallTopTile, wallBottomTile, wallLeftTile, wallRightTile, wallFullTile;
     [SerializeField] private TileBase wallTopLeftTile, wallTopRightTile, wallBottomLeftTile, wallBottomRightTile;
+    [SerializeField] private TileBase wallTopLeftCornerTile, wallTopRightCornerTile, wallBottomLeftCornerTile, wallBottomRightCornerTile;
+    [SerializeField] private bool paintFloorbelowWalls = true;
 
     public void PaintFloorTile(IEnumerable<Vector2Int> floorPositions)
     {
@@ -40,6 +42,8 @@ public class TilemapVisualizer : MonoBehaviour
 
     public void PaintSingleBasicWall(Vector2Int position, string neightboursBinary)
     {
+        if(paintFloorbelowWalls)
+            PaintSigleTile(floorTilemap, position, floorTile);
         int typeAsInt = Convert.ToInt32(neightboursBinary, 2);
         TileBase tile = null;
         if (WallTypesHelper.wallTop.Contains(typeAsInt))
@@ -52,12 +56,26 @@ public class TilemapVisualizer : MonoBehaviour
             tile = wallRightTile;
         else if (WallTypesHelper.wallFull.Contains(typeAsInt))
         {
-            Debug.Log("wall full at position: " + position);
+            if (WallTypesHelper.wallTopLeftInnerCorner.Contains(typeAsInt))
+            {
+                tile = wallTopLeftCornerTile;
+            }
+            else
+            {
+                tile = wallFullTile;
+                Debug.Log("full: " + position + "binary: " + neightboursBinary);
+       
+            }
+
         }
 
         //TODO: wallFull, and wallCorner
         if (tile != null)
             PaintSigleTile(wallTilemap, position, tile);
+        else
+        {
+            Debug.Log("no tile for: " + position + "binary: " + neightboursBinary);
+        }
     }
 
     public void PaintSingleCornerWall(Vector2Int position, string neighboursBinaryType)

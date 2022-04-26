@@ -15,9 +15,9 @@ MonoBehaviour:
   prefab: {fileID: 1165992998545724, guid: 9973831dff4adc8478347b785a389db3, type: 3}
   idleAnimation: {fileID: 7400000, guid: 33b33a88a1523c148b9eb29689796a22, type: 2}
   moveAnimation: {fileID: 11400000, guid: 19ac239dc50ad384ab9b0ebef9002e16, type: 2}
-  attackAnimation: {fileID: 11400000, guid: 19ac239dc50ad384ab9b0ebef9002e16, type: 2}
+  attackAnimation: {fileID: 11400000, guid: c4b543c46695f1740ae0d9e987772123, type: 2}
   attackChargeAnimation: {fileID: 0}
-  attackFreezeAnimation: 1
+  attackFreezeAnimation: 0
   damagedAnimation: {fileID: 7400000, guid: ef3589560bdbfe0418a8001a6cb09f40, type: 2}
   moveSpeed: 1
   visionRange: 5
@@ -36,3 +36,4 @@ MonoBehaviour:
     prefab: {fileID: 6066569096904572211, guid: c4b2cde9ede95d14ea607883e07000cc, type: 3}
   comeBack: 1
   health: 10
+  MinMaxCoins: {x: 53, y: 545}

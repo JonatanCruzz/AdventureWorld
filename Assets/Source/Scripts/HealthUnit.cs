@@ -43,7 +43,6 @@ public class HealthUnit : MonoBehaviour
         maxHP = (BaseHP + AddictiveHP) * (MultiplierHP + 1);
         HP = Mathf.Clamp(maxHP * relativeHp, 0, maxHP);
 
-        Debug.Log("Max HP: " + this.maxHP + " HP: " + this.HP);
 
     }
     public void Awake()

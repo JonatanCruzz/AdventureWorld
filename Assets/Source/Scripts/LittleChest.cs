@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class LittleChest : Interactable
 {
-    public bool isOpen;
     public Inventory defaultInventory;
     private Inventory chestInventory;
 
@@ -18,18 +17,11 @@ public class LittleChest : Interactable
             chestInventory = Instantiate(defaultInventory);
             // chestInventory.transform.position = transform.position;
         }
-        isOpen = true;
-        var inventoryUI = FindObjectOfType<InventoryUI>();
-        inventoryUI.OpenChest(chestInventory);
-        inventoryUI.OnInventoryClose += () => { isOpen = false; };
+        GameController.Instance.uiManager.OpenChest(chestInventory);
 
 
     }
 
-    public override bool IsInteracting()
-    {
-        return isOpen;
-    }
 
   
 }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Com.LuisPedroFonseca.ProCamera2D;
 using UnityEngine;
 using UnityEngine.Assertions;
 
@@ -8,7 +9,7 @@ using UnityEngine.Assertions;
 public class Warp : MonoBehaviour
 {
     public GameObject target;
-    public BaseCameraMargin targetMap;
+    // public BaseCameraMargin targetMap;
     public bool needText;
 
     GameObject area;
@@ -20,7 +21,7 @@ public class Warp : MonoBehaviour
         GetComponent<SpriteRenderer>().enabled = false;
         transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = false;
 
-        Assert.IsNotNull(targetMap);
+        // Assert.IsNotNull(targetMap);
 
         area = GameObject.FindGameObjectWithTag("Area");
     }
@@ -37,15 +38,15 @@ public class Warp : MonoBehaviour
         yield return fade.FadeIn();
 
         other.transform.position = target.transform.GetChild(0).transform.position;
-        Camera.main.GetComponent<CameraMovements>().setBound(targetMap.gameObject);
-
+        // Camera.main.GetComponent<CameraMovements>().setBound(targetMap.gameObject);
+        ProCamera2D.Instance.Reset();
         // other.GetComponent<Animator>().enabled = true;
         other.GetComponent<Player>().movePrevent = false;
         yield return fade.FadeOut();
 
         if (needText)
         {
-            StartCoroutine(area.GetComponent<Area>().ShowArea(targetMap.name));
+            // StartCoroutine(area.GetComponent<Area>().ShowArea(targetMap.name));
         }
     }
 
