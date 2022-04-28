@@ -17,7 +17,6 @@ public class LoadingScreen : MonoBehaviour
         while (!level.isDone)
         {
             pogressbar.fillAmount = Mathf.Clamp01(level.progress / 0.9f);
-            System.Threading.Thread.Sleep(500); //innecesario
             yield return null;
         }
     }
