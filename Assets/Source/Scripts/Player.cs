@@ -70,7 +70,8 @@ public class Player : MonoBehaviour, AttackForce
     public AudioClip dash;
     public AudioClip l_atk;
     public AudioClip l_atk_shot;
-
+    public AudioClip ouch;
+    public AudioClip interact;
 
     [HideInInspector] Rigidbody2D rb2d;
 
@@ -244,6 +245,8 @@ public class Player : MonoBehaviour, AttackForce
                 {
                     if (this.canInteract && this.interactable != null)
                     {
+                        src.clip = interact;
+                        src.Play();
                         this.interactable.DoClick(this);
                     }
                 }
@@ -443,6 +446,8 @@ public class Player : MonoBehaviour, AttackForce
     public void Attacked(AttackSpecifications data)
     {
         if (damage || invulnerable) return;
+        src.clip = ouch;
+        src.Play();
         hp.HP -= data.damage; // TODO: apply defense
         this.moveBehaviour.Attack = data;
         StartCoroutine(onDamage());
