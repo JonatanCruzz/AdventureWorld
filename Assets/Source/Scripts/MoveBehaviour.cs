@@ -27,7 +27,7 @@ public class MoveBehaviour : MonoBehaviour
 
     public void Move(InputAction.CallbackContext ctx)
     {
-        if (this.Dashing)
+        if (this.Dashing)   
         {
             p_moveDirection = ctx.ReadValue<Vector2>();
             return;

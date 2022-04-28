@@ -332,14 +332,16 @@ public class Player : MonoBehaviour, AttackForce
         }
         else
         {
+            GameController.Instance.audio.Stop();
+            
             hp.HP = hp.Max_HP;
             //get the loaded scene
             var scene = SceneManager.GetActiveScene();
             // if the scene is "SampleScene", load the scene "NuevoMap 1"
             if (scene.name == "SampleScene")
             {
-                PixelCrushers.SaveSystem.LoadScene("NuevoMap 1@spawnpoint");
-                // SceneManager.LoadScene("Forest");
+                GameController.Instance.UI.SetActive(false);
+                PixelCrushers.SaveSystem.LoadScene("Muerte");
             }
         }
         /* else
