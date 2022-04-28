@@ -12,6 +12,7 @@ public class GameController : MonoBehaviour
     public Transform player;
     public ProCamera2DRooms camera2DRooms;
 
+    public GameObject th;
     public GameObject UI;
 
     public AudioSource audio;

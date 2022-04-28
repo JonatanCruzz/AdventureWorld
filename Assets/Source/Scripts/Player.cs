@@ -340,7 +340,10 @@ public class Player : MonoBehaviour, AttackForce
             // if the scene is "SampleScene", load the scene "NuevoMap 1"
             if (scene.name == "SampleScene")
             {
-                GameController.Instance.UI.SetActive(false);
+                //GameController.Instance.UI.SetActive(false);
+                Destroy(GameController.Instance.UI);
+                Destroy(GameController.Instance.th);
+                Destroy(GameController.Instance);
                 PixelCrushers.SaveSystem.LoadScene("Muerte");
             }
         }

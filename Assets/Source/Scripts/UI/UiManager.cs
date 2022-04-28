@@ -136,7 +136,6 @@ namespace AdventureWorld.Prueba
         {
             teleportUI.enabled = true;
             this.inventoryUI.gameObject.SetActive(true);
-
         }
     }
 }
