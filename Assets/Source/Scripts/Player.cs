@@ -65,6 +65,12 @@ public class Player : MonoBehaviour, AttackForce
     private SpriteRenderer spriteRenderer;
     public Image barra;
 
+    public AudioSource src;
+    public AudioClip atk;
+    public AudioClip dash;
+    public AudioClip l_atk;
+    public AudioClip l_atk_shot;
+
 
     [HideInInspector] Rigidbody2D rb2d;
 
@@ -208,6 +214,8 @@ public class Player : MonoBehaviour, AttackForce
                 {
                     case InputActionPhase.Started:
                         moveBehaviour.Dash();
+                        src.clip = dash;
+                        src.Play();
                         break;
                     case InputActionPhase.Canceled:
                         moveBehaviour.StopDash();
@@ -222,6 +230,8 @@ public class Player : MonoBehaviour, AttackForce
                     case InputActionPhase.Started:
                         if (attacking) return;
                         StartCoroutine(this.DoAttack());
+                        src.clip = atk;
+                        src.Play();
                         break;
                     case InputActionPhase.Canceled:
                         // attackCollider.enabled = false;
@@ -299,7 +309,7 @@ public class Player : MonoBehaviour, AttackForce
 
     void Update()
     {
-        //el damage es lo que se agrego nuevo hoy 2-11-2021
+        //el damage es lo que se agrego nuevo
         Vida();
         this.ghost.makeGhost = this.moveBehaviour.Dashing;
 
@@ -381,9 +391,12 @@ public class Player : MonoBehaviour, AttackForce
                 // this.state.lo
                 this.state.Setloading();
                 aura.AuraStart();
+                src.clip = l_atk;
+                src.Play();
                 break;
             case InputActionPhase.Canceled:
-
+                src.clip = l_atk_shot;
+                src.Play();
                 StartCoroutine(DoingSlashAttack());
                 break;
         }
