@@ -31,11 +31,13 @@ public class PrayStatue : Interactable
 
 
         player.transform.position = transform.GetChild(0).transform.position;
-
+        GameController.Instance.UpdateMusic();
 
         yield return StartCoroutine(fadeScript.FadeOut());
 
         player.GetComponent<Player>().movePrevent = false;
         player.GetComponent<Player>().canInteract = true;
+
+
     }
 }

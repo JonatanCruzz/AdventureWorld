@@ -42,6 +42,9 @@ public class Warp : MonoBehaviour
         ProCamera2D.Instance.Reset();
         // other.GetComponent<Animator>().enabled = true;
         other.GetComponent<Player>().movePrevent = false;
+
+        GameController.Instance.UpdateMusic();
+
         yield return fade.FadeOut();
 
         if (needText)
